@@ -129,19 +129,6 @@ export default function Home() {
     }
   }, [userStats, shownBadges])
 
-  useEffect(() => {
-    const handleWalletConnected = (event: any) => {
-      console.log("[v0] Wallet connected:", event.detail.address)
-      setWalletConnected(true)
-    }
-
-    window.addEventListener("walletConnected", handleWalletConnected)
-
-    return () => {
-      window.removeEventListener("walletConnected", handleWalletConnected)
-    }
-  }, [])
-
   const handleSwipeRight = () => {
     if (donationAmount === null) return
 

@@ -1,20 +1,32 @@
 "use client"
 
-import { ThirdwebConnect } from "./thirdweb-connect"
+import { useState } from "react"
 
 interface WalletConnectProps {
   onConnect: () => void
 }
 
 export function WalletConnect({ onConnect }: WalletConnectProps) {
+  const [isConnecting, setIsConnecting] = useState(false)
+
+  const handleConnect = async () => {
+    setIsConnecting(true)
+    // Simulate connection delay
+    setTimeout(() => {
+      setIsConnecting(false)
+      onConnect()
+    }, 1500)
+  }
+
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 h-full">
-      {/* Top Navigation Bar */}
+      {/* Top Navigation Bar - WITHOUT SwipePad text to avoid duplication */}
       <div className="flex items-center justify-between w-full mb-8 px-2">
         <button className="flex items-center justify-center w-12 h-12 rounded-full relative">
           <img src="/images/lena-profile.jpg" alt="Profile" className="w-12 h-12 rounded-full object-cover" />
         </button>
 
+        {/* Empty space where SwipePad text was */}
         <div className="flex-1"></div>
 
         <div className="flex space-x-2">
@@ -28,26 +40,49 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center max-w-md w-full">
-        <div className="mb-6 flex flex-col items-center w-full">
-          <h1 className="text-4xl font-bold text-center mb-4" style={{ fontFamily: "Pixelify Sans, monospace" }}>
+      <div className="flex-1 flex flex-col items-center justify-center">
+        <div className="mb-8 flex justify-center w-full">
+          <h1 className="text-4xl font-bold text-center" style={{ fontFamily: "Pixelify Sans, monospace" }}>
             SwipePad
           </h1>
-          <h2 className="text-2xl font-bold mb-3 text-center">Welcome to SwipePad!</h2>
-          <p className="text-gray-300 text-center mb-6 max-w-sm text-sm">
-            Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
-          </p>
         </div>
 
-        <div className="w-full max-w-sm">
-          <ThirdwebConnect />
-        </div>
+        <h2 className="text-2xl font-bold mb-2 text-center">Welcome to SwipePad!</h2>
+        <p className="text-gray-300 text-center mb-8 max-w-sm">
+          Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
+        </p>
 
-        <div className="text-center mt-6">
-          <p className="text-xs text-gray-400 max-w-xs mx-auto">
-            By connecting, you agree to our Terms of Service and Privacy Policy. Your funds remain secure in your wallet
-            at all times.
-          </p>
+        <div className="w-full max-w-sm space-y-4">
+          <button
+            onClick={handleConnect}
+            disabled={isConnecting}
+            className="w-full bg-[#FFD600] hover:bg-[#E6C200] text-black font-bold py-4 px-6 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          >
+            {isConnecting ? (
+              <>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
+                Connecting...
+              </>
+            ) : (
+              <>
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h.01a1 1 0 100-2H5zm3 0a1 1 0 000 2h3a1 1 0 100-2H8z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Enter Miniapp on MiniPay
+              </>
+            )}
+          </button>
+
+          <div className="text-center">
+            <p className="text-xs text-gray-400 max-w-xs mx-auto">
+              By connecting, you agree to our Terms of Service and Privacy Policy. Your funds remain secure in your
+              wallet at all times.
+            </p>
+          </div>
         </div>
       </div>
     </div>
