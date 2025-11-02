@@ -1,8 +1,8 @@
 "use client"
 import { useEffect } from "react"
-import { ConnectButton, useActiveAccount, darkTheme } from "thirdweb/react"
-import { client, celoAlfajores } from "@/lib/thirdweb"
-import { createWallet, inAppWallet } from "thirdweb/wallets"
+import { useActiveAccount } from "thirdweb/react"
+import { client, wallets, customTheme, celoMainnet } from "@/components/wallet/WalletConnect"
+import { ConnectButton } from "thirdweb/react"
 
 interface WalletConnectProps {
   onConnect: () => void
@@ -17,34 +17,6 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
       onConnect()
     }
   }, [account, onConnect])
-
-  const wallets = [
-    inAppWallet({
-      auth: {
-        options: [
-          "google",
-          "discord",
-          "telegram",
-          "farcaster",
-          "email",
-          "x",
-          "passkey",
-          "phone",
-          "github",
-          "twitch",
-          "line",
-          "tiktok",
-          "apple",
-          "guest",
-        ],
-      },
-    }),
-    createWallet("io.metamask"),
-    createWallet("com.coinbase.wallet"),
-    createWallet("me.rainbow"),
-    createWallet("io.rabby"),
-    createWallet("io.zerion.wallet"),
-  ]
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 h-full">
@@ -83,21 +55,18 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
           <ConnectButton
             client={client}
             wallets={wallets}
-            chain={celoAlfajores}
+            chains={[celoMainnet]}
             connectButton={{
               label: "Enter MiniApp",
               className:
                 "!w-full !bg-[#FFD600] hover:!bg-[#E6C200] !text-black !font-bold !py-4 !px-6 !rounded-xl !transition-colors",
             }}
-            connectModal={{ size: "compact" }}
-            theme={darkTheme({
-              colors: {
-                accentText: "hsl(51, 100%, 45%)",
-                borderColor: "hsl(0, 0%, 0%)",
-                modalBg: "hsl(221, 39%, 11%)",
-                separatorLine: "hsl(201, 86%, 40%)",
-              },
-            })}
+            connectModal={{
+              size: "compact",
+              title: "Sign in to SwipePad",
+              showThirdwebBranding: true,
+            }}
+            theme={customTheme}
           />
 
           <div className="text-center">

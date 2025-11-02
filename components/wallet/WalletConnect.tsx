@@ -1,10 +1,33 @@
-"use client";
+"use client"
 
-import React from "react";
-import { ConnectButton, darkTheme } from "thirdweb/react";
-import { inAppWallet, createWallet } from "thirdweb/wallets";
-import { thirdwebClient } from "../../config/thirdweb.config";
-import { DEFAULT_CHAIN, SUPPORTED_CHAINS } from "../../config/chains.config";
+import type React from "react"
+
+import { ConnectButton, darkTheme, ThirdwebProvider } from "thirdweb/react"
+import { createThirdwebClient } from "thirdweb"
+import { inAppWallet, createWallet } from "thirdweb/wallets"
+import { defineChain } from "thirdweb/chains"
+
+const client = createThirdwebClient({
+  clientId: "3d325540f5e91eb9d2ce5f2ab8122be3",
+})
+
+const celoMainnet = defineChain({
+  id: 42220,
+  name: "Celo",
+  nativeCurrency: {
+    name: "CELO",
+    symbol: "CELO",
+    decimals: 18,
+  },
+  blockExplorers: [
+    {
+      name: "Celo Explorer",
+      url: "https://explorer.celo.org",
+      apiUrl: "https://explorer.celo.org/api",
+    },
+  ],
+  rpc: "https://forno.celo.org",
+})
 
 const wallets = [
   inAppWallet({
@@ -32,8 +55,7 @@ const wallets = [
   createWallet("me.rainbow"),
   createWallet("io.rabby"),
   createWallet("io.zerion.wallet"),
-  createWallet("com.valora"),
-];
+]
 
 const customTheme = darkTheme({
   colors: {
@@ -57,16 +79,14 @@ const customTheme = darkTheme({
     selectedTextColor: "hsl(51, 100%, 45%)",
     selectedTextBg: "hsl(51, 100%, 15%)",
   },
-});
+})
 
-export const ConnectWalletButton: React.FC = () => {
+export { client, wallets, customTheme, celoMainnet }
+
+export function WalletConnect() {
   return (
     <ConnectButton
-      client={thirdwebClient}
-      wallets={wallets}
-      chain={DEFAULT_CHAIN}
-      chains={SUPPORTED_CHAINS}
-      theme={customTheme}
+      client={client}
       connectButton={{
         label: "Enter SwipePad",
         style: {
@@ -75,14 +95,21 @@ export const ConnectWalletButton: React.FC = () => {
         },
       }}
       connectModal={{
-        title: "Sign in to SwipePad",
         size: "compact",
+        title: "Sign in to SwipePad",
         showThirdwebBranding: true,
         welcomeScreen: {
           title: "Welcome to SwipePad",
-          subtitle: "Connect your wallet to get started on Celo",
+          subtitle: "Connect your wallet to get started",
         },
       }}
+      theme={customTheme}
+      wallets={wallets}
+      chains={[celoMainnet]}
     />
-  );
-};
+  )
+}
+
+export function WalletProvider({ children }: { children: React.ReactNode }) {
+  return <ThirdwebProvider>{children}</ThirdwebProvider>
+}

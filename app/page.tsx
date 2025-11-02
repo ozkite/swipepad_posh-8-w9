@@ -1,5 +1,3 @@
-import { ConnectWalletButton } from "@/components/wallet/ConnectWalletButton";
-import { useWallet } from "@/hooks/useWallet";
 "use client"
 
 import { useState, useEffect } from "react"
