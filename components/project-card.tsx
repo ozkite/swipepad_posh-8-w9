@@ -362,6 +362,7 @@ export function ProjectCard({
               className="flex items-center space-x-1 text-gray-400 hover:text-red-400 transition-colors"
             >
               <Heart className={`w-5 h-5 ${isLiked ? "fill-red-400 text-red-400" : ""}`} />
+              <span className="text-xs">{likeCount}</span>
             </button>
 
             {/* Comment Button */}
@@ -370,6 +371,7 @@ export function ProjectCard({
               className="flex items-center space-x-1 text-gray-400 hover:text-blue-400 transition-colors"
             >
               <MessageCircle className="w-5 h-5" />
+              <span className="text-xs">{project.comments}</span>
             </button>
 
             {/* Share Button */}
@@ -436,7 +438,6 @@ export function ProjectCard({
             }
             className="w-full mt-4 py-2 bg-[#FFD600] hover:bg-yellow-500 text-black font-medium rounded-lg transition-colors text-sm"
           >
-            <ThumbsUp className="w-4 h-4 mr-2" />
             Like
           </button>
         )}

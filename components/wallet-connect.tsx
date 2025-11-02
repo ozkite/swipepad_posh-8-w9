@@ -1,32 +1,59 @@
 "use client"
-
-import { useState } from "react"
+import { useEffect } from "react"
+import { ConnectButton, useActiveAccount, darkTheme } from "thirdweb/react"
+import { client, celoAlfajores } from "@/lib/thirdweb"
+import { createWallet, inAppWallet } from "thirdweb/wallets"
 
 interface WalletConnectProps {
   onConnect: () => void
 }
 
 export function WalletConnect({ onConnect }: WalletConnectProps) {
-  const [isConnecting, setIsConnecting] = useState(false)
+  const account = useActiveAccount()
 
-  const handleConnect = async () => {
-    setIsConnecting(true)
-    // Simulate connection delay
-    setTimeout(() => {
-      setIsConnecting(false)
+  useEffect(() => {
+    if (account) {
+      console.log("[v0] Wallet connected:", account.address)
       onConnect()
-    }, 1500)
-  }
+    }
+  }, [account, onConnect])
+
+  const wallets = [
+    inAppWallet({
+      auth: {
+        options: [
+          "google",
+          "discord",
+          "telegram",
+          "farcaster",
+          "email",
+          "x",
+          "passkey",
+          "phone",
+          "github",
+          "twitch",
+          "line",
+          "tiktok",
+          "apple",
+          "guest",
+        ],
+      },
+    }),
+    createWallet("io.metamask"),
+    createWallet("com.coinbase.wallet"),
+    createWallet("me.rainbow"),
+    createWallet("io.rabby"),
+    createWallet("io.zerion.wallet"),
+  ]
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 h-full">
-      {/* Top Navigation Bar - WITHOUT SwipePad text to avoid duplication */}
+      {/* Top Navigation Bar */}
       <div className="flex items-center justify-between w-full mb-8 px-2">
         <button className="flex items-center justify-center w-12 h-12 rounded-full relative">
           <img src="/images/lena-profile.jpg" alt="Profile" className="w-12 h-12 rounded-full object-cover" />
         </button>
 
-        {/* Empty space where SwipePad text was */}
         <div className="flex-1"></div>
 
         <div className="flex space-x-2">
@@ -53,29 +80,25 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
         </p>
 
         <div className="w-full max-w-sm space-y-4">
-          <button
-            onClick={handleConnect}
-            disabled={isConnecting}
-            className="w-full bg-[#FFD600] hover:bg-[#E6C200] text-black font-bold py-4 px-6 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-          >
-            {isConnecting ? (
-              <>
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-black mr-2"></div>
-                Connecting...
-              </>
-            ) : (
-              <>
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2 2a1 1 0 000 2h.01a1 1 0 100-2H5zm3 0a1 1 0 000 2h3a1 1 0 100-2H8z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Enter MiniApp
-              </>
-            )}
-          </button>
+          <ConnectButton
+            client={client}
+            wallets={wallets}
+            chain={celoAlfajores}
+            connectButton={{
+              label: "Enter MiniApp",
+              className:
+                "!w-full !bg-[#FFD600] hover:!bg-[#E6C200] !text-black !font-bold !py-4 !px-6 !rounded-xl !transition-colors",
+            }}
+            connectModal={{ size: "compact" }}
+            theme={darkTheme({
+              colors: {
+                accentText: "hsl(51, 100%, 45%)",
+                borderColor: "hsl(0, 0%, 0%)",
+                modalBg: "hsl(221, 39%, 11%)",
+                separatorLine: "hsl(201, 86%, 40%)",
+              },
+            })}
+          />
 
           <div className="text-center">
             <p className="text-xs text-gray-400 max-w-xs mx-auto">

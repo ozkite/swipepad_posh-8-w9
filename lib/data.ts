@@ -22,58 +22,90 @@ export interface Project {
   boostAmount?: number
 }
 
-async function loadCeloBuilders(): Promise<Project[]> {
-  try {
-    const response = await fetch("/c2_builders_final.json")
-    const data = await response.json()
-
-    return data
-      .filter((builder: any) => {
-        const hasValidName = builder.Name && builder.Name.trim().length > 0
-        return hasValidName
-      })
-      .map((builder: any, index: number) => ({
-        id: `celo-builder-${index + 1}`,
-        name: builder.Name,
-        description: builder.Description || `Building on Celo blockchain - ${builder.Name}`,
-        category: "Celo Builders",
-        imageUrl:
-          builder["Profile Image URL"] ||
-          `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(builder.Name)}`,
-        website: undefined,
-        twitter: undefined,
-        discord: undefined,
-        linkedin: builder.LinkedIn && builder.LinkedIn !== "N/A" ? builder.LinkedIn : undefined,
-        farcaster: builder.Farcaster || undefined,
-        github: builder.GitHub || undefined,
-        fundingGoal: Math.floor(Math.random() * 100000) + 10000,
-        fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
-        likes: Math.floor(Math.random() * 500) + 10,
-        comments: Math.floor(Math.random() * 100) + 1,
-        walletAddress: builder.wallet_address,
-        isBookmarked: false,
-        userHasLiked: false,
-        userHasCommented: false,
-        reportCount: 0,
-        boostAmount: 0,
-      }))
-  } catch (error) {
-    console.error("[v0] Error loading Celo Builders:", error)
-    return []
-  }
-}
-
-// Define celoBuilderProjects based on the fetched data structure.
-// This assumes the JSON structure has 'name', 'bio', 'image', 'linkedin', 'farcaster', 'github', 'wallet' properties.
-const celoBuilderProjects: {
-  name: string
-  bio?: string
-  image?: string
-  linkedin?: string
-  farcaster?: string
-  github?: string
-  wallet?: string
-}[] = [] // Initialize as an empty array. This will be populated by loadCeloBuilders if needed, or used directly if not fetched.
+// Celo Builders projects from the JSON
+const celoBuilderProjects = [
+  {
+    name: "JulioMCruz.base.eth",
+    bio: "🚀 OnChain Engineer | Developing decentralized solutions that empower communities 🌐 Passionate about onchain innovation and open-source collaboration.",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3cef26d3-9f0a-4c12-160a-47082c268d00/original",
+    farcaster: "https://farcaster.xyz/juliomcruz",
+    linkedin: "https://www.linkedin.com/in/juliomcruz",
+    github: "https://github.com/JulioMCruz",
+    wallet: "0xc2564e41b7f5cb66d2d99466450cfebce9e8228f",
+  },
+  {
+    name: "Soko",
+    bio: "Web3 OS Builder W3GPT.ai",
+    image: "https://i.imgur.com/PNaumro.jpg",
+    farcaster: "https://farcaster.xyz/soko.eth",
+    linkedin: "https://www.linkedin.com/in/markeljan",
+    github: "https://github.com/Markeljan",
+    wallet: "0x42e9c498135431a48796b5ffe2cbc3d7a1811927",
+  },
+  {
+    name: "Gabriel Temtsen",
+    bio: "Full-stack Developer || Blockchain Developer || Web2 & Web3 developer",
+    image: "https://images.colorino.site/eb2db514e7781d9bd460b81f3bbaae51b951258f5dd2b149a2c2250f707b6946.png",
+    farcaster: "https://farcaster.xyz/gabedev.eth",
+    linkedin: "https://www.linkedin.com/in/gabriel-temtsen-bb0a8a236",
+    github: "https://github.com/gabrieltemtsen",
+    wallet: "0xc5337cee97ff5b190f26c4a12341dd210f26e17c",
+  },
+  {
+    name: "limone.eth 🍋",
+    bio: "building mini-apps /builders-garden /farville /just-frame-it | building a web3 hub in rome /urbe-eth /ethrome 🇮🇹🐺 https://limone.lol",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/05f5a8aa-48ee-48af-d618-c420091f3200/original",
+    farcaster: "https://farcaster.xyz/limone.eth",
+    linkedin: "https://www.linkedin.com/in/simone-staffa-8b3b79158",
+    github: "https://github.com/limone-eth",
+    wallet: "0x1358155a15930f89ebc787a34eb4ccfd9720bc62",
+  },
+  {
+    name: "Sambit Sargam Ekalabya",
+    bio: "Web3 Builder",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fa31601f-a263-40b3-2067-517a1b110400/rectcrop3",
+    farcaster: "https://farcaster.xyz/sambitsargam",
+    linkedin: "https://www.linkedin.com/in/sambitsargam",
+    github: "https://github.com/sambitsargam",
+    wallet: "0xadbb2bae7f0cd584491c35089d8a819108a1276c",
+  },
+  {
+    name: "Mark Carey 🎩🫂",
+    bio: "frame developer, web3 developer, long distance runner /pixelnouns /frm /degendogs /degenfers /toka /maxis",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ce812b3c-6930-41e7-b2a1-d70075494500/original",
+    farcaster: "https://farcaster.xyz/markcarey",
+    linkedin: "https://www.linkedin.com/in/markcareyinternet",
+    github: "https://github.com/markcarey",
+    wallet: "0x09a900eb2ff6e9aca12d4d1a396ddc9be0307661",
+  },
+  {
+    name: "ottox.eth",
+    bio: "Cryptocat",
+    image: "https://i.imgur.com/nm0OfnR.jpg",
+    farcaster: "https://farcaster.xyz/ottox",
+    linkedin: "https://www.linkedin.com/in/otto-blockchain",
+    github: "https://github.com/ottodevs",
+    wallet: "0xb343880dc01517dcfcbb528864d567e3389753e1",
+  },
+  {
+    name: "thescoho",
+    bio: "I like building cool stuff! 🏗️",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/aee44326-2c54-4478-9137-258fa970fd00/original",
+    farcaster: "https://farcaster.xyz/jake",
+    linkedin: "https://www.linkedin.com/in/sailesh-s-453061141",
+    github: "https://github.com/ss251",
+    wallet: "0x09928cebb4c977c5e5db237a2a2ce5cd10497cb8",
+  },
+  {
+    name: "leal.eth 🫡",
+    bio: "Engineer/Cofounder of @talent",
+    image: "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2ea7d438-7e41-4057-1ea0-9346b5a29f00/original",
+    farcaster: "https://farcaster.xyz/leal.eth",
+    linkedin: "https://www.linkedin.com/in/lealfrancisco",
+    github: "https://github.com/0xleal",
+    wallet: "0x33041027dd8f4dc82b6e825fb37adf8f15d44053",
+  },
+]
 
 // Complete dataset from the JSON file - all 404 projects
 const rawProjects = [
@@ -1346,8 +1378,8 @@ const originalProjects: Project[] = rawProjects
       project["URL to Logo"] && project["URL to Logo"] !== "NA"
         ? project["URL to Logo"]
         : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(project["Name of Project"] + " " + project.Category)}`,
-    website: project.Website && project.Website !== "NA" ? project.Website : undefined,
-    twitter: project.Twitter && project.Twitter !== "NA" ? project.Twitter : undefined,
+    website: project.Website && project.Website !== "NA" ? project.Website : "NA",
+    twitter: project.Twitter && project.Twitter !== "NA" ? project.Twitter : "NA",
     fundingGoal: Math.floor(Math.random() * 100000) + 10000,
     fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
     likes: Math.floor(Math.random() * 500) + 10,
@@ -1360,16 +1392,9 @@ const originalProjects: Project[] = rawProjects
     boostAmount: 0,
   }))
 
-export async function getProjects(): Promise<Project[]> {
-  const celoBuilders = await loadCeloBuilders()
-  const allProjects = [...originalProjects, ...celoBuilders].filter(
-    (project) => project.category === "KarmaGap" || project.category === "Celo Builders",
-  )
-  return allProjects
-}
-
-export const projects: Project[] = originalProjects.filter(
+export const projects: Project[] = [...originalProjects, ...celoBuilderProjectsTransformed].filter(
   (project) => project.category === "KarmaGap" || project.category === "Celo Builders",
 )
 
+// Update categories with Celo Builders in second position
 export const categories = ["KarmaGap", "Celo Builders"]
