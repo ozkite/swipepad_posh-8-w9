@@ -8718,7 +8718,7 @@ snapshots:
       '@expo/json-file': 10.0.7
       '@expo/metro': 54.1.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
       '@expo/spawn-async': 1.7.2
-      browserslist: 4.26.2
+      browserslist: 4.27.0
       chalk: 4.1.2
       debug: 4.4.3
       dotenv: 16.4.7

@@ -1,15 +1,13 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { ThirdwebProvider } from "thirdweb/react"
 import "./globals.css"
+import { Analytics } from "@vercel/analytics/react"
+import { WalletProvider } from "@/components/wallet/WalletProvider"
 
 export const metadata: Metadata = {
-  title: "Swipe Pad",
-  description: "Swipe to support regenerative projects on Celo",
-  generator: "v0.app",
+  title: "SwipePad",
+  description: "SwipePad on Celo Network",
 }
 
 export default function RootLayout({
@@ -29,7 +27,7 @@ html {
         `}</style>
       </head>
       <body>
-        <ThirdwebProvider>{children}</ThirdwebProvider>
+        <WalletProvider>{children}</WalletProvider>
         <Analytics />
       </body>
     </html>
