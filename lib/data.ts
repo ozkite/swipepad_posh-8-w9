@@ -1346,29 +1346,32 @@ const rawProjects = [
   },
 ]
 
+import celoBuilders from "./c2-builders-data.json"
+
 // Transform Celo Builders projects
-const celoBuilderProjectsTransformed = celoBuilderProjects
-  .filter((project) => {
-    const hasValidName = project.name && project.name.trim().length > 0
+const celoBuilderProjectsTransformed = celoBuilders
+  .filter((builder: any) => {
+    const hasValidName = builder.Name && builder.Name.trim().length > 0
     return hasValidName
   })
-  .map((project, index) => ({
+  .map((builder: any, index: number) => ({
     id: `celo-builder-${index + 1}`,
-    name: project.name,
-    description: project.bio || `Building on Celo blockchain - ${project.name}`,
+    name: builder.Name,
+    description: builder.Description || `Building on Celo blockchain - ${builder.Name}`,
     category: "Celo Builders",
-    imageUrl: project.image || `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(project.name)}`,
-    website: undefined,
+    imageUrl:
+      builder["Profile Image URL"] || `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(builder.Name)}`,
+    website: builder.Description && builder.Description.startsWith("http") ? builder.Description : undefined,
     twitter: undefined,
     discord: undefined,
-    linkedin: project.linkedin || undefined,
-    farcaster: project.farcaster || undefined,
-    github: project.github || undefined,
+    linkedin: builder.LinkedIn && builder.LinkedIn !== "N/A" ? builder.LinkedIn : undefined,
+    farcaster: builder.Farcaster && builder.Farcaster !== "N/A" ? builder.Farcaster : undefined,
+    github: builder.GitHub && builder.GitHub !== "N/A" ? builder.GitHub : undefined,
     fundingGoal: Math.floor(Math.random() * 100000) + 10000,
     fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
     likes: Math.floor(Math.random() * 500) + 10,
     comments: Math.floor(Math.random() * 100) + 1,
-    walletAddress: project.wallet,
+    walletAddress: builder.wallet_address,
     isBookmarked: false,
     userHasLiked: false,
     userHasCommented: false,

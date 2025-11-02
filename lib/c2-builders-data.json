@@ -1,0 +1,35 @@
+[
+  {
+    "Name": "JulioMCruz.base.eth",
+    "Description": "🚀 OnChain Engineer | Developing decentralized solutions that empower communities 🌐 Passionate about onchain innovation and open-source collaboration.",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3cef26d3-9f0a-4c12-160a-47082c268d00/original",
+    "Points": "549.0",
+    "Rank": "#1",
+    "Farcaster": "https://farcaster.xyz/juliomcruz",
+    "LinkedIn": "https://www.linkedin.com/in/juliomcruz",
+    "GitHub": "https://github.com/JulioMCruz",
+    "wallet_address": "0xc2564e41b7f5cb66d2d99466450cfebce9e8228f"
+  },
+  {
+    "Name": "Soko",
+    "Description": "Web3 OS Builder W3GPT.ai",
+    "Profile Image URL": "https://i.imgur.com/PNaumro.jpg",
+    "Points": "471.0",
+    "Rank": "#2",
+    "Farcaster": "https://farcaster.xyz/soko.eth",
+    "LinkedIn": "https://www.linkedin.com/in/markeljan",
+    "GitHub": "https://github.com/Markeljan",
+    "wallet_address": "0x42e9c498135431a48796b5ffe2cbc3d7a1811927"
+  },
+  {
+    "Name": "Gabriel Temtsen",
+    "Description": "Full-stack Developer || Blockchain Developer || Web2 & Web3 developer",
+    "Profile Image URL": "https://images.colorino.site/eb2db514e7781d9bd460b81f3bbaae51b951258f5dd2b149a2c2250f707b6946.png",
+    "Points": "462.0",
+    "Rank": "#3",
+    "Farcaster": "https://farcaster.xyz/gabedev.eth",
+    "LinkedIn": "https://www.linkedin.com/in/gabriel-temtsen-bb0a8a236",
+    "GitHub": "https://github.com/gabrieltemtsen",
+    "wallet_address": "0xc5337cee97ff5b190f26c4a12341dd210f26e17c"
+  }
+]
