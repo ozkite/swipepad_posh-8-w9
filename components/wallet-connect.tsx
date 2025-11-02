@@ -1,8 +1,9 @@
 "use client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useActiveAccount } from "thirdweb/react"
 import { client, wallets, customTheme, celoMainnet } from "@/components/wallet/WalletConnect"
 import { ConnectButton } from "thirdweb/react"
+import { ProjectRegistrationForm } from "@/components/project-registration-form"
 
 interface WalletConnectProps {
   onConnect: () => void
@@ -10,74 +11,120 @@ interface WalletConnectProps {
 
 export function WalletConnect({ onConnect }: WalletConnectProps) {
   const account = useActiveAccount()
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false)
 
   useEffect(() => {
     if (account) {
       console.log("[v0] Wallet connected:", account.address)
+      // Don't auto-call onConnect - let the user click the button
+    }
+  }, [account])
+
+  const handleConnect = () => {
+    if (account) {
       onConnect()
     }
-  }, [account, onConnect])
+  }
+
+  const handleRegistrationSubmit = (formData: any) => {
+    console.log("Project registration submitted:", formData)
+    alert("Thank you! Your project registration has been submitted for review.")
+  }
 
   return (
-    <div className="flex flex-col items-center justify-center py-12 px-6 h-full">
-      {/* Top Navigation Bar */}
-      <div className="flex items-center justify-between w-full mb-8 px-2">
-        <button className="flex items-center justify-center w-12 h-12 rounded-full relative">
-          <img src="/images/lena-profile.jpg" alt="Profile" className="w-12 h-12 rounded-full object-cover" />
-        </button>
-
-        <div className="flex-1"></div>
-
-        <div className="flex space-x-2">
-          <button className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700">
-            <TrendingIcon />
+    <>
+      <div className="flex flex-col items-center justify-center py-12 px-6 h-full">
+        {/* Top Navigation Bar */}
+        <div className="flex items-center justify-between w-full mb-8 px-2">
+          <button className="flex items-center justify-center w-12 h-12 rounded-full relative">
+            <img src="/images/lena-profile.jpg" alt="Profile" className="w-12 h-12 rounded-full object-cover" />
           </button>
-          <button className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB]">
-            <CartIcon />
-          </button>
-        </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center">
-        <div className="mb-8 flex justify-center w-full">
-          <h1 className="text-4xl font-bold text-center" style={{ fontFamily: "Pixelify Sans, monospace" }}>
-            SwipePad
-          </h1>
+          <div className="flex-1"></div>
+
+          <div className="flex space-x-2">
+            <button className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700">
+              <TrendingIcon />
+            </button>
+            <button className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB]">
+              <CartIcon />
+            </button>
+          </div>
         </div>
 
-        <h2 className="text-2xl font-bold mb-2 text-center">Welcome to SwipePad!</h2>
-        <p className="text-gray-300 text-center mb-8 max-w-sm">
-          Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
-        </p>
+        {/* Main Content */}
+        <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="mb-8 flex justify-center w-full">
+            <h1 className="text-4xl font-bold text-center" style={{ fontFamily: "Pixelify Sans, monospace" }}>
+              SwipePad
+            </h1>
+          </div>
 
-        <div className="w-full max-w-sm space-y-4">
-          <ConnectButton
-            client={client}
-            wallets={wallets}
-            chains={[celoMainnet]}
-            connectButton={{
-              label: "Enter MiniApp",
-              className:
-                "!w-full !bg-[#FFD600] hover:!bg-[#E6C200] !text-black !font-bold !py-4 !px-6 !rounded-xl !transition-colors",
-            }}
-            connectModal={{
-              size: "compact",
-              title: "Sign in to SwipePad",
-              showThirdwebBranding: false,
-            }}
-            theme={customTheme}
-          />
+          <h2 className="text-2xl font-bold mb-2 text-center">Welcome to SwipePad!</h2>
+          <p className="text-gray-300 text-center mb-8 max-w-sm">
+            Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
+          </p>
 
-          <div className="text-center">
+          <div className="w-full flex justify-center px-6">
+            <div className="w-full max-w-sm">
+              {account ? (
+                <button
+                  onClick={handleConnect}
+                  className="w-full bg-[#FFD600] hover:bg-[#E6C200] text-black font-bold py-4 px-6 rounded-xl transition-colors"
+                >
+                  Enter MiniApp
+                </button>
+              ) : (
+                <div className="w-full">
+                  <ConnectButton
+                    client={client}
+                    wallets={wallets}
+                    chain={celoMainnet}
+                    connectButton={{
+                      label: "Enter MiniApp",
+                      className:
+                        "!w-full !bg-[#FFD600] hover:!bg-[#E6C200] !text-black !font-bold !py-4 !px-6 !rounded-xl !transition-colors",
+                    }}
+                    connectModal={{
+                      size: "compact",
+                      title: "Sign in to SwipePad",
+                      showThirdwebBranding: false,
+                    }}
+                    theme={customTheme}
+                    onConnect={handleConnect}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          {/* </CHANGE> */}
+
+          <div className="text-center mt-4">
             <p className="text-xs text-gray-400 max-w-xs mx-auto">
               By connecting, you agree to our Terms of Service and Privacy Policy. Your funds remain secure in your
               wallet at all times.
             </p>
           </div>
         </div>
+
+        <button
+          onClick={() => setShowRegistrationForm(true)}
+          className="fixed bottom-6 right-6 bg-[#677FEB] hover:bg-[#5A6FD3] text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all hover:scale-105 flex items-center gap-2 z-50"
+          title="Register Your Project"
+        >
+          <PlusIcon />
+          <span>Project Registration</span>
+        </button>
+        {/* </CHANGE> */}
       </div>
-    </div>
+
+      <ProjectRegistrationForm
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+        onSubmit={handleRegistrationSubmit}
+      />
+      {/* </CHANGE> */}
+    </>
   )
 }
 
@@ -116,6 +163,25 @@ function TrendingIcon() {
     >
       <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
       <polyline points="17 6 23 6 23 12" />
+    </svg>
+  )
+}
+
+function PlusIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 5v14" />
+      <path d="M5 12h14" />
     </svg>
   )
 }

@@ -31,6 +31,7 @@ export default function Home() {
   const [showCart, setShowCart] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [walletConnected, setWalletConnected] = useState(false)
+  const [hasSeenWelcome, setHasSeenWelcome] = useState(false)
   const [donationAmount, setDonationAmount] = useState<DonationAmount | null>(null)
   const [donationCurrency, setDonationCurrency] = useState<StableCoin>("cUSD")
   const [confirmSwipes, setConfirmSwipes] = useState<ConfirmSwipes>(5)
@@ -271,8 +272,13 @@ export default function Home() {
 
   const AppContent = () => (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      {!walletConnected ? (
-        <WalletConnect onConnect={() => setWalletConnected(true)} />
+      {!hasSeenWelcome ? (
+        <WalletConnect
+          onConnect={() => {
+            setWalletConnected(true)
+            setHasSeenWelcome(true)
+          }}
+        />
       ) : (
         <>
           {/* Fixed Header */}
