@@ -4,11 +4,13 @@ import type React from "react"
 
 import { ConnectButton, darkTheme, ThirdwebProvider } from "thirdweb/react"
 import { createThirdwebClient } from "thirdweb"
-import { createWallet } from "thirdweb/wallets"
+import { inAppWallet, createWallet } from "thirdweb/wallets"
 import { defineChain } from "thirdweb/chains"
 
+const clientId = process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3"
+
 const client = createThirdwebClient({
-  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3",
+  clientId,
 })
 
 const celoMainnet = defineChain({
@@ -29,8 +31,32 @@ const celoMainnet = defineChain({
   rpc: "https://forno.celo.org",
 })
 
-// Using only external wallets that work without domain restrictions
 const wallets = [
+  // Only include inAppWallet if user has set their own client ID
+  ...(process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID
+    ? [
+        inAppWallet({
+          auth: {
+            options: [
+              "google",
+              "discord",
+              "telegram",
+              "farcaster",
+              "email",
+              "x",
+              "passkey",
+              "phone",
+              "github",
+              "tiktok",
+              "facebook",
+              "apple",
+              "line",
+              "guest",
+            ],
+          },
+        }),
+      ]
+    : []),
   createWallet("io.metamask"),
   createWallet("com.coinbase.wallet"),
   createWallet("me.rainbow"),
@@ -41,24 +67,7 @@ const wallets = [
 const customTheme = darkTheme({
   colors: {
     accentText: "hsl(51, 100%, 45%)",
-    accentButtonBg: "hsl(51, 100%, 45%)",
-    accentButtonText: "hsl(221, 39%, 11%)",
-    borderColor: "hsl(0, 0%, 20%)",
-    modalBg: "hsl(221, 39%, 11%)",
-    separatorLine: "hsl(201, 86%, 40%)",
-    primaryButtonBg: "hsl(221, 39%, 15%)",
-    primaryButtonText: "hsl(0, 0%, 100%)",
-    secondaryButtonBg: "hsl(221, 39%, 18%)",
-    secondaryButtonText: "hsl(0, 0%, 90%)",
-    secondaryButtonHoverBg: "hsl(221, 39%, 22%)",
-    dropdownBg: "hsl(221, 39%, 13%)",
-    inputAutofillBg: "hsl(221, 39%, 15%)",
-    scrollbarBg: "hsl(221, 39%, 20%)",
-    skeletonBg: "hsl(221, 39%, 18%)",
-    connectedButtonBg: "hsl(221, 39%, 15%)",
-    connectedButtonBgHover: "hsl(221, 39%, 18%)",
-    selectedTextColor: "hsl(51, 100%, 45%)",
-    selectedTextBg: "hsl(51, 100%, 15%)",
+    borderColor: "hsl(221, 39%, 11%)",
   },
 })
 
@@ -68,25 +77,10 @@ export function WalletConnect() {
   return (
     <ConnectButton
       client={client}
-      connectButton={{
-        label: "Enter SwipePad",
-        style: {
-          fontSize: "16px",
-          fontWeight: "600",
-        },
-      }}
-      connectModal={{
-        size: "compact",
-        title: "Connect Wallet",
-        showThirdwebBranding: true,
-        welcomeScreen: {
-          title: "Welcome to SwipePad",
-          subtitle: "Connect your wallet to get started",
-        },
-      }}
+      chain={celoMainnet}
+      connectModal={{ size: "compact" }}
       theme={customTheme}
       wallets={wallets}
-      chains={[celoMainnet]}
     />
   )
 }

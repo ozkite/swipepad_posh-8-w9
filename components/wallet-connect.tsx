@@ -64,7 +64,7 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
             connectModal={{
               size: "compact",
               title: "Sign in to SwipePad",
-              showThirdwebBranding: true,
+              showThirdwebBranding: false,
             }}
             theme={customTheme}
           />
