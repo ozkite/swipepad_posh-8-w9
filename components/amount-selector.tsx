@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export type DonationAmount = "10 cents" | "50 cents" | "1 fiat"
+export type DonationAmount = "10 cents" | "50 cents" | "1 Stable"
 export type StableCoin =
   | "cUSD"
   | "cEUR"
@@ -26,7 +26,7 @@ export function AmountSelector({ onSelect }: AmountSelectorProps) {
   const [selectedCurrency, setSelectedCurrency] = useState<StableCoin>("cUSD")
   const [selectedSwipes, setSelectedSwipes] = useState<ConfirmSwipes>(5)
 
-  const amounts: DonationAmount[] = ["10 cents", "50 cents", "1 fiat"]
+  const amounts: DonationAmount[] = ["10 cents", "50 cents", "1 Stable"]
   const currencies: StableCoin[] = ["cUSD", "cEUR", "cGBP", "cAUD", "cCHF", "cCAD", "cKES", "cREAL", "cZAR"]
   const swipeOptions: ConfirmSwipes[] = [5, 10, 20]
 

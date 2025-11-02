@@ -72,7 +72,7 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-                Enter Miniapp on MiniPay
+                Enter MiniApp
               </>
             )}
           </button>
