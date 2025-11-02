@@ -22,8 +22,58 @@ export interface Project {
   boostAmount?: number
 }
 
-// Celo Builders projects from the JSON
-const celoBuilderProjects = []
+async function loadCeloBuilders(): Promise<Project[]> {
+  try {
+    const response = await fetch("/c2_builders_final.json")
+    const data = await response.json()
+
+    return data
+      .filter((builder: any) => {
+        const hasValidName = builder.Name && builder.Name.trim().length > 0
+        return hasValidName
+      })
+      .map((builder: any, index: number) => ({
+        id: `celo-builder-${index + 1}`,
+        name: builder.Name,
+        description: builder.Description || `Building on Celo blockchain - ${builder.Name}`,
+        category: "Celo Builders",
+        imageUrl:
+          builder["Profile Image URL"] ||
+          `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(builder.Name)}`,
+        website: undefined,
+        twitter: undefined,
+        discord: undefined,
+        linkedin: builder.LinkedIn && builder.LinkedIn !== "N/A" ? builder.LinkedIn : undefined,
+        farcaster: builder.Farcaster || undefined,
+        github: builder.GitHub || undefined,
+        fundingGoal: Math.floor(Math.random() * 100000) + 10000,
+        fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
+        likes: Math.floor(Math.random() * 500) + 10,
+        comments: Math.floor(Math.random() * 100) + 1,
+        walletAddress: builder.wallet_address,
+        isBookmarked: false,
+        userHasLiked: false,
+        userHasCommented: false,
+        reportCount: 0,
+        boostAmount: 0,
+      }))
+  } catch (error) {
+    console.error("[v0] Error loading Celo Builders:", error)
+    return []
+  }
+}
+
+// Define celoBuilderProjects based on the fetched data structure.
+// This assumes the JSON structure has 'name', 'bio', 'image', 'linkedin', 'farcaster', 'github', 'wallet' properties.
+const celoBuilderProjects: {
+  name: string
+  bio?: string
+  image?: string
+  linkedin?: string
+  farcaster?: string
+  github?: string
+  wallet?: string
+}[] = [] // Initialize as an empty array. This will be populated by loadCeloBuilders if needed, or used directly if not fetched.
 
 // Complete dataset from the JSON file - all 404 projects
 const rawProjects = [
@@ -1249,23 +1299,20 @@ const celoBuilderProjectsTransformed = celoBuilderProjects
   .map((project, index) => ({
     id: `celo-builder-${index + 1}`,
     name: project.name,
-    description: `Building on Celo blockchain - ${project.name}`,
+    description: project.bio || `Building on Celo blockchain - ${project.name}`,
     category: "Celo Builders",
-    imageUrl:
-      project.image && project.image !== "http://unavatar.io/fallback.png" && project.image.trim().length > 0
-        ? project.image
-        : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(project.name)}`,
-    website: project.website && project.website.trim().length > 0 ? project.website : "NA",
-    twitter: project.twitter && project.twitter.trim().length > 0 ? project.twitter : "NA",
-    discord: project.discord && project.discord.trim().length > 0 ? project.discord : "NA",
-    linkedin: project.linkedin && project.linkedin.trim().length > 0 ? project.linkedin : "NA",
-    github: project.github && project.github.trim().length > 0 ? project.github : "NA",
-    farcaster: project.farcaster && project.farcaster.trim().length > 0 ? project.farcaster : "NA",
+    imageUrl: project.image || `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(project.name)}`,
+    website: undefined,
+    twitter: undefined,
+    discord: undefined,
+    linkedin: project.linkedin || undefined,
+    farcaster: project.farcaster || undefined,
+    github: project.github || undefined,
     fundingGoal: Math.floor(Math.random() * 100000) + 10000,
     fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
     likes: Math.floor(Math.random() * 500) + 10,
     comments: Math.floor(Math.random() * 100) + 1,
-    walletAddress: project.wallet || `0x${Math.random().toString(16).substr(2, 40)}`,
+    walletAddress: project.wallet,
     isBookmarked: false,
     userHasLiked: false,
     userHasCommented: false,
@@ -1299,8 +1346,8 @@ const originalProjects: Project[] = rawProjects
       project["URL to Logo"] && project["URL to Logo"] !== "NA"
         ? project["URL to Logo"]
         : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(project["Name of Project"] + " " + project.Category)}`,
-    website: project.Website && project.Website !== "NA" ? project.Website : "NA",
-    twitter: project.Twitter && project.Twitter !== "NA" ? project.Twitter : "NA",
+    website: project.Website && project.Website !== "NA" ? project.Website : undefined,
+    twitter: project.Twitter && project.Twitter !== "NA" ? project.Twitter : undefined,
     fundingGoal: Math.floor(Math.random() * 100000) + 10000,
     fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
     likes: Math.floor(Math.random() * 500) + 10,
@@ -1313,9 +1360,16 @@ const originalProjects: Project[] = rawProjects
     boostAmount: 0,
   }))
 
-export const projects: Project[] = [...originalProjects, ...celoBuilderProjectsTransformed].filter(
+export async function getProjects(): Promise<Project[]> {
+  const celoBuilders = await loadCeloBuilders()
+  const allProjects = [...originalProjects, ...celoBuilders].filter(
+    (project) => project.category === "KarmaGap" || project.category === "Celo Builders",
+  )
+  return allProjects
+}
+
+export const projects: Project[] = originalProjects.filter(
   (project) => project.category === "KarmaGap" || project.category === "Celo Builders",
 )
 
-// Update categories with Celo Builders in second position
 export const categories = ["KarmaGap", "Celo Builders"]

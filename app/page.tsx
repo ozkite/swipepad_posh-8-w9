@@ -9,7 +9,8 @@ import { Cart } from "@/components/cart"
 import { SuccessScreen } from "@/components/success-screen"
 import { WalletConnect } from "@/components/wallet-connect"
 import { AmountSelector, type DonationAmount, type StableCoin, type ConfirmSwipes } from "@/components/amount-selector"
-import { projects, categories } from "@/lib/data"
+import { getProjects, categories, type Project } from "@/lib/data"
+import { shuffleArray } from "@/lib/utils"
 import { UserProfile } from "@/components/user-profile"
 import { TrendingSection } from "@/components/trending-section"
 import { CommunityFunds } from "@/components/community-funds"
@@ -39,6 +40,9 @@ export default function Home() {
   const [swipeCount, setSwipeCount] = useState(0)
   const [showProfileQuickView, setShowProfileQuickView] = useState(false)
   const [showEditProfile, setShowEditProfile] = useState(false)
+  const [shuffledProjects, setShuffledProjects] = useState<Project[]>([])
+  const [projects, setProjects] = useState<Project[]>([])
+  const [isLoadingProjects, setIsLoadingProjects] = useState(true)
   const [userStats, setUserStats] = useState({
     totalDonations: 0,
     categoriesSupported: new Set<string>(),
@@ -74,11 +78,28 @@ export default function Home() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false)
   const [shownBadges, setShownBadges] = useState<Set<string>>(new Set())
 
+  useEffect(() => {
+    async function loadProjects() {
+      try {
+        setIsLoadingProjects(true)
+        const loadedProjects = await getProjects()
+        setProjects(loadedProjects)
+        console.log("[v0] Loaded projects:", loadedProjects.length)
+      } catch (error) {
+        console.error("[v0] Error loading projects:", error)
+        setProjects([])
+      } finally {
+        setIsLoadingProjects(false)
+      }
+    }
+    loadProjects()
+  }, [])
+
   const recentDonations = cart.slice(0, 5).map((item, index) => ({
     project: item.project,
     amount: item.amount,
     currency: item.currency,
-    date: new Date(Date.now() - index * 86400000), // Today, yesterday, etc.
+    date: new Date(Date.now() - index * 86400000),
   }))
 
   const savedProjects = projects.slice(0, 3)
@@ -86,55 +107,17 @@ export default function Home() {
   const filteredProjects = projects.filter((project) => project.category === selectedCategory)
 
   useEffect(() => {
-    let isMounted = true
-
-    const checkStreak = () => {
-      if (!isMounted) return 0
-      if (userStats.lastDonation) {
-        const lastDonationDate = new Date(userStats.lastDonation)
-        const today = new Date()
-        const diffTime = Math.abs(today.getTime() - lastDonationDate.getTime())
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-        if (diffDays <= 1) {
-          return userStats.streak
-        } else {
-          return 0
-        }
-      }
-      return 0
-    }
-
-    const checkBadges = () => {
-      if (!isMounted) return
-
-      if (userStats.totalDonations === 1 && !shownBadges.has("First Swipe")) {
-        setCurrentBadge("First Swipe")
-        setShowBadgeNotification(true)
-        setShownBadges((prev) => new Set([...prev, "First Swipe"]))
-      } else if (checkStreak() === 5 && !shownBadges.has("5-Day Streak")) {
-        setCurrentBadge("5-Day Streak")
-        setShowBadgeNotification(true)
-        setShownBadges((prev) => new Set([...prev, "5-Day Streak"]))
-      } else if (userStats.categoriesSupported.size >= 3 && !shownBadges.has("Category Champion")) {
-        setCurrentBadge("Category Champion")
-        setShowBadgeNotification(true)
-        setShownBadges((prev) => new Set([...prev, "Category Champion"]))
-      }
-    }
-
-    checkBadges()
-
-    return () => {
-      isMounted = false
-    }
-  }, [userStats, shownBadges])
+    const filtered = projects.filter((project) => project.category === selectedCategory)
+    const shuffled = shuffleArray(filtered)
+    setShuffledProjects(shuffled)
+    setCurrentProjectIndex(0)
+  }, [selectedCategory, projects])
 
   const handleSwipeRight = () => {
     if (donationAmount === null) return
 
-    const project = filteredProjects[currentProjectIndex]
+    const project = shuffledProjects[currentProjectIndex]
 
-    // Update user stats
     setUserStats((prev) => {
       const categoriesSupported = new Set(prev.categoriesSupported)
       categoriesSupported.add(project.category)
@@ -147,29 +130,24 @@ export default function Home() {
       }
     })
 
-    // Update user profile stats
     setUserProfile((prev) => ({
       ...prev,
       totalSwipes: prev.totalSwipes + 1,
       totalDonated: prev.totalDonated + Number.parseFloat(donationAmount.split(" ")[0]),
     }))
 
-    // Add to cart
     const newCart = [...cart, { project, amount: donationAmount, currency: donationCurrency }]
     setCart(newCart)
 
-    // Increment swipe count
     const newSwipeCount = swipeCount + 1
     setSwipeCount(newSwipeCount)
 
-    // Show success screen after reaching confirm swipes threshold
     if (newSwipeCount >= confirmSwipes) {
       setShowSuccess(true)
       setSwipeCount(0)
     }
 
-    // Move to next project
-    if (currentProjectIndex < filteredProjects.length - 1) {
+    if (currentProjectIndex < shuffledProjects.length - 1) {
       setCurrentProjectIndex(currentProjectIndex + 1)
     } else {
       setCurrentProjectIndex(0)
@@ -177,13 +155,12 @@ export default function Home() {
   }
 
   const handleSwipeLeft = () => {
-    // Update swipe count even for skips
     setUserProfile((prev) => ({
       ...prev,
       totalSwipes: prev.totalSwipes + 1,
     }))
 
-    if (currentProjectIndex < filteredProjects.length - 1) {
+    if (currentProjectIndex < shuffledProjects.length - 1) {
       setCurrentProjectIndex(currentProjectIndex + 1)
     } else {
       setCurrentProjectIndex(0)
@@ -194,7 +171,7 @@ export default function Home() {
     setDonationAmount(amount)
     setDonationCurrency(currency)
     setConfirmSwipes(swipes)
-    setSwipeCount(0) // Reset swipe count when starting new session
+    setSwipeCount(0)
   }
 
   const handleCheckout = async () => {
@@ -248,7 +225,6 @@ export default function Home() {
 
   const handleSuccessClose = () => {
     setShowSuccess(false)
-    // Continue with current settings, don't reset donation amount
   }
 
   const handleProfileSave = (profileData: any) => {
@@ -266,7 +242,7 @@ export default function Home() {
       }
       return acc
     },
-    {} as Record<string, typeof projects>,
+    {} as Record<string, Project[]>,
   )
 
   const AppContent = () => (
@@ -341,7 +317,11 @@ export default function Home() {
 
           {/* Scrollable Content */}
           <div className="flex-1 overflow-y-auto">
-            {viewMode === "profile" ? (
+            {isLoadingProjects ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FFD600]"></div>
+              </div>
+            ) : viewMode === "profile" ? (
               <UserProfile stats={userStats} onBack={() => setViewMode("swipe")} />
             ) : viewMode === "trending" ? (
               <div className="px-6 py-6">
@@ -404,15 +384,15 @@ export default function Home() {
                         </div>
 
                         <div className="px-6">
-                          {filteredProjects.length > 0 && (
+                          {shuffledProjects.length > 0 && (
                             <ProjectCard
-                              project={filteredProjects[currentProjectIndex]}
+                              project={shuffledProjects[currentProjectIndex]}
                               onSwipeLeft={handleSwipeLeft}
                               onSwipeRight={handleSwipeRight}
                               viewMode="swipe"
                               donationAmount={donationAmount}
                               donationCurrency={donationCurrency}
-                              onBoost={(amount) => handleProjectBoost(filteredProjects[currentProjectIndex], amount)}
+                              onBoost={(amount) => handleProjectBoost(shuffledProjects[currentProjectIndex], amount)}
                             />
                           )}
                         </div>
