@@ -4,11 +4,11 @@ import type React from "react"
 
 import { ConnectButton, darkTheme, ThirdwebProvider } from "thirdweb/react"
 import { createThirdwebClient } from "thirdweb"
-import { inAppWallet, createWallet } from "thirdweb/wallets"
+import { createWallet } from "thirdweb/wallets"
 import { defineChain } from "thirdweb/chains"
 
 const client = createThirdwebClient({
-  clientId: "3d325540f5e91eb9d2ce5f2ab8122be3",
+  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3",
 })
 
 const celoMainnet = defineChain({
@@ -29,27 +29,8 @@ const celoMainnet = defineChain({
   rpc: "https://forno.celo.org",
 })
 
+// Using only external wallets that work without domain restrictions
 const wallets = [
-  inAppWallet({
-    auth: {
-      options: [
-        "email",
-        "phone",
-        "google",
-        "discord",
-        "telegram",
-        "farcaster",
-        "x",
-        "passkey",
-        "github",
-        "twitch",
-        "line",
-        "tiktok",
-        "apple",
-        "guest",
-      ],
-    },
-  }),
   createWallet("io.metamask"),
   createWallet("com.coinbase.wallet"),
   createWallet("me.rainbow"),
@@ -96,7 +77,7 @@ export function WalletConnect() {
       }}
       connectModal={{
         size: "compact",
-        title: "Sign in to SwipePad",
+        title: "Connect Wallet",
         showThirdwebBranding: true,
         welcomeScreen: {
           title: "Welcome to SwipePad",

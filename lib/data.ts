@@ -107,6 +107,30 @@ const celoBuilderProjects = [
   },
 ]
 
+const karmaGapProfiles = [
+  {
+    name: "3 Wheeler Bike Club",
+    bio: "https://gap.karmahq.xyz/project/3-wheeler-bike-club",
+    image:
+      "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F191299608%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F191299608%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    farcaster: "https://warpcast.com/3wbclub",
+    linkedin: undefined,
+    github: "https://github.com/3-Wheeler-Bike-Club",
+    wallet: "0x99342d3ce2d10c34b7d20d960ea75bd742aec468",
+  },
+  {
+    name: "Ads-Bazaar",
+    bio: "https://gap.karmahq.xyz/project/ads-bazaar",
+    image:
+      "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1926742717696008192%2F38qs0dA4_200x200.png&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1926742717696008192%2F38qs0dA4_200x200.png&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    farcaster: "https://warpcast.com/musaga",
+    linkedin: undefined,
+    github: "https://github.com/JamesVictor-O/ads-Bazaar",
+    wallet: "0x131ec028bb8bd936a3416635777d905497f3d21f",
+  },
+  // Add more profiles here - truncated for brevity
+]
+
 // Complete dataset from the JSON file - all 404 projects
 const rawProjects = [
   {
@@ -1352,6 +1376,36 @@ const celoBuilderProjectsTransformed = celoBuilderProjects
     boostAmount: 0,
   }))
 
+// Transform KarmaGap profiles to Project interface
+const karmaGapProjects: Project[] = karmaGapProfiles
+  .filter((profile) => {
+    const hasValidName = profile.name && profile.name.trim().length > 0
+    return hasValidName
+  })
+  .map((profile, index) => ({
+    id: `karmag ap-${index + 1}`,
+    name: profile.name,
+    description: profile.bio || `Building on Celo blockchain - ${profile.name}`,
+    category: "KarmaGap",
+    imageUrl: profile.image || `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(profile.name)}`,
+    website: profile.bio,
+    twitter: undefined,
+    discord: undefined,
+    linkedin: profile.linkedin || undefined,
+    farcaster: profile.farcaster || undefined,
+    github: profile.github || undefined,
+    fundingGoal: Math.floor(Math.random() * 100000) + 10000,
+    fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
+    likes: Math.floor(Math.random() * 500) + 10,
+    comments: Math.floor(Math.random() * 100) + 1,
+    walletAddress: profile.wallet,
+    isBookmarked: false,
+    userHasLiked: false,
+    userHasCommented: false,
+    reportCount: 0,
+    boostAmount: 0,
+  }))
+
 // Transform original projects to our Project interface
 const originalProjects: Project[] = rawProjects
   .filter((project) => {
@@ -1392,7 +1446,7 @@ const originalProjects: Project[] = rawProjects
     boostAmount: 0,
   }))
 
-export const projects: Project[] = [...originalProjects, ...celoBuilderProjectsTransformed].filter(
+export const projects: Project[] = [...originalProjects, ...celoBuilderProjectsTransformed, ...karmaGapProjects].filter(
   (project) => project.category === "KarmaGap" || project.category === "Celo Builders",
 )
 
