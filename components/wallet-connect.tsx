@@ -12,6 +12,7 @@ interface WalletConnectProps {
 export function WalletConnect({ onConnect }: WalletConnectProps) {
   const account = useActiveAccount()
   const [showRegistrationForm, setShowRegistrationForm] = useState(false)
+  const [showDemoModal, setShowDemoModal] = useState(false)
 
   useEffect(() => {
     if (account) {
@@ -24,6 +25,15 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
     if (account) {
       onConnect()
     }
+  }
+
+  const handleDemoConnect = () => {
+    setShowDemoModal(true)
+  }
+
+  const handleDemoConfirm = () => {
+    setShowDemoModal(false)
+    onConnect()
   }
 
   const handleRegistrationSubmit = (formData: any) => {
@@ -97,7 +107,6 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
               )}
             </div>
           </div>
-          {/* </CHANGE> */}
 
           <div className="text-center mt-4">
             <p className="text-xs text-gray-400 max-w-xs mx-auto">
@@ -109,21 +118,44 @@ export function WalletConnect({ onConnect }: WalletConnectProps) {
 
         <button
           onClick={() => setShowRegistrationForm(true)}
-          className="fixed bottom-6 right-6 bg-[#677FEB] hover:bg-[#5A6FD3] text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all hover:scale-105 flex items-center gap-2 z-50"
+          className="fixed bottom-6 right-6 w-14 h-14 bg-[#677FEB] hover:bg-[#5A6FD3] text-white rounded-full shadow-lg transition-all hover:scale-110 flex items-center justify-center z-50"
           title="Register Your Project"
         >
           <PlusIcon />
-          <span>Project Registration</span>
         </button>
-        {/* </CHANGE> */}
       </div>
+
+      {showDemoModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-[#1a1f2e] rounded-2xl p-6 max-w-sm w-full">
+            <h3 className="text-xl font-bold mb-4">Demo Mode</h3>
+            <p className="text-gray-300 mb-6">
+              This is a demo version. No real wallet connection or social login is required. Click continue to explore
+              the app.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowDemoModal(false)}
+                className="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleDemoConfirm}
+                className="flex-1 bg-[#FFD600] hover:bg-[#E6C200] text-black font-bold py-3 px-4 rounded-lg transition-colors"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <ProjectRegistrationForm
         isOpen={showRegistrationForm}
         onClose={() => setShowRegistrationForm(false)}
         onSubmit={handleRegistrationSubmit}
       />
-      {/* </CHANGE> */}
     </>
   )
 }
@@ -171,12 +203,12 @@ function PlusIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >

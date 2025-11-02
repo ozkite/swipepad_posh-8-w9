@@ -1452,3 +1452,26 @@ export const projects: Project[] = [...originalProjects, ...celoBuilderProjectsT
 
 // Update categories with Celo Builders in second position
 export const categories = ["KarmaGap", "Celo Builders"]
+
+export function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
+export function getRandomProfiles(category?: string): Project[] {
+  let filtered = projects
+  if (category) {
+    filtered = projects.filter((project) => project.category === category)
+  }
+  return shuffleArray(filtered)
+}
+
+export function getRandomProfile(category?: string): Project | null {
+  const filtered = category ? projects.filter((project) => project.category === category) : projects
+  if (filtered.length === 0) return null
+  return filtered[Math.floor(Math.random() * filtered.length)]
+}

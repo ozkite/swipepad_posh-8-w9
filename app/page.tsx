@@ -9,7 +9,7 @@ import { Cart } from "@/components/cart"
 import { SuccessScreen } from "@/components/success-screen"
 import { WalletConnect } from "@/components/wallet-connect"
 import { AmountSelector, type DonationAmount, type StableCoin, type ConfirmSwipes } from "@/components/amount-selector"
-import { projects, categories } from "@/lib/data"
+import { projects, categories, getRandomProfiles } from "@/lib/data"
 import { UserProfile } from "@/components/user-profile"
 import { TrendingSection } from "@/components/trending-section"
 import { CommunityFunds } from "@/components/community-funds"
@@ -40,6 +40,7 @@ export default function Home() {
   const [swipeCount, setSwipeCount] = useState(0)
   const [showProfileQuickView, setShowProfileQuickView] = useState(false)
   const [showEditProfile, setShowEditProfile] = useState(false)
+  const [filteredProjects, setFilteredProjects] = useState<typeof projects>([])
   const [userStats, setUserStats] = useState({
     totalDonations: 0,
     categoriesSupported: new Set<string>(),
@@ -79,12 +80,16 @@ export default function Home() {
     project: item.project,
     amount: item.amount,
     currency: item.currency,
-    date: new Date(Date.now() - index * 86400000), // Today, yesterday, etc.
+    date: new Date(Date.now() - index * 86400000),
   }))
 
   const savedProjects = projects.slice(0, 3)
 
-  const filteredProjects = projects.filter((project) => project.category === selectedCategory)
+  useEffect(() => {
+    const randomized = getRandomProfiles(selectedCategory)
+    setFilteredProjects(randomized)
+    setCurrentProjectIndex(0)
+  }, [selectedCategory])
 
   useEffect(() => {
     let isMounted = true
@@ -135,7 +140,6 @@ export default function Home() {
 
     const project = filteredProjects[currentProjectIndex]
 
-    // Update user stats
     setUserStats((prev) => {
       const categoriesSupported = new Set(prev.categoriesSupported)
       categoriesSupported.add(project.category)
@@ -148,28 +152,23 @@ export default function Home() {
       }
     })
 
-    // Update user profile stats
     setUserProfile((prev) => ({
       ...prev,
       totalSwipes: prev.totalSwipes + 1,
       totalDonated: prev.totalDonated + Number.parseFloat(donationAmount.split(" ")[0]),
     }))
 
-    // Add to cart
     const newCart = [...cart, { project, amount: donationAmount, currency: donationCurrency }]
     setCart(newCart)
 
-    // Increment swipe count
     const newSwipeCount = swipeCount + 1
     setSwipeCount(newSwipeCount)
 
-    // Show success screen after reaching confirm swipes threshold
     if (newSwipeCount >= confirmSwipes) {
       setShowSuccess(true)
       setSwipeCount(0)
     }
 
-    // Move to next project
     if (currentProjectIndex < filteredProjects.length - 1) {
       setCurrentProjectIndex(currentProjectIndex + 1)
     } else {
@@ -178,7 +177,6 @@ export default function Home() {
   }
 
   const handleSwipeLeft = () => {
-    // Update swipe count even for skips
     setUserProfile((prev) => ({
       ...prev,
       totalSwipes: prev.totalSwipes + 1,
@@ -195,7 +193,7 @@ export default function Home() {
     setDonationAmount(amount)
     setDonationCurrency(currency)
     setConfirmSwipes(swipes)
-    setSwipeCount(0) // Reset swipe count when starting new session
+    setSwipeCount(0)
   }
 
   const handleCheckout = async () => {
@@ -249,7 +247,6 @@ export default function Home() {
 
   const handleSuccessClose = () => {
     setShowSuccess(false)
-    // Continue with current settings, don't reset donation amount
   }
 
   const handleProfileSave = (profileData: any) => {
@@ -281,7 +278,6 @@ export default function Home() {
         />
       ) : (
         <>
-          {/* Fixed Header */}
           <div className="sticky top-0 z-40 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
             <div className="flex flex-col items-center py-3">
               <div className="flex items-center justify-between w-full mb-4 px-6">
@@ -345,7 +341,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scrollable Content */}
           <div className="flex-1 overflow-y-auto">
             {viewMode === "profile" ? (
               <UserProfile stats={userStats} onBack={() => setViewMode("swipe")} />
