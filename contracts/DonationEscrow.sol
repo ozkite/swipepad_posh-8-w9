@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "./interfaces/IStableToken.sol";
-
 /**
  * @title DonationEscrow
- * @dev Allows users to donate to verified projects on Celo
- *      Funds are sent directly to project wallet — no custody
+ * @dev Simple, non-custodial donation handler for Celo stablecoins
+ *      Funds go directly to the project's wallet — no custody.
  */
 contract DonationEscrow {
     address public immutable owner;
@@ -55,4 +53,11 @@ contract DonationEscrow {
 
         emit DonationSent(msg.sender, _project, _token, _amount);
     }
+}
+
+interface IStableToken {
+    function transfer(address to, uint256 value) external returns (bool);
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
+    function allowance(address owner, address spender) external view returns (uint256);
 }
