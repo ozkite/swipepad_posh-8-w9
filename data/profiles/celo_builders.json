@@ -1,0 +1,893 @@
+[
+  {
+    "Name": "JulioMCruz.base.eth",
+    "Description": "🚀 OnChain Engineer | Developing decentralized solutions that empower communities 🌐 Passionate about onchain innovation and open-source collaboration.",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3cef26d3-9f0a-4c12-160a-47082c268d00/original",
+    "Farcaster": "https://farcaster.xyz/juliomcruz",
+    "LinkedIn": "https://www.linkedin.com/in/juliomcruz",
+    "GitHub": "https://github.com/JulioMCruz",
+    "wallet_address": "0xc2564e41b7f5cb66d2d99466450cfebce9e8228f"
+  },
+  {
+    "Name": "Soko",
+    "Description": "Web3 OS Builder W3GPT.ai",
+    "Profile Image URL": "https://i.imgur.com/PNaumro.jpg",
+    "Farcaster": "https://farcaster.xyz/soko.eth",
+    "LinkedIn": "https://www.linkedin.com/in/markeljan",
+    "GitHub": "https://github.com/Markeljan",
+    "wallet_address": "0x42e9c498135431a48796b5ffe2cbc3d7a1811927"
+  },
+  {
+    "Name": "Gabriel Temtsen",
+    "Description": "Full-stack Developer || Blockchain Developer || Web2 & Web3 developer",
+    "Profile Image URL": "https://images.colorino.site/eb2db514e7781d9bd460b81f3bbaae51b951258f5dd2b149a2c2250f707b6946.png",
+    "Farcaster": "https://farcaster.xyz/gabedev.eth",
+    "LinkedIn": "https://www.linkedin.com/in/gabriel-temtsen-bb0a8a236",
+    "GitHub": "https://github.com/gabrieltemtsen",
+    "wallet_address": "0xc5337cee97ff5b190f26c4a12341dd210f26e17c"
+  },
+  {
+    "Name": "limone.eth 🍋",
+    "Description": "building mini-apps /builders-garden /farville /just-frame-it | building a web3 hub in rome /urbe-eth /ethrome 🇮🇹🐺 https://limone.lol",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/05f5a8aa-48ee-48af-d618-c420091f3200/original",
+    "Farcaster": "https://farcaster.xyz/limone.eth",
+    "LinkedIn": "https://www.linkedin.com/in/simone-staffa-8b3b79158",
+    "GitHub": "https://github.com/limone-eth",
+    "wallet_address": "0x1358155a15930f89ebc787a34eb4ccfd9720bc62"
+  },
+  {
+    "Name": "Sambit Sargam Ekalabya",
+    "Description": "Web3 Builder",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fa31601f-a263-40b3-2067-517a1b110400/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/sambitsargam",
+    "LinkedIn": "https://www.linkedin.com/in/sambitsargam",
+    "GitHub": "https://github.com/sambitsargam",
+    "wallet_address": "0xadbb2bae7f0cd584491c35089d8a819108a1276c"
+  },
+  {
+    "Name": "Mark Carey 🎩🫂",
+    "Description": "frame developer, web3 developer, long distance runner /pixelnouns /frm /degendogs /degenfers /toka /maxis",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ce812b3c-6930-41e7-b2a1-d70075494500/original",
+    "Farcaster": "https://farcaster.xyz/markcarey",
+    "LinkedIn": "https://www.linkedin.com/in/markcareyinternet",
+    "GitHub": "https://github.com/markcarey",
+    "wallet_address": "0x09a900eb2ff6e9aca12d4d1a396ddc9be0307661"
+  },
+  {
+    "Name": "ottox.eth",
+    "Description": "Cryptocat",
+    "Profile Image URL": "https://i.imgur.com/nm0OfnR.jpg",
+    "Farcaster": "https://farcaster.xyz/ottox",
+    "LinkedIn": "https://www.linkedin.com/in/otto-blockchain",
+    "GitHub": "https://github.com/ottodevs",
+    "wallet_address": "0xb343880dc01517dcfcbb528864d567e3389753e1"
+  },
+  {
+    "Name": "thescoho",
+    "Description": "I like building cool stuff! 🏗️",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/aee44326-2c54-4478-9137-258fa970fd00/original",
+    "Farcaster": "https://farcaster.xyz/jake",
+    "LinkedIn": "https://www.linkedin.com/in/sailesh-s-453061141",
+    "GitHub": "https://github.com/ss251",
+    "wallet_address": "0x09928cebb4c977c5e5db237a2a2ce5cd10497cb8"
+  },
+  {
+    "Name": "leal.eth 🫡",
+    "Description": "Engineer/Cofounder of @talent",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2ea7d438-7e41-4057-1ea0-9346b5a29f00/original",
+    "Farcaster": "https://farcaster.xyz/leal.eth",
+    "LinkedIn": "https://www.linkedin.com/in/lealfrancisco",
+    "GitHub": "https://github.com/0xleal",
+    "wallet_address": "0x33041027dd8f4dc82b6e825fb37adf8f15d44053"
+  },
+  {
+    "Name": "geeloko",
+    "Description": "doing things @3wbclub",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0dbec033-69ba-4f88-0de5-55bdde402a00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/geeloko",
+    "LinkedIn": "https://www.linkedin.com/in/samuelamoako",
+    "GitHub": "https://github.com/Tickether",
+    "wallet_address": "0x99342d3ce2d10c34b7d20d960ea75bd742aec468"
+  },
+  {
+    "Name": "nikolaii.eth 🚀",
+    "Description": "I cook miniApps. Open for opportunities.",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/eae2e0d7-f252-48c1-9685-aa17d2fee000/original",
+    "Farcaster": "https://farcaster.xyz/nikolaii.eth",
+    "LinkedIn": "https://www.linkedin.com/in/lebedovsky",
+    "GitHub": "https://github.com/NikolaiL",
+    "wallet_address": "0x4b7b07d8baf51975eeab0e1eb4b481a5ac691ed6"
+  },
+  {
+    "Name": "daksh",
+    "Description": "for the vibes",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/dd7160eb-b5b7-4be4-51b1-f194f0d88500/original",
+    "Farcaster": "https://farcaster.xyz/dakshk.eth",
+    "LinkedIn": "https://www.linkedin.com/in/dakshk",
+    "GitHub": "https://github.com/dawksh",
+    "wallet_address": "0x84c178827be01f0c7ea040a319cb11c6f8408b45"
+  },
+  {
+    "Name": "0xmht.eth",
+    "Description": "Web3 Developer 👨‍💻 | Building products with my team at AlphaDevs Labs | Book a call to discuss your idea : alphadevs.dev",
+    "Profile Image URL": "https://i.imgur.com/49wVi2U.jpg",
+    "Farcaster": "https://farcaster.xyz/0xmht.eth",
+    "LinkedIn": "https://www.linkedin.com/in/0xmht",
+    "GitHub": "https://github.com/mr-harshtyagi",
+    "wallet_address": "0x0ae710219b203965b219c16f6b56a0573bf3126c"
+  },
+  {
+    "Name": "Wesley— oss/acc",
+    "Description": "Events @Ethereum 🦄 Indie Hacker 🛠️",
+    "Profile Image URL": "https://i.imgur.com/CPypC2f.jpg",
+    "Farcaster": "https://farcaster.xyz/wslyvh.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/wslyvh",
+    "wallet_address": "0x8289432acd5eb0214b1c2526a5edb480aa06a9ab"
+  },
+  {
+    "Name": "Hoot",
+    "Description": "fullstack degen",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3b534cba-af6a-425f-145a-54653d0ac500/original",
+    "Farcaster": "https://farcaster.xyz/owl",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/maggo",
+    "wallet_address": "0xfd37f4625ca5816157d55a5b3f7dd8dd5f8a0c2f"
+  },
+  {
+    "Name": "Myk.eth",
+    "Description": "doing the right thing. working hard. being optimistic. putting the team over the individual. pushing boundaries with creativity.",
+    "Profile Image URL": "https://res.cloudinary.com/base-app/image/upload/f_auto/v1757722464/image_uploads/b3f3c1db-262c-407c-8100-4f4fb0798440.jpg",
+    "Farcaster": "https://farcaster.xyz/myk",
+    "LinkedIn": "https://www.linkedin.com/in/michaelgarysolomon",
+    "GitHub": "https://github.com/mykcryptodev",
+    "wallet_address": "0x653ff253b0c7c1cc52f484e891b71f9f1f010bfb"
+  },
+  {
+    "Name": "join.base.eth 🐲",
+    "Description": "/laf-is lead, /ahand thumb, /thaink tank, /onchain enjoyooor, huge music omnilover, obscurities booker, amateur trumpeter",
+    "Profile Image URL": "https://i.imgur.com/8gJYWdO.jpg",
+    "Farcaster": "https://farcaster.xyz/guy-do-or-die",
+    "LinkedIn": "https://www.linkedin.com/in/guy-do-or-die",
+    "GitHub": "https://github.com/guy-do-or-die",
+    "wallet_address": "0x830bc5551e429ddbc4e9ac78436f8bf13eca8434"
+  },
+  {
+    "Name": "Greg",
+    "Description": "I like baking /goodbread and building apps on web3 protocols. DevRel @ ENS Labs",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ad699dcf-70df-4653-a85f-dee16d5e2700/original",
+    "Farcaster": "https://farcaster.xyz/greg",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/gskril",
+    "wallet_address": "0x179a862703a4adfb29896552df9e307980d19285"
+  },
+  {
+    "Name": "Ali Serag",
+    "Description": "Tech Entreprenuer",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d3d25f5a-6144-4677-2329-1d17f827f800/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/serag",
+    "LinkedIn": "https://www.linkedin.com/in/ali-serag-0135a47a",
+    "GitHub": "https://github.com/Aliserag",
+    "wallet_address": "0xd10af01d4f617974726eeec717fbc642df69cb58"
+  },
+  {
+    "Name": "Zenigame",
+    "Description": "Wanna be the very best. ゼニゼニ",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/46c48fa8-50e2-47a6-b46c-efdaed372500/original",
+    "Farcaster": "https://farcaster.xyz/zeni.eth",
+    "LinkedIn": "https://www.linkedin.com/in/leejknowlton",
+    "GitHub": "https://github.com/leeknowlton",
+    "wallet_address": "0x764e427020ad72624075c61260192c6e486d15a5"
+  },
+  {
+    "Name": "Song",
+    "Description": "Full Stack Developer",
+    "Profile Image URL": "https://prod-metadata.s3.amazonaws.com/images/791.png",
+    "Farcaster": "https://farcaster.xyz/ysongh",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/ysongh",
+    "wallet_address": "0x5c53fdd9b9877d1037b655a09e6a240b9205ea6e"
+  },
+  {
+    "Name": "GMonchain",
+    "Description": "Human Checkmark",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/360c6d70-0000-4888-017c-28bc2b7e0900/original",
+    "Farcaster": "https://farcaster.xyz/gmonchain.eth",
+    "LinkedIn": "https://www.linkedin.com/in/jonny-viet-b63624281",
+    "GitHub": "https://github.com/gmonchain",
+    "wallet_address": "0x87f3d2364a03d71a035e73fc3ad70ead9a0affb5"
+  },
+  {
+    "Name": "Darryl Yeo 🛠️",
+    "Description": "/frontend dev (HTML/CSS)・founder/decentralized data wrangler /blockhead・contributor /walletbeat, ••••・hackathon bounty hunter・music maker・dropout・25",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9c8cbb31-2884-4716-2405-55ab785caf00/original",
+    "Farcaster": "https://farcaster.xyz/darrylyeo",
+    "LinkedIn": "https://www.linkedin.com/in/darrylyeo",
+    "GitHub": "https://github.com/darrylyeo",
+    "wallet_address": "0xda22919e01e249ba4c96dba46bee29e4981835fc"
+  },
+  {
+    "Name": "Vraj Desai 🎩",
+    "Description": "Buildoor | @base Global Builder",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/85687246-d19f-4cc1-3987-f4e5a9ad4b00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/vrajdesai.eth",
+    "LinkedIn": "https://www.linkedin.com/in/vrajdesai78",
+    "GitHub": "https://github.com/vrajdesai78",
+    "wallet_address": "0x3039e4a4a540f35ae03a09f3d5a122c49566f919"
+  },
+  {
+    "Name": "Kenil",
+    "Description": "Developer Relations @sei-protocol",
+    "Profile Image URL": "https://i.imgur.com/8t8pP3I.jpg",
+    "Farcaster": "https://farcaster.xyz/kenilshahh",
+    "LinkedIn": "https://www.linkedin.com/in/kenil-shah-619587215",
+    "GitHub": "https://github.com/KENILSHAHH",
+    "wallet_address": "0x4cbee7ad42d33e9d3b41e8b6faca2f6f173c8a94"
+  },
+  {
+    "Name": "Mohit bhat",
+    "Description": "Blockchain Engineer| GSoC Project Admin & Mentor | 50+ Hackathons winner | ❤️Open Source | Web3 speaker and educator | 3x @ethglobal Finalist🏆",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/99e0be3a-7a5b-4f60-e613-931131a8d600/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/bchief",
+    "LinkedIn": "https://www.linkedin.com/in/mbcse",
+    "GitHub": "https://github.com/mbcse",
+    "wallet_address": "0xAa81f641d4b3546F05260F49DEc69Eb0314c47De"
+  },
+  {
+    "Name": "megabyte",
+    "Description": "valar morghulis || dev",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/312c2e74-aae5-487b-509b-50f45580eb00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/megabyte",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/megabyte0x",
+    "wallet_address": "0x2acdf6a2f893687ccd341a1ad7e27102b665d8c4"
+  },
+  {
+    "Name": "Dayitva Goel",
+    "Description": "I build sometimes",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9a61d9cd-ed7f-41c3-13e2-21f475c83300/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/dayitvagoel",
+    "LinkedIn": "https://www.linkedin.com/in/dayitvagoel",
+    "GitHub": "https://github.com/Dayitva",
+    "wallet_address": "0x631088af5a770bee50ffa7dd5dc18994616dc1ff"
+  },
+  {
+    "Name": "Rohit",
+    "Description": "Head of DevRel @reown. I love photography, literature and motorcycles. I also love to travel | bento.me/rohitramesh",
+    "Profile Image URL": "https://i.imgur.com/0WFyG4X.jpg",
+    "Farcaster": "https://farcaster.xyz/rohit7101",
+    "LinkedIn": "https://www.linkedin.com/in/rohit-ramesh-5724041a9",
+    "GitHub": "https://github.com/rohit-710",
+    "wallet_address": "0xcbe80a330f5221ac28392933bdee65f1f2dab834"
+  },
+  {
+    "Name": "iain",
+    "Description": "Protocol @ ZORA - Hardware Tinkerer",
+    "Profile Image URL": "https://i.imgur.com/9w2mQ1j.jpg",
+    "Farcaster": "https://farcaster.xyz/iain",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/iainnash",
+    "wallet_address": "0x18c8df1fb7fb44549f90d1c2bb1dc8b690cd0559"
+  },
+  {
+    "Name": "Steve",
+    "Description": "DX Engineer | DevRel at OpenZeppelin | Building orbiter.host & bhvr.dev | opinions are my own",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/96fc945a-3e70-424f-fb85-1e1c8277e200/original",
+    "Farcaster": "https://farcaster.xyz/stevedylandev",
+    "LinkedIn": "https://www.linkedin.com/in/steve-simkins",
+    "GitHub": "https://github.com/stevedylandev",
+    "wallet_address": "0x464d18c13b4420e07ee85d5e6fddfc3078ee9e23"
+  },
+  {
+    "Name": "Oliseh Genesis",
+    "Description": "Solving real problems and bringing good vibes. Need help? Tap me. Don’t need help? Still tap me — let’s build something cool.",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/f817ece5-af48-4a41-9d5c-0ff8328b7100/original",
+    "Farcaster": "https://farcaster.xyz/oliseh",
+    "LinkedIn": "https://www.linkedin.com/in/olisehgenesis",
+    "GitHub": "https://github.com/Olisehgenesis",
+    "wallet_address": "0xB8f936be2B12406391B4232647593Cdb62dF2203"
+  },
+  {
+    "Name": "Arsenii Pechenkin",
+    "Description": "Ecosystem growth at Dfinity/ICP",
+    "Profile Image URL": "https://i.imgur.com/ez16aBQ.jpg",
+    "Farcaster": "https://farcaster.xyz/pe",
+    "LinkedIn": "https://www.linkedin.com/in/arsenii-pechenkin",
+    "GitHub": "https://github.com/Pe4enable",
+    "wallet_address": "0x9b559d0808690df5541cf30afd357c0c5c420a92"
+  },
+  {
+    "Name": "Nithin",
+    "Description": "Web Dev",
+    "Profile Image URL": "https://i.imgur.com/lXZh9fc.jpg",
+    "Farcaster": "https://farcaster.xyz/nith567",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/Nith567",
+    "wallet_address": "0x8879318091671ba1274e751f8cDEF76bb37eb3eD"
+  },
+  {
+    "Name": "Stephan",
+    "Description": "cypherpunk wannabe | @base",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/64c851c0-2036-4629-ead7-ae60bfc62500/original",
+    "Farcaster": "https://farcaster.xyz/stephancill",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/stephancill",
+    "wallet_address": "0x8d25687829d6b85d9e0020b8c89e3ca24de20a89"
+  },
+  {
+    "Name": "Pepe",
+    "Description": "TRIKITA",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/4d29906f-99ee-479a-349d-b20361e9ee00/original",
+    "Farcaster": "https://farcaster.xyz/cypherfrog.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/cypherpepe",
+    "wallet_address": "0xfc2d9450ee35fc00ccc290e785d9e24bbacf7d86"
+  },
+  {
+    "Name": "Akhil Nanavati",
+    "Description": "Full Stack and Blockchain Developer",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e6988348-2dfd-45d8-9dbe-90eda7ea2c00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/akhilnanavati",
+    "LinkedIn": "https://www.linkedin.com/in/akhil-nanavati-386867190",
+    "GitHub": "https://github.com/Akhil-2310",
+    "wallet_address": "0x6cc717de21a631e02a425d7fe6138706bc784197"
+  },
+  {
+    "Name": "Harpalsinh Jadeja",
+    "Description": "therealharpaljadeja on GitHub /monad",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c709f879-d466-46a5-d3f9-47c79a289900/original",
+    "Farcaster": "https://farcaster.xyz/harpaljadeja",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/therealharpaljadeja",
+    "wallet_address": "0x22b2DD2CFEF2018D15543c484aceF6D9B5435863"
+  },
+  {
+    "Name": "Emiridbest",
+    "Description": "Building AI Agents | I follow back!",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/ef9e5730-5271-4865-6833-0e5eeb2c0b00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/emiridbest",
+    "LinkedIn": "https://www.linkedin.com/in/emiridbest",
+    "GitHub": "https://github.com/emiridbest",
+    "wallet_address": "0xb82896c4f251ed65186b416dbdb6f6192dfaf926"
+  },
+  {
+    "Name": "Daniel Cukier",
+    "Description": "Father, @Web3Dev_ builder, Blockchain Crypto Enthusiast. PhD in Computer Science. NFT collector. MTB Biker. Google Developer Expert (GDE) KB5",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/54caa423-d936-4278-da54-f6b6a39fba00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/danicuki",
+    "LinkedIn": "https://www.linkedin.com/in/danielcukier",
+    "GitHub": "https://github.com/danicuki",
+    "wallet_address": "0xf1ca86104f86c3305fab1c6cd5ab8bebee7ce585"
+  },
+  {
+    "Name": "mel 🐶🍄",
+    "Description": "just a human who sometimes codes · core: regen token + frutero club + ladao · devrel: dabl club",
+    "Profile Image URL": "https://i.imgur.com/6blcwSN.jpg",
+    "Farcaster": "https://farcaster.xyz/troopdegen.eth",
+    "LinkedIn": "https://www.linkedin.com/in/0xmel",
+    "GitHub": "https://github.com/troopdegen",
+    "wallet_address": "0x188eb6a325ea019c0c192542c77e0e19c4825f17"
+  },
+  {
+    "Name": "briandoyle81 🌊🎩",
+    "Description": "Developer of Echo Protocol / DevRel @ Flow Foundation - (flow.com)",
+    "Profile Image URL": "https://i.imgur.com/Pfx9vDL.jpg",
+    "Farcaster": "https://farcaster.xyz/briandoyle81",
+    "LinkedIn": "https://www.linkedin.com/in/doylebrianj",
+    "GitHub": "https://github.com/briandoyle81",
+    "wallet_address": "0xac5b774d7a700acdb528048b6052bc1549cd73b9"
+  },
+  {
+    "Name": "heavy.base",
+    "Description": "cto @ anotherblock - builder and music owner, always growing by continuously doing things I find fun.",
+    "Profile Image URL": "https://i.imgur.com/8DIvu3b.jpg",
+    "Farcaster": "https://farcaster.xyz/heavydev",
+    "LinkedIn": "https://www.linkedin.com/in/jonathan-gustafsson",
+    "GitHub": "https://github.com/jonathangus",
+    "wallet_address": "0xba78cd28f7132958235d278ff3c5dc5e6d34cc15"
+  },
+  {
+    "Name": "Bianc8.eth",
+    "Description": "🇮🇹 Web3 fullstack developer at @builders-garden",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/cc9fdda1-30fb-44cd-76f3-08270161c500/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/bianc8",
+    "LinkedIn": "https://www.linkedin.com/in/ebiancotto",
+    "GitHub": "https://github.com/bianc8",
+    "wallet_address": "0xf66c00759467c6524b0c86af132bb52786b37382"
+  },
+  {
+    "Name": "jaibo.base.eth",
+    "Description": "Thinking... Always thinking 🤔",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/76080c52-028a-4b4c-66f3-fe48d101c400/original",
+    "Farcaster": "https://farcaster.xyz/jaibo",
+    "LinkedIn": "https://www.linkedin.com/in/ivan-flores-hurtado-09243b44",
+    "GitHub": "https://github.com/iafhurtado",
+    "wallet_address": "0xc863dfee737c803c93af4b6b27029294f6a56eb5"
+  },
+  {
+    "Name": "albert",
+    "Description": "founding eng @deform, prev: @alchemyplatform",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7a4437ba-e141-4b1f-840d-53758f27f700/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/thatguyintech",
+    "LinkedIn": "https://www.linkedin.com/in/albhu",
+    "GitHub": "https://github.com/thatguyintech",
+    "wallet_address": "0xf5fff32cf83a1a614e15f25ce55b0c0a6b5f8f2c"
+  },
+  {
+    "Name": "Nastya",
+    "Description": "Building AI x SocialFi app @reachbot /getreach | Open-source human-readable EVM data https://github.com/3loop/loop-decoder",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/3f3a7e0e-72a9-464f-8dd3-f8acb087ed00/original",
+    "Farcaster": "https://farcaster.xyz/nastya",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/anastasiarods",
+    "wallet_address": "0x6C994eEF6fdbeE8BCFF9016B7CE3A53b489Ad155"
+  },
+  {
+    "Name": "zak3939 ↑",
+    "Description": "CTO of PHI https://philand.xyz/",
+    "Profile Image URL": "https://i.imgur.com/AAAQU6K.jpg",
+    "Farcaster": "https://farcaster.xyz/zak3939",
+    "LinkedIn": "https://www.linkedin.com/in/nobuaki-onishi-7282b1116",
+    "GitHub": "https://github.com/ZaK3939",
+    "wallet_address": "0x5037e7747faa78fc0ecf8dfc526dcd19f73076ce"
+  },
+  {
+    "Name": "Solene",
+    "Description": "prev Ledger & H.E.R. DAO Global Lead",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/db00d0ba-d9ee-415f-25db-f4cb65900500/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/sdav",
+    "LinkedIn": "https://www.linkedin.com/in/solene-daviaud",
+    "GitHub": "https://github.com/sdaav",
+    "wallet_address": "0xd1800c1df4e798954b992a1b8c8fb7c02c3957d6"
+  },
+  {
+    "Name": "Yash Goyal",
+    "Description": "Backend & Blockchain Developer",
+    "Profile Image URL": "https://i.imgur.com/77fnwC5.jpg",
+    "Farcaster": "https://farcaster.xyz/yashgoyal",
+    "LinkedIn": "https://www.linkedin.com/in/yash-goyal-0018",
+    "GitHub": "https://github.com/yashgo0018",
+    "wallet_address": "0xe29e09ffa0696758555f59a53ba602e00880504a"
+  },
+  {
+    "Name": "astro",
+    "Description": "I break and build things",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d4bd9998-f979-4aea-73b7-2b287aab5900/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/mrsr",
+    "LinkedIn": "https://www.linkedin.com/in/mayurrrr",
+    "GitHub": "https://github.com/mayur-samrutwar",
+    "wallet_address": "0xfd2A47A6C6eEFfb2Acce043c3Ac06D3f53C4e22B"
+  },
+  {
+    "Name": "Mukul Kolpe",
+    "Description": "Open-Source Contributor | 22 x Hackathon Winner🏆",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/78664749?v=4",
+    "Farcaster": "N/A",
+    "LinkedIn": "https://www.linkedin.com/in/mukulkolpe",
+    "GitHub": "https://github.com/MukulKolpe",
+    "wallet_address": "0xfc001b20db6195b148cfc4f7685091931d93cd93"
+  },
+  {
+    "Name": "Luiz Vasconcelos",
+    "Description": "Open Source Developer @ OpenZeppelin",
+    "Profile Image URL": "https://i.imgur.com/SKrQqQu.jpg",
+    "Farcaster": "https://farcaster.xyz/luiz-lvj",
+    "LinkedIn": "https://www.linkedin.com/in/luiz-vasconcelos-j%C3%BAnior-155ba01a4",
+    "GitHub": "https://github.com/luiz-lvj",
+    "wallet_address": "0xab53369e91dcfc275744dc0a30bd3e363b2785e0"
+  },
+  {
+    "Name": "Reza Rahemtola",
+    "Description": "Freelance Full Stack Developer",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/de616aa3-c2f0-4778-1cad-75d68954ea00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/rezarah",
+    "LinkedIn": "https://www.linkedin.com/in/reza-rahemtola",
+    "GitHub": "https://github.com/RezaRahemtola",
+    "wallet_address": "0x5ec5b1906154dd7517e39628ef17358204d3f69b"
+  },
+  {
+    "Name": "Cleaner",
+    "Description": "bio",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/be3455cd-029b-4f86-3ca5-26d524e58100/original",
+    "Farcaster": "https://farcaster.xyz/cleaner",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/cleanerzkp",
+    "wallet_address": "0xf2422406aDe75654B5116B76E996dc97ed78FB6D"
+  },
+  {
+    "Name": "Sinaver Idrisov",
+    "Description": "• building @bankr • founder @payflow • made in /crimea 🇺🇦",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fbf709e8-83ae-485d-1d69-02f33143b200/original",
+    "Farcaster": "https://farcaster.xyz/sinaver.eth",
+    "LinkedIn": "https://www.linkedin.com/in/sidrisov",
+    "GitHub": "https://github.com/sidrisov",
+    "wallet_address": "0x0dee77c83cb8b14fa95497825df93202abf6ad83"
+  },
+  {
+    "Name": "David Hurley",
+    "Description": "always be building",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2c84463b-21f9-46c6-e336-65d2deb9b200/original",
+    "Farcaster": "https://farcaster.xyz/hurls",
+    "LinkedIn": "https://www.linkedin.com/in/davidhurley1",
+    "GitHub": "https://github.com/hurley87",
+    "wallet_address": "0xbD78783a26252bAf756e22f0DE764dfDcDa7733c"
+  },
+  {
+    "Name": "sweetman",
+    "Description": "✧the dev for onchain music ✧✧✧✧✧✧✧",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/af9054f0-3ce6-48b3-25c5-d5553ae09600/original",
+    "Farcaster": "https://farcaster.xyz/sweetman",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/sweetmantech",
+    "wallet_address": "0xb5acDED340D66678f01097818940A0F028DAFB8d"
+  },
+  {
+    "Name": "Temitope O. Hassan",
+    "Description": "Christian | Graph Advocate | Buidl Guidl Buidler | Subgraph Developer | Smart Contract Security Auditor | Base Builder",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/48fe831c-752b-43fa-1365-e2473be43600/original",
+    "Farcaster": "https://farcaster.xyz/temitopeohassan.eth",
+    "LinkedIn": "https://www.linkedin.com/in/temitopeohassan",
+    "GitHub": "https://github.com/temitopeohassan",
+    "wallet_address": "0xaf108dd1ac530f1c4bded13f43e336a9cec92b44"
+  },
+  {
+    "Name": "ggoma",
+    "Description": "full sack developer intern at /farcards /mintclub @warpcastbot 🔫 my code breaks things :(",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/67d77bcc-a871-4b7e-1a8e-3d11a68d8400/original",
+    "Farcaster": "https://farcaster.xyz/undefined",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/ggomaeng",
+    "wallet_address": "0x1B18D8126DDE618E994A9B4ab115B944EFC748a2"
+  },
+  {
+    "Name": "willywonka ⌐◨-◨",
+    "Description": "Buidl the change you wish to see in the world. Customize your space on /nounspace, download @shapeshift, donate on @giveth, pick up @trashnfts #bestdayever",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c2324ecf-c09f-40f5-936c-80fbbd0cb500/original",
+    "Farcaster": "https://farcaster.xyz/willywonka.eth",
+    "LinkedIn": "https://www.linkedin.com/in/willyog",
+    "GitHub": "https://github.com/willyogo",
+    "wallet_address": "0x05a1ff0a32bc24265bcb39499d0c5d9a6cb2011c"
+  },
+  {
+    "Name": "Didier Krux 👾",
+    "Description": "Fullstack Web3 Dev @devcon @ethereumfndn | Building @banklessacademy 👨🏻‍🚀🎓 newtoweb3.io 🐇 | Mission: Create innovative web3 onboarding tools 🚀",
+    "Profile Image URL": "https://i.imgur.com/pswXUIw.jpg",
+    "Farcaster": "https://farcaster.xyz/didierkrux.eth",
+    "LinkedIn": "https://www.linkedin.com/in/didierkrux",
+    "GitHub": "https://github.com/didierkrux",
+    "wallet_address": "0xbd19a3f0a9cace18513a1e2863d648d13975cb30"
+  },
+  {
+    "Name": "halaprix",
+    "Description": "building https://summer.fi ex @aptiv ex Community champion @metaplex",
+    "Profile Image URL": "https://i.imgur.com/gZAFkTQ.jpg",
+    "Farcaster": "https://farcaster.xyz/halaprix",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/halaprix",
+    "wallet_address": "0x4eb7f19d6efcace59eaed70220da5002709f9b71"
+  },
+  {
+    "Name": "MetaEnd.degen🎩🚨",
+    "Description": "https://meta.orbiter.website",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/becc8773-33a6-40ab-0f73-23bd253e9700/original",
+    "Farcaster": "https://farcaster.xyz/metaend.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/ngmisl",
+    "wallet_address": "0xac1c4bed1c7c71fd3afde11e2bd4f18d969c843d"
+  },
+  {
+    "Name": "Micro",
+    "Description": "cto bitte.ai",
+    "Profile Image URL": "https://i.imgur.com/hvaOPrU.jpg",
+    "Farcaster": "https://farcaster.xyz/microchipgnu",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/microchipgnu",
+    "wallet_address": "0xbb70839d17f4efcb970b7eac626b4eb56e9d6510"
+  },
+  {
+    "Name": "Bleyle",
+    "Description": "Sports/Gaming/Web3",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9a31b4b1-7a0c-4caf-13f1-2b7f01673600/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/bleyle",
+    "LinkedIn": "https://www.linkedin.com/in/bleyle-osewe-b899a4231",
+    "GitHub": "https://github.com/Bleyle823",
+    "wallet_address": "0x231CdF6d31BF1D106DFA88b702B00E4b900628AD"
+  },
+  {
+    "Name": "parseb",
+    "Description": "internet native governance",
+    "Profile Image URL": "https://i.imgur.com/wKjI3TP.jpg",
+    "Farcaster": "https://farcaster.xyz/parseb.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/parseb",
+    "wallet_address": "0x1accd0f282e2be148a06c92921145bc32682f6a3"
+  },
+  {
+    "Name": "Another",
+    "Description": "Fullstack enginner and astrophysics student",
+    "Profile Image URL": "https://i.imgur.com/9wvljRF.jpg",
+    "Farcaster": "https://farcaster.xyz/anotherdev",
+    "LinkedIn": "https://www.linkedin.com/in/jose-manco-dev",
+    "GitHub": "https://github.com/Another-DevX",
+    "wallet_address": "0x5e15dbf75d3819dd9da31fc159ce5bc5f3751ab0"
+  },
+  {
+    "Name": "Shrutz",
+    "Description": "full stack web engineer + designer // 🛠️ react, next, python & on-chain // degening at /fbi",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/5c4e6f87-0ba7-4560-19c6-909ad07eab00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/shrutz",
+    "LinkedIn": "https://www.linkedin.com/in/shrutipanjwani",
+    "GitHub": "https://github.com/shrutipanjwani",
+    "wallet_address": "0xd05eca82d8573b885e4bcc4fcf677e02324e6835"
+  },
+  {
+    "Name": "Kirill",
+    "Description": "CTO/Co-founder, Collectif DAO, liquid staking protocol on Filecoin",
+    "Profile Image URL": "https://i.imgur.com/oDgcYVR.jpg",
+    "Farcaster": "https://farcaster.xyz/kmadorin",
+    "LinkedIn": "https://www.linkedin.com/in/kirill-madorin",
+    "GitHub": "https://github.com/kmadorin",
+    "wallet_address": "0x9e0f0d83dd880240e3506a7ac4ce82500b2bd92b"
+  },
+  {
+    "Name": "hellno the optimist",
+    "Description": "dev + founder | @vibesengineering.eth @herocast",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/415baeae-ab4c-4d2f-bccd-3f319e89ec00/original",
+    "Farcaster": "https://farcaster.xyz/hellno.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/hellno",
+    "wallet_address": "0x6d9ffaede2c6cd9bb48bece230ad589e0e0d981c"
+  },
+  {
+    "Name": "GT",
+    "Description": "Coding newbie building FC Customised Feed - https://www.peekfeed.cat Hootsuite for FC - https://www.drafts.cat/",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/8728f050-535a-4e26-0459-8c3252dcd400/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/gayatri",
+    "LinkedIn": "https://www.linkedin.com/in/gayatri-taley",
+    "GitHub": "https://github.com/gayatrigt",
+    "wallet_address": "0x2cd1353cf0e402770643b54011a63b546a189c44"
+  },
+  {
+    "Name": "Zk",
+    "Description": "ZK learning ZK",
+    "Profile Image URL": "https://i.imgur.com/4Lk37pj.jpg",
+    "Farcaster": "https://farcaster.xyz/risotto",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/zklim",
+    "wallet_address": "0xf9721228081edfcaeb68ca1f6c9e945f925e0c87"
+  },
+  {
+    "Name": "☐𝕫𝕜",
+    "Description": "V҉enture Ƀuidler / Regenpreneur",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/5f5f9b7e-09ea-445e-d4a2-47d1f1f40500/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/ozkite.eth",
+    "LinkedIn": "https://www.linkedin.com/in/olahventures",
+    "GitHub": "https://github.com/ozkite",
+    "wallet_address": "0x8922c8ac42ae84ced3a4e8d54ce7fcb3d52ebcb2"
+  },
+  {
+    "Name": "df",
+    "Description": "Building ethcomments.xyz",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/e738382d-7e8c-41f1-9d6d-dedf55df2f00/original",
+    "Farcaster": "https://farcaster.xyz/df",
+    "LinkedIn": "https://www.linkedin.com/in/dvfurlong",
+    "GitHub": "https://github.com/davidfurlong",
+    "wallet_address": "0xdaa83039aca9a33b2e54bb2acc9f9c3a99357618"
+  },
+  {
+    "Name": "karolhuertas.eth",
+    "Description": "I love developing software and want to continue increasing my skills as a developer using and learning more about web3 protocols and blockchains.",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/94dad00d-1f59-46be-bd8b-16776021a900/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/dolvin",
+    "LinkedIn": "https://www.linkedin.com/in/dolvin17",
+    "GitHub": "https://github.com/dolvin17",
+    "wallet_address": "0x8a37e9a0b7d03e658f8df76c809af227368ffad4"
+  },
+  {
+    "Name": "Filipe Macedo",
+    "Description": "building @talent to help builders stand out",
+    "Profile Image URL": "https://i.imgur.com/YgNTMUI.jpg",
+    "Farcaster": "https://farcaster.xyz/macedo",
+    "LinkedIn": "https://www.linkedin.com/in/filmacedo",
+    "GitHub": "https://github.com/filmacedo",
+    "wallet_address": "0x58a35cf59d5c630c057af008a78bc67cdc2ec094"
+  },
+  {
+    "Name": "Ruben Dinis 🫡",
+    "Description": "Software Engineer building Talent Protocol",
+    "Profile Image URL": "https://i.imgur.com/OCqCnqh.jpg",
+    "Farcaster": "https://farcaster.xyz/rubendinis",
+    "LinkedIn": "https://www.linkedin.com/in/ruben-sousa-dinis",
+    "GitHub": "https://github.com/RubenSousaDinis",
+    "wallet_address": "0xc8b74c37bd25e6ca8cb6ddf2e01058c45d341182"
+  },
+  {
+    "Name": "nezzar.eth",
+    "Description": "Lost in space @ /astroblock FID 1733",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/d78453a5-3fa5-486b-5dcb-a80c4dc29a00/original",
+    "Farcaster": "https://farcaster.xyz/nezzar",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/nezz0746",
+    "wallet_address": "0x26bbec292e5080ecfd36f38ff1619ff35826b113"
+  },
+  {
+    "Name": "Boidushya",
+    "Description": "devrel @walletconnect • acceleration maximalist",
+    "Profile Image URL": "https://i.seadn.io/gae/VwAq_8Clvtyq1itGo3RkBVnf56JiVtzwhl8yz4mLmqCXqlmDtWTCvY6ubWJWfv4DlKFILxdoH8x-OKj0wKAPCprm0CfpthgQ4mpS?w=500&auto=format",
+    "Farcaster": "https://farcaster.xyz/boi",
+    "LinkedIn": "https://www.linkedin.com/in/boidushya",
+    "GitHub": "https://github.com/boidushya",
+    "wallet_address": "0x4a8f300114f6a3ced6847f8cb18264c2d9b82d59"
+  },
+  {
+    "Name": "Jack Dishman",
+    "Description": "coding @clanker",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/87fbe83b-1455-4f62-f389-ae82d7452900/original",
+    "Farcaster": "https://farcaster.xyz/dish",
+    "LinkedIn": "https://www.linkedin.com/in/jackdishman",
+    "GitHub": "https://github.com/jackdishman",
+    "wallet_address": "0x308112d06027cd838627b94ddfc16ea6b4d90004"
+  },
+  {
+    "Name": "OptimusPrime",
+    "Description": "Full Stack Web3 Developer",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/fa59938b-9e8b-4217-80f6-399754f11400/original",
+    "Farcaster": "https://farcaster.xyz/dineshaitham",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/dinesh11515",
+    "wallet_address": "0xd988fecd58efd97b9e7d23d15b77f084631e3d47"
+  },
+  {
+    "Name": "Koshik Raj",
+    "Description": "☕️ Brewing @brewit 🔑 PGP: C4B9 729D B4AB 75BD",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/bc50bf57-8622-41a2-7ef9-e729988d0f00/original",
+    "Farcaster": "https://farcaster.xyz/koshik",
+    "LinkedIn": "https://www.linkedin.com/in/koshikraj",
+    "GitHub": "https://github.com/koshikraj",
+    "wallet_address": "0x958543756a4c7ac6fb361f0efbfecd98e4d297db"
+  },
+  {
+    "Name": "Daniel - Bountycaster",
+    "Description": "Engineer @farcaster, co-founder @bountycaster. Sharing what I learn about AI + development. Previously: Phantom, 0x. NYC 🗽",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/7f3409a0-80ae-4aa6-2a1b-a536b34aeb00/original",
+    "Farcaster": "https://farcaster.xyz/pirosb3",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/PirosB3",
+    "wallet_address": "0x729170d38dd5449604f35f349fdfcc9ad08257cd"
+  },
+  {
+    "Name": "brolag",
+    "Description": "Web3 Developer",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/1393385?v=4",
+    "Farcaster": "N/A",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/brolag",
+    "wallet_address": "0x3e259685a7b778de2a8dbdf836659c4011ccab9e"
+  },
+  {
+    "Name": "Alexandre Carvalheira",
+    "Description": "Ex-Founder at OmniKingdoms",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/65663665?v=4",
+    "Farcaster": "N/A",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/alexandrecarvalheira",
+    "wallet_address": "0x434d36f32abed3f7937fe0be88dc1b0eb9381244"
+  },
+  {
+    "Name": "ErikValle.eth",
+    "Description": "ETH Cinco de Mayo Roll a Mate 🧉 Avalanche Ambassador https://swaylings.dev road to web3 developer #Hagamosloconmiedo",
+    "Profile Image URL": "https://i.imgur.com/VBLBXIN.jpg",
+    "Farcaster": "https://farcaster.xyz/erikvalle.eth",
+    "LinkedIn": "https://www.linkedin.com/in/erikvalle",
+    "GitHub": "https://github.com/moclas17",
+    "wallet_address": "0x0e88ac34917a6bf5e36bfdc2c6c658e58078a1e6"
+  },
+  {
+    "Name": "brijeshagal",
+    "Description": "Fullstack Blockchain Developer",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/87767138?v=4",
+    "Farcaster": "N/A",
+    "LinkedIn": "https://www.linkedin.com/in/brijesh-agal",
+    "GitHub": "https://github.com/brijeshagal",
+    "wallet_address": "0xc1fE03473776465Da67d7f357ADA5Ff3206bFBd9"
+  },
+  {
+    "Name": "Timtimtim 🎩",
+    "Description": "DevRel @storyprotocol IP is everything Alumni @learnweb3 Ex @bnbchain @flock_io Building /creader",
+    "Profile Image URL": "https://i.imgur.com/rgpFh3F.png",
+    "Farcaster": "https://farcaster.xyz/timtimtim",
+    "LinkedIn": "https://www.linkedin.com/in/timothy-creader-io",
+    "GitHub": "https://github.com/timothyshen",
+    "wallet_address": "0xd74554760adc11bb290e28ba7fc07c33923693ef"
+  },
+  {
+    "Name": "lopeselio.base.eth",
+    "Description": "Building fun on-chain games experiences powered by SVM, EVM, MoveVM https://twitter.com/IntoTheVerse_",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/720cf6ca-8488-4ced-5ed9-ce7c498ff000/original",
+    "Farcaster": "https://farcaster.xyz/lopeselio",
+    "LinkedIn": "https://www.linkedin.com/in/lopeselio",
+    "GitHub": "https://github.com/lopeselio",
+    "wallet_address": "0xfcf700ed2d78c732b725ebab8ca3ad37ee6c4f24"
+  },
+  {
+    "Name": "Apoorv Lathey",
+    "Description": "Smart contracts @ flaunch.gg Building🕵 impersonator.xyz 🟥 swiss-knife.xyz 🔍 @eiptools 🖼️ framestore.xyz 🏗️ apoorv.xyz",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/c8a1af8e-b5b0-46c3-9e19-141517f0a500/original",
+    "Farcaster": "https://farcaster.xyz/apoorvlathey",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/apoorvlathey",
+    "wallet_address": "0x63a556c75443b176b5a4078e929e38beb37a1ff2"
+  },
+  {
+    "Name": "0xShikhar",
+    "Description": "👨‍💻Buildooor & Full Stack Web3 Dev | Twitter - https://x.com/0xShikhar",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/4daa9c8f-3b46-4936-194c-48e1830bae00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/0xshikhar",
+    "LinkedIn": "https://www.linkedin.com/in/0xshikhar",
+    "GitHub": "https://github.com/0xshikhar",
+    "wallet_address": "0x30bcd2e90b3c05e54446568d823408b2ddfa7a01"
+  },
+  {
+    "Name": "Neel",
+    "Description": "Building @metengine",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/0909bc34-7521-44e3-e91a-dcf9032f4400/original",
+    "Farcaster": "https://farcaster.xyz/neelpatel",
+    "LinkedIn": "https://www.linkedin.com/in/neelds",
+    "GitHub": "https://github.com/neel-ds",
+    "wallet_address": "0xf0d2546a8402845d0cf66a7f6519aa29827dc393"
+  },
+  {
+    "Name": "Avinash",
+    "Description": "Web3 developer with Ethereum expertise exploring zk",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/36d93bb3-f4e0-4ca6-739d-5b6639304f00/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/avinashnayak",
+    "LinkedIn": "https://www.linkedin.com/in/avinash-nayak-547027224",
+    "GitHub": "https://github.com/AvinashNayak27",
+    "wallet_address": "0xf7d4041e751E0b4f6eA72Eb82F2b200D278704A4"
+  },
+  {
+    "Name": "Defidevrel.base.eth",
+    "Description": "Doing stuffs for @base | Ex: Devrel @memoiafrica",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d1b96c4-2c40-4caf-c3fa-cf7ca48a8900/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/defidevrel",
+    "LinkedIn": "https://www.linkedin.com/in/elishaokon13",
+    "GitHub": "https://github.com/Elishaokon13",
+    "wallet_address": "0xeC21b2FEc9c68Cc2041d0c2BF3Dc6B1D7CB05B4B"
+  },
+  {
+    "Name": "‍",
+    "Description": "https://github.com/o-az",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/52abfc00-1925-4593-9eb2-606d6e159200/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/git",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/o-az",
+    "wallet_address": "0x1d4e95d95dff0b7f005bca0d69e999aae2ea6528"
+  },
+  {
+    "Name": "Matthias Kretschmann",
+    "Description": "pixel and code masseur • https://krema.me • formerly built oceanprotocol.com, bigchaindb.com, ascribe.io",
+    "Profile Image URL": "https://i.imgur.com/QCCxNp4.jpg",
+    "Farcaster": "https://farcaster.xyz/krema.eth",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/kremalicious",
+    "wallet_address": "0x903322c7e45a60d7c8c3ea236c5bea9af86310c7"
+  },
+  {
+    "Name": "jcruzfff",
+    "Description": "Design Engineer | Co-Founder @ Dreamflow",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/95213271?v=4",
+    "Farcaster": "N/A",
+    "LinkedIn": "https://www.linkedin.com/in/jcruzfff",
+    "GitHub": "https://github.com/jcruzfff",
+    "wallet_address": "0x9d0cfb6f23e51748c46f252e5a2fe5e36d54a178"
+  },
+  {
+    "Name": "jibola",
+    "Description": "just enjoy tinkering with new tech",
+    "Profile Image URL": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/4acd0898-ecab-4afe-5249-928c37737200/rectcrop3",
+    "Farcaster": "https://farcaster.xyz/jibola",
+    "LinkedIn": "N/A",
+    "GitHub": "https://github.com/jbrit",
+    "wallet_address": "0xcd4bde67fe7c6eb601d03a35ea8a55eb2b136965"
+  }
+]
