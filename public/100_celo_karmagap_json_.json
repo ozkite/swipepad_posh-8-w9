@@ -1,0 +1,1964 @@
+[
+  {
+    "Name": "3 Wheeler Bike Club",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F191299608%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F191299608%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/3-wheeler-bike-club",
+    "Farcaster": "https://warpcast.com/3wbclub",
+    "GitHub": "https://github.com/3-Wheeler-Bike-Club",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x99342d3ce2d10c34b7d20d960ea75bd742aec468"
+  },
+  {
+    "Name": "Ads-Bazaar",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1926742717696008192%2F38qs0dA4_200x200.png&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1926742717696008192%2F38qs0dA4_200x200.png&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/ads-bazaar",
+    "Farcaster": "https://warpcast.com/musaga",
+    "GitHub": "https://github.com/JamesVictor-O/ads-Bazaar",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x131ec028bb8bd936a3416635777d905497f3d21f"
+  },
+  {
+    "Name": "Bank Of Celo",
+    "Profile Image URL": "http://bank-of-celo.vercel.app/icon.png",
+    "Description": "https://gap.karmahq.xyz/project/bank-of-celo",
+    "Farcaster": "https://warpcast.com/gabedev.eth",
+    "GitHub": "https://github.com/gabrieltemtsen",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc5337cee97ff5b190f26c4a12341dd210f26e17c"
+  },
+  {
+    "Name": "Buy Hypercerts on Celo",
+    "Profile Image URL": "https://celo-farcaster-frames-chi.vercel.app/hypercert-img-url.png",
+    "Description": "https://gap.karmahq.xyz/project/buy-hypercerts-on-celo",
+    "Farcaster": "https://farcaster.xyz/miniapps/Zdh0xnr4_Udh/celo-hypercerts-marketplace",
+    "GitHub": "https://github.com/AbolareRoheemah",
+    "LinkedIn": "https://www.linkedin.com/in/abolareroheemah/",
+    "wallet_address": "0x21dfd1cfd1d45801f46b0f40aed056b064045aa2"
+  },
+  {
+    "Name": "Canvassing",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1912519687012794368%2FbLIgn1y6_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1912519687012794368%2FbLIgn1y6_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/canvassing",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/andrewkimjoseph",
+    "LinkedIn": "https://www.linkedin.com/company/thecanvassing/",
+    "wallet_address": "0x5e20682be95cd9319b0557d905384bb356932116"
+  },
+  {
+    "Name": "cCOP Wrapper",
+    "Profile Image URL": "https://bafybeihaqyxy6vrelryd66eewjggu3tafuv2hfof6cmzzga2qpfmd4gmue.ipfs.w3s.link/Foto%20de%20perfil.png",
+    "Description": "https://gap.karmahq.xyz/project/ccop-wrapper",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/TuCopFinance/cCOP-Wrapper",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x22886c71a4c1fa2824bd86210ead1c310b3d7cf5"
+  },
+  {
+    "Name": "ChamaPay",
+    "Profile Image URL": "https://ik.imagekit.io/gcfah6uz27/Unknown.jpg",
+    "Description": "https://gap.karmahq.xyz/project/chamapay",
+    "Farcaster": "https://farcaster.xyz/miniapps/xXpwKJ5lxJHj/chamapay",
+    "GitHub": "https://github.com/jeffIshmael/chamapay-minipay",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x4821ced48fb4456055c86e42587f61c1f39c6315"
+  },
+  {
+    "Name": "Dezenmart",
+    "Profile Image URL": "https://drive.google.com/file/d/1VycAXB59PxEsLN9CTptaomkV_nD1MjOw/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/dezenmart",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Dezenmart-STORE",
+    "LinkedIn": "https://www.linkedin.com/company/105698759",
+    "wallet_address": "0x2298947e6c1d6c282c258b3e5f8989670a8e346f"
+  },
+  {
+    "Name": "Earnbase",
+    "Profile Image URL": "https://ik.imagekit.io/gcfah6uz27/logo.png?updatedAt=1752053854934",
+    "Description": "https://gap.karmahq.xyz/project/earnbase",
+    "Farcaster": "https://farcaster.xyz/miniapps/te_I8X6QteFo/earnbase",
+    "GitHub": "https://github.com/jeffIshmael/Earnbase",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x4821ced48fb4456055c86e42587f61c1f39c6315"
+  },
+  {
+    "Name": "EduCert - Certificate Verification",
+    "Profile Image URL": "https://drive.google.com/file/d/14KWSM_fB_kM57L29xI-YDb_HFbwztAAt/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/educert---certificate-verification",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Educertfication/Educert-v2",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x62bc8ae3c235ded14ebf9fe8f72e827204c4efe4"
+  },
+  {
+    "Name": "Esusu",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1816010675187007488%2FVLvZAIPo_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1816010675187007488%2FVLvZAIPo_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/esusu",
+    "Farcaster": "https://warpcast.com/emiridbest",
+    "GitHub": "https://github.com/emiridbest/esusu",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xb82896c4f251ed65186b416dbdb6f6192dfaf926"
+  },
+  {
+    "Name": "EventChain",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F45979359%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F45979359%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/eventchain",
+    "Farcaster": "https://warpcast.com/chigz/0xf5b88e08",
+    "GitHub": "https://github.com/Chigozie0706/eventchain",
+    "LinkedIn": "https://www.linkedin.com/in/chigozie-jacob-8a4300191/",
+    "wallet_address": "0x5e23d5be257d9140d4c5b12654111a4d4e18d9b2"
+  },
+  {
+    "Name": "Expendi",
+    "Profile Image URL": "https://drive.google.com/file/d/1DEWv7D85VTTjGta4wqeqgU5W9srEn6w0/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/expendi",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/DennohKim/Expendi",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x27e5cf811c4294211367c69a8c305bcb9a79feba"
+  },
+  {
+    "Name": "Faucet Drops",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1924876289686503425%2FfuhulSAN_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1924876289686503425%2FfuhulSAN_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/faucet-drops",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/jerydam",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xd59b83de618561c8ff4e98fc29a1b96abcbfb18a"
+  },
+  {
+    "Name": "Festify",
+    "Profile Image URL": "https://production-karma-gap-projects.s3.amazonaws.com/logos/0xec8dc4323ddf4c6a928ce6db432d9007ce242ffab8e3d8827a7cf6bd2de69cd4/1758712915589.png",
+    "Description": "https://gap.karmahq.xyz/project/festify",
+    "Farcaster": "https://warpcast.com/iabdulkarim",
+    "GitHub": "https://github.com/aliveevie/festify_celo",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x85ba183fb4c16d435b076dde459dafc8eff864d8"
+  },
+  {
+    "Name": "Flappy Rocket",
+    "Profile Image URL": "https://flappy-farcaster.vercel.app/splash.png",
+    "Description": "https://gap.karmahq.xyz/project/flappy-rocket",
+    "Farcaster": "https://farcaster.xyz/miniapps/f5XRHJ_xmU7r/flappy-rocket",
+    "GitHub": "https://github.com/fraolb",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc00da57cde8dcb4ed4a8141784b5b4a5cbf62551"
+  },
+  {
+    "Name": "Imperfect Form",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F74209106%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F74209106%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/imperfect-form",
+    "Farcaster": "https://farcaster.xyz/~/channel/imperfectform",
+    "GitHub": "https://github.com/thisyearnofear/imperfect-form",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x55a5705453ee82c742274154136fce8149597058"
+  },
+  {
+    "Name": "Learna",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/35783747?v=4&size=64",
+    "Description": "https://gap.karmahq.xyz/project/learna",
+    "Farcaster": "https://farcaster.xyz/bobelr",
+    "GitHub": "https://github.com/bobeu/learna",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa1f70ffa4322e3609dd905b41f17bf3913366bc1"
+  },
+  {
+    "Name": "Minilend by Pesabits",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1803657257177018369%2FINw5n9Hm_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1803657257177018369%2FINw5n9Hm_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/minilend-by-pesabits",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/gikenye/ministables",
+    "LinkedIn": "https://linkedin.com/in/gikenye",
+    "wallet_address": "0x3c524c715cfee15bc9aef75b1064a866c401d745"
+  },
+  {
+    "Name": "Mobarter",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1919504130000699392%2Fbw0gCUop_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1919504130000699392%2Fbw0gCUop_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/mobarter",
+    "Farcaster": "https://warpcast.com/philix",
+    "GitHub": "https://github.com/philix27/mobarter-2025",
+    "LinkedIn": "https://www.linkedin.com/company/105072988/admin/dashboard/",
+    "wallet_address": "0x20f50b8832f87104853df3fdda47dd464f885a49"
+  },
+  {
+    "Name": "Moviemeter",
+    "Profile Image URL": "https://i.postimg.cc/5t3xFjXg/new-favicon-gradient.jpg",
+    "Description": "https://gap.karmahq.xyz/project/moviemeter-2",
+    "Farcaster": "https://warpcast.com/gideondern",
+    "GitHub": "https://github.com/GideonNut/Moviemeter",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc49b8e093600f684b69ed6ba1e36b7dfad42f982"
+  },
+  {
+    "Name": "Payme",
+    "Profile Image URL": "https://drive.google.com/file/d/1FQ1Ya1PagMCZDIi53BQ9rMQzGKAS3AJG/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/payme",
+    "Farcaster": "https://warpcast.com/iabdulkarim",
+    "GitHub": "https://github.com/aliveevie/mentopay-invoice-flow",
+    "LinkedIn": "https://www.linkedin.com/in/ibrahim193/",
+    "wallet_address": "0x85ba183fb4c16d435b076dde459dafc8eff864d8"
+  },
+  {
+    "Name": "Questpanda",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1916235650396717057%2FyzrJ9huF_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1916235650396717057%2FyzrJ9huF_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/questpanda-1",
+    "Farcaster": "https://farcaster.xyz/miniapps/2DGvXirXeyLn/questpanda",
+    "GitHub": "https://github.com/leakeyqq/questapp",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x71a00c5a3255d43b8c933ae853ac59de04dbfbdc"
+  },
+  {
+    "Name": "Sovereign Seas",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F61495902%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F61495902%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/sovereign-seas",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Olisehgenesis/sovereign-seas",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x53eaf4cd171842d8144e45211308e5d90b4b0088"
+  },
+  {
+    "Name": "Vort3x",
+    "Profile Image URL": "https://ichrispindiary.vercel.app/img/image2.dfe8a70d.jpg",
+    "Description": "https://gap.karmahq.xyz/project/vort3x",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Chrispin-m",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xddb917e178416448d9c587e04fd64e76a96b92cb"
+  },
+  {
+    "Name": "AgeGate",
+    "Profile Image URL": "https://www.canva.com/design/DAGub_0OYRM/NszzO7e5LU6mxPHFZuhupQ/edit",
+    "Description": "https://gap.karmahq.xyz/project/agegate",
+    "Farcaster": "https://warpcast.com/akhilnanavati",
+    "GitHub": "https://github.com/Akhil-2310/age-gate",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5a1d61c71cfcf21f82129392d54f39e80139be30"
+  },
+  {
+    "Name": "Aprendiendo de Celo",
+    "Profile Image URL": "https://www.meme-arsenal.com/memes/88c41d18c6e5da0ff58657a2cbbd0d8c.jpg",
+    "Description": "https://gap.karmahq.xyz/project/aprendiendo-de-celo",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/AndresChanchi/celo-defi-journey",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x6da463c076efe2b7352bf72d166ba105855e39b0"
+  },
+  {
+    "Name": "Autoflow",
+    "Profile Image URL": "https://autofloy.vercel.app/",
+    "Description": "https://gap.karmahq.xyz/project/autoflow",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/gikenye/autoflow",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x76e195168791800ea73f9eae388690868bd0e54d"
+  },
+  {
+    "Name": "BackupBuddy",
+    "Profile Image URL": "https://drive.google.com/file/d/1K9Qn0JsvDplb1m_-4tX1o4Uv3YUUqR-p/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/backupbuddy",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x64ccd150998baba36985726e7dd83871ad668fd0"
+  },
+  {
+    "Name": "Defi Bootcamp",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/14319083?v=4",
+    "Description": "https://gap.karmahq.xyz/project/celo-colombia-defi-bootcamp",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/AugustoAleGon",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xec5a1f27babfc4d4e193177fc10ae70f2432e0b6"
+  },
+  {
+    "Name": "DeFi Bootcamp - HelloWorld",
+    "Profile Image URL": "N/A",
+    "Description": "https://gap.karmahq.xyz/project/celocolombia-defi-bootcamp---helloworld",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/SoyEdwinCabrera/hello-celo.git",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xdcf6804608a260c2313b13d02a77bb8e0600f999"
+  },
+  {
+    "Name": "CeloTicketX",
+    "Profile Image URL": "N/A",
+    "Description": "https://gap.karmahq.xyz/project/celoticketx",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x8879318091671ba1274e751f8cdef76bb37eb3ed"
+  },
+  {
+    "Name": "cKash",
+    "Profile Image URL": "N/A",
+    "Description": "https://gap.karmahq.xyz/project/ckash",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/ckashapp",
+    "LinkedIn": "https://www.linkedin.com/company/ckash-app/posts/",
+    "wallet_address": "0x1c3e7391e5136c204b3524aa9624eb3ca883ff28"
+  },
+  {
+    "Name": "Clixpesa",
+    "Profile Image URL": "https://pbs.twimg.com/profile_images/1557680710307266560/sViDRL6x_400x400.jpg",
+    "Description": "https://gap.karmahq.xyz/project/clixpesa",
+    "Farcaster": "https://warpcast.com/kachdn",
+    "GitHub": "https://github.com/clixpesa",
+    "LinkedIn": "https://linkedin.com/company/clixpesa",
+    "wallet_address": "0x430433c63a50d9cf77bbaa86a9806ba71f2bcb0d"
+  },
+  {
+    "Name": "ContriBoost",
+    "Profile Image URL": "https://photos.google.com/u/1/photo/AF1QipPgEvhD1OQ3Vzn3dV_UM4sl8R8fzktfW1K5ah4u",
+    "Description": "https://gap.karmahq.xyz/project/contriboost",
+    "Farcaster": "https://warpcast.com/jerydam",
+    "GitHub": "http://github.com/jerydam/contriBoostUpgrade",
+    "LinkedIn": "https://linkedin.com/in/jerydam",
+    "wallet_address": "0x3207d4728c32391405c7122e59ccb115a4af31ea"
+  },
+  {
+    "Name": "cPiggy",
+    "Profile Image URL": "https://github.com/TuCopFinance/cPiggy/blob/main/frontend/src/pic/cPiggy.png",
+    "Description": "https://gap.karmahq.xyz/project/cpiggy",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/TuCopFinance/cPiggy",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x22886c71a4c1fa2824bd86210ead1c310b3d7cf5"
+  },
+  {
+    "Name": "create-farcaster-miniapp",
+    "Profile Image URL": "https://github.com/Emmo00/create-farcaster-miniapp/blob/098d834c58771ff4d5742fe8369ce3e1787be970/images/cli.png?raw=true",
+    "Description": "https://gap.karmahq.xyz/project/create-farcaster-miniapp",
+    "Farcaster": "https://www.npmjs.com/package/create-farcaster-miniapp",
+    "GitHub": "https://github.com/emmo00",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x7b054580aea6b6cbdf30bbbe84777bae623f4d1e"
+  },
+  {
+    "Name": "Digipaga.eth",
+    "Profile Image URL": "https://pbs.twimg.com/profile_images/1945808172926558208/C3jSPESH_400x400.jpg",
+    "Description": "https://gap.karmahq.xyz/project/digipagaeth",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/digimercados/digipaga",
+    "LinkedIn": "https://www.linkedin.com/company/digimercados",
+    "wallet_address": "0x526e2e50a2f833317d6b6abf023d41067f74f8cf"
+  },
+  {
+    "Name": "DynaVest",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F76777953%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F76777953%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/dynavest",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/LI-YONG-QI/dynavest-contract",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x80dadebda19e5c010c4417985a4c05d0a8008a81"
+  },
+  {
+    "Name": "EcoLink",
+    "Profile Image URL": "https://eco-link-three.vercel.app/",
+    "Description": "https://gap.karmahq.xyz/project/ecolink",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Etz-Hola/EcoLink",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xbaaf5e8dd8de97f8d502d6601e8a5223691d44ef"
+  },
+  {
+    "Name": "Exion",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/210595870?s=200&v=4",
+    "Description": "https://gap.karmahq.xyz/project/exion",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Exion-Finance/Exion",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xbabe714f243bc1ee1cb17772800096750a1d0c2f"
+  },
+  {
+    "Name": "Farquest",
+    "Profile Image URL": "https://drive.google.com/file/d/1JmMfOyGcDEtzPsUnz_KivGZLTL64awGJ/view?usp=sharing",
+    "Description": "https://gap.karmahq.xyz/project/farquest",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/numdinkushi/FarQuest",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xbdeb0877ea15abd145e12d7c74c04a5a5f924879"
+  },
+  {
+    "Name": "FX-Remit",
+    "Profile Image URL": "https://raw.githubusercontent.com/Kanasjnr/Fx-Remit/staging/packages/react-app/public/logo.svg",
+    "Description": "https://gap.karmahq.xyz/project/fx-remit",
+    "Farcaster": "https://farcaster.xyz/kanas",
+    "GitHub": "https://github.com/Kanasjnr/Fx-Remit",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa1599790b763e537bd15b5b912012e5fb65491a3"
+  },
+  {
+    "Name": "GainForest",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1674865118914437130%2F9HjAHrYf_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1674865118914437130%2F9HjAHrYf_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/gainforest-2",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/gainforest",
+    "LinkedIn": "https://linkedin.com/company/gainforest",
+    "wallet_address": "0x98d3f6ebf58b0258ce8ccbe35d53d0162c3a316c"
+  },
+  {
+    "Name": "HealFi",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F64213387%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F64213387%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/healfi",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Jerydam",
+    "LinkedIn": "https://linkedin.com/in/jerydam",
+    "wallet_address": "0x3207d4728c32391405c7122e59ccb115a4af31ea"
+  },
+  {
+    "Name": "Hyumane",
+    "Profile Image URL": "https://www.canva.com/design/DAGtTusfOdA/pGBZB8dUavWoZPa7E6kOqg/edit?utm_content=DAGtTusfOdA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "Description": "https://gap.karmahq.xyz/project/hyumane",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Akhil-2310/Hyumane",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x634443313301f86fe48516268c98213c16e10a6e"
+  },
+  {
+    "Name": "Learn through games",
+    "Profile Image URL": "https://learn.tg/logo-learntg.png",
+    "Description": "https://gap.karmahq.xyz/project/learn-through-games",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/pasosdeJesus",
+    "LinkedIn": "https://www.linkedin.com/company/pasos-de-jes-s",
+    "wallet_address": "0x939aa9effad34e11bb8fa3025f1b500e87970cae"
+  },
+  {
+    "Name": "Local Lift",
+    "Profile Image URL": "https://ibb.co/sJ6kVwTt",
+    "Description": "https://gap.karmahq.xyz/project/local-lift",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/technicaldee",
+    "LinkedIn": "https://linkedin.com/in/technicaldee",
+    "wallet_address": "0x900f96dd68ca49001228348f1a2cd28556fb62dd"
+  },
+  {
+    "Name": "MiloFX",
+    "Profile Image URL": "https://iili.io/F8V1RGS.png",
+    "Description": "https://gap.karmahq.xyz/project/milofx",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Olisehgenesis/milofx",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x53eaf4cd171842d8144e45211308e5d90b4b0088"
+  },
+  {
+    "Name": "Mini App Gallery",
+    "Profile Image URL": "https://miniappgallery.netlify.app/images/logo.png",
+    "Description": "https://gap.karmahq.xyz/project/mini-app-gallery",
+    "Farcaster": "https://farcaster.xyz/ysongh",
+    "GitHub": "https://github.com/ysongh",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x9521eaf603a407afc9b85acb681ec9c77cdeafe8"
+  },
+  {
+    "Name": "MotusDAPP/De-Payments for mental health",
+    "Profile Image URL": "https://i.postimg.cc/bvszP8vy/Motus-DAO-dapp.png",
+    "Description": "https://gap.karmahq.xyz/project/motusdappde-payments-for-mental-health",
+    "Farcaster": "https://farcaster.xyz/motusdao",
+    "GitHub": "https://github.com/motusdao/DePayments",
+    "LinkedIn": "https://www.linkedin.com/in/motusdao/",
+    "wallet_address": "0x4a5ce41ed6383ee58a97eb3f0163d92562b2e0ae"
+  },
+  {
+    "Name": "Overtime",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/33924826?v=4",
+    "Description": "https://gap.karmahq.xyz/project/overtime",
+    "Farcaster": "https://farcaster.xyz/ianmunge",
+    "GitHub": "https://github.com/Overtime-Org",
+    "LinkedIn": "https://www.linkedin.com/in/ian-munge-1b6390103",
+    "wallet_address": "0xa94a71d6e643693f381e7e94dc6fb06320f39de2"
+  },
+  {
+    "Name": "PetTrace",
+    "Profile Image URL": "https://production-karma-gap-projects.s3.amazonaws.com/logos/0xc6db9c2c23e9b1cd20627d92523f9e2895180492c2187e514dc23b28d3f9b5f5/1756550121864.png",
+    "Description": "https://gap.karmahq.xyz/project/pettrace",
+    "Farcaster": "https://warpcast.com/jadesola0710",
+    "GitHub": "https://github.com/jadesola0710",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x124d8fad33e0b9fe9f3e1e90d0fc0055abe8ca8d"
+  },
+  {
+    "Name": "Physical Rentals",
+    "Profile Image URL": "https://pbs.twimg.com/profile_images/1942695250071269376/Rs9L1a8F.jpg",
+    "Description": "https://gap.karmahq.xyz/project/physical-rentals",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/SrJuanF/PhysicalRentals",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc8dcafedd535cfbfe190b24c7435f50cc7377468"
+  },
+  {
+    "Name": "Predicta",
+    "Profile Image URL": "https://github.com/SweetieBirdX/predicta/blob/main/public/predictalogo.svg",
+    "Description": "https://gap.karmahq.xyz/project/predicta",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/SweetieBirdX/predicta",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x4497c59e0d7f982bad49c4ee8ccc3b242568f8f3"
+  },
+  {
+    "Name": "Revix – recover your crypto using passport",
+    "Profile Image URL": "https://github.com/delneg/ethglobal-cannes-front/blob/master/public/logo.png?raw=true",
+    "Description": "https://gap.karmahq.xyz/project/revix--recover-your-crypto-using-passport",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/delneg/ethglobal-cannes-front",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xd4fe8e6b18dd9a149c579da6008bd6161def580a"
+  },
+  {
+    "Name": "Silicon Valley Personality Check miniapp",
+    "Profile Image URL": "https://res.cloudinary.com/drcwv987u/image/upload/v1748696525/sv_frame_splash_oookyt.jpg",
+    "Description": "https://gap.karmahq.xyz/project/silicon-valley-personality-check-miniapp",
+    "Farcaster": "https://farcaster.xyz/miniapps/KdpKkxlyHAZu/silicon-valley-character-quiz",
+    "GitHub": "https://github.com/emmo00",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x7b054580aea6b6cbdf30bbbe84777bae623f4d1e"
+  },
+  {
+    "Name": "Simplifinance",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F179311542%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F179311542%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/simplifinance",
+    "Farcaster": "https://farcaster.xyz/bobelr/",
+    "GitHub": "https://github.com/simplifinance/simplifi/",
+    "LinkedIn": "https://www.linkedin.com/in/isaac-j",
+    "wallet_address": "0xa1f70ffa4322e3609dd905b41f17bf3913366bc1"
+  },
+  {
+    "Name": "SPLITZY",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F81521871%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F81521871%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/splitzy",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/PythoSalaf/Splitzy",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc931d24cb528e40154ce7b6a6081d92f724faf0f"
+  },
+  {
+    "Name": "404 - Page Not Found",
+    "Profile Image URL": "https://gap.karmahq.xyz/images/karma-logo-dark.svg",
+    "Description": "https://gap.karmahq.xyz/project/stabels",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/show-karma/karma-gap-sdk",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "stable-sl",
+    "Profile Image URL": "https://stable-sl.pdj.app/stable-sl-logo.png",
+    "Description": "https://gap.karmahq.xyz/project/stable-sl",
+    "Farcaster": "https://warpcast.com/vtamara",
+    "GitHub": "https://github.com/pasosdeJesus",
+    "LinkedIn": "https://www.linkedin.com/in/vtamara/",
+    "wallet_address": "0x2e2c4ac19c93d0984840cdd8e7f77500e2ef978e"
+  },
+  {
+    "Name": "TuCOP Wallet",
+    "Profile Image URL": "https://bafybeihaqyxy6vrelryd66eewjggu3tafuv2hfof6cmzzga2qpfmd4gmue.ipfs.w3s.link/Foto%20de%20perfil.png",
+    "Description": "https://gap.karmahq.xyz/project/tucop-wallet",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/TuCopFinance",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x22886c71a4c1fa2824bd86210ead1c310b3d7cf5"
+  },
+  {
+    "Name": "Voulti",
+    "Profile Image URL": "https://raw.githubusercontent.com/csacanam/deramp-contracts/aa6a2e511de032bb3fc4901f36102e4a10411380/docs/logo-voulti.png",
+    "Description": "https://gap.karmahq.xyz/project/voulti",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/csacanam/deramp-contracts",
+    "LinkedIn": "https://linkedin.com/in/camilosaka",
+    "wallet_address": "0x0a25c91209a158d0a4922837cdd590ace0d13f0d"
+  },
+  {
+    "Name": "Ayowecca Uganda",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1256915740197863425%2FYXN0dsRN_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1256915740197863425%2FYXN0dsRN_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/ayowecca-uganda-training-rural-farmers--indigenous-communities-on-regenerative-agriculture-providing-women--girls-with-new-skills-for-economic-empowerment-and-planting-fruit-trees-in-schools-health-centers--churches",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/AYOWECCA%20UGANDA",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x0d0c0941e2578da2b9E2Ad03619615f7EeBc48f7"
+  },
+  {
+    "Name": "Celo Bootcamp Journey",
+    "Profile Image URL": "https://x.com/0xSt1ven/photo",
+    "Description": "https://gap.karmahq.xyz/project/celo-bootcamp-journey",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/stiven-drada",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x40c84682c884b4eb4ddc88608eac4ec09d7fccac"
+  },
+  {
+    "Name": "Celo Colombia -Bootcamp",
+    "Profile Image URL": "https://x.com/dcryptrodriguez/photo",
+    "Description": "https://gap.karmahq.xyz/project/celo-colombia--bootcamp",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/DanielRodriguez9",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x1dfc460e01421e5d2f0384ae637cd549efb9d0e0"
+  },
+  {
+    "Name": "Celo Colombia DeFi BootCamp - AlexiisMarz",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/44250417?v=4&size=64",
+    "Description": "https://gap.karmahq.xyz/project/celo-colombia-defi-bootcamp---alexiismarz",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/cold-briu/celo-colombia-bootcamp",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x687361b113fb964eda04d492094c923e241004e3"
+  },
+  {
+    "Name": "Celo DeFi Bootcamp",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/63302493?s=96&v=4",
+    "Description": "https://gap.karmahq.xyz/project/celo-defi-bootcamp",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5d6d6007d704035b9ff7c7bd26490efbf22cb878"
+  },
+  {
+    "Name": "CeloColombia DeFi Bootcamp",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/39354014?v=4",
+    "Description": "https://gap.karmahq.xyz/project/celocolombia-defi-bootcamp",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/cold-briu/",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x82d7fbe4a05862d3165103596f04785a0b8037a2"
+  },
+  {
+    "Name": "Celorean",
+    "Profile Image URL": "https://www.celorean.school/farcaster/celorean.png",
+    "Description": "https://gap.karmahq.xyz/project/celorean",
+    "Farcaster": "https://farcaster.xyz/miniapps/bMzCJrzNG_2p/celorean",
+    "GitHub": "https://github.com/soomtochukwu/Celorean",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x8a371e00cd51e2be005b86ef73c5ee9ef6d23feb"
+  },
+  {
+    "Name": "Citizen Wallet",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1690699428502413313%2F13DM8Q7i_400x400.jpg&default=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1690699428502413313%2F13DM8Q7i_400x400.jpg&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/citizen-wallet-2",
+    "Farcaster": "https://warpcast.com/jonasboury",
+    "GitHub": "https://github.com/citizenwallet",
+    "LinkedIn": "https://www.linkedin.com/company/citizen-wallet",
+    "wallet_address": "0xae35b0adb1dd4d406f4edb82f46208ea7ec0becc"
+  },
+  {
+    "Name": "Crypto Cultiva",
+    "Profile Image URL": "https://www.facebook.com/photo/?fbid=122119708724191783&set=a.122111284844191783",
+    "Description": "https://gap.karmahq.xyz/project/crypto-cultiva",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/CryptoMilovat",
+    "LinkedIn": "https://www.linkedin.com/in/cristian-fernando-parra-rodriguez-0b6b8a243/",
+    "wallet_address": "0x25587ec5e6d01bdb1ca4951abb64f6eb0e0452cb"
+  },
+  {
+    "Name": "DeFi Builder - Demo",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/44486786?v=4",
+    "Description": "https://gap.karmahq.xyz/project/defi-builder---demo",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/kattya17",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x825c51d40db410de45936399b5422e1c8fe721b1"
+  },
+  {
+    "Name": "Defi Builder J111Sanchez",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/85815114?v=4",
+    "Description": "https://gap.karmahq.xyz/project/defi-builder-j111sanchez",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x0dbe44eda689f9d3393678ab746062a4b3f36aaa"
+  },
+  {
+    "Name": "FarmBlock",
+    "Profile Image URL": "https://drive.google.com/file/d/1trlle6UvmsAWV7aLNF4odFUUQDxWZfbz",
+    "Description": "https://gap.karmahq.xyz/project/farmblock",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Oforge007/FarmBlock",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x57176b05c2af84b6c41e633a9d641f2309ed0bcc"
+  },
+  {
+    "Name": "Hello Celo",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/6034295?v=4",
+    "Description": "https://gap.karmahq.xyz/project/hello-celo",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x0a25c91209a158d0a4922837cdd590ace0d13f0d"
+  },
+  {
+    "Name": "Huautli Libre: Community Composting System",
+    "Profile Image URL": "https://static.wixstatic.com/media/fca016_14b3fb46852b43a38e6e7afd8aee2e7b~mv2.png/v1/fill/w_260,h_244,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Dise%C3%B1o%20sin%20t%C3%ADtulo.png",
+    "Description": "https://gap.karmahq.xyz/project/huautli-libre-community-composting-system",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/amarantonio",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x418e03e84718b8d3f75ce15f09933b6f6d1c5f7f"
+  },
+  {
+    "Name": "Knapsac",
+    "Profile Image URL": "https://jxfqfrfpaiijyvciclrw.supabase.co/storage/v1/object/public/images//Knapsac%20logo%20horizontal.png",
+    "Description": "https://gap.karmahq.xyz/project/knapsac",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/KnapsacDefi/knapsac",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x99a03cf527acc798585c025068bbba0b9e645347"
+  },
+  {
+    "Name": "LearningRec",
+    "Profile Image URL": "https://media.licdn.com/dms/image/v2/D4E03AQFg6KWY1c0GDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709235626454?e=1758153600&v=beta&t=EcI5x--HJcBVwZbMAYexABVCHL1O8ExHJUEWgO0_LHg",
+    "Description": "https://gap.karmahq.xyz/project/learningrec",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/guizostudios/learningRec/tree/LearningRec",
+    "LinkedIn": "https://www.linkedin.com/in/ewertonlopes/",
+    "wallet_address": "0xa41c7e823c0ef1dc1a2102dd0bd7b0c13fa38e08"
+  },
+  {
+    "Name": "Nummora",
+    "Profile Image URL": "https://pbs.twimg.com/profile_images/1940084181804924928/J0sLL-Cj_400x400.jpg",
+    "Description": "https://gap.karmahq.xyz/project/nummora",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x49fc88d0e7972e8a470ec21d42d44f751c3b7d47"
+  },
+  {
+    "Name": "OnChainFund",
+    "Profile Image URL": "N/A",
+    "Description": "https://gap.karmahq.xyz/project/onchainfund",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x270c99e0e1409f63a83adb2db4fbeb5752b0fbc2"
+  },
+  {
+    "Name": "PumpForge",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F125604535%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F125604535%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/pumpforge",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/lanacreates/PumpForge",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x6feb1f41a6c0a90a98ffedf71d4fd18b8f1072f4"
+  },
+  {
+    "Name": "Quizelo",
+    "Profile Image URL": "https://github.com/Olisehgenesis/qui-zelo/blob/master/public/logo.png",
+    "Description": "https://gap.karmahq.xyz/project/quizelo",
+    "Farcaster": "https://farcaster.xyz/miniapps/V3brx063bqsQ/quizelo",
+    "GitHub": "https://github.com/olisehgenesis",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x53eaf4cd171842d8144e45211308e5d90b4b0088"
+  },
+  {
+    "Name": "RealMind",
+    "Profile Image URL": "https://dailywiser.xyz/logo_text.png",
+    "Description": "https://gap.karmahq.xyz/project/realmind",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xf2e9703ec4a5ccf9af9d9200910f877632374acc"
+  },
+  {
+    "Name": "Swipe",
+    "Profile Image URL": "https://images.weserv.nl/?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F133031815%3Fs%3D400%26v%3D4&default=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F133031815%3Fs%3D400%26v%3D4&l=9&af=&il=&n=-1&w=400&ttl=31557600000",
+    "Description": "https://gap.karmahq.xyz/project/refi-starter---swipe-2-donate-app",
+    "Farcaster": "https://warpcast.com/refistarter.eth",
+    "GitHub": "https://github.com/ReFi-Starter/swipe-pad",
+    "LinkedIn": "https://www.linkedin.com/company/refistarter",
+    "wallet_address": "0xe9be7b680a573fc03396f1227ea2695bc6dedfcb"
+  },
+  {
+    "Name": "Regen Eliza",
+    "Profile Image URL": "https://pbs.twimg.com/profile_images/1916812287509409793/zpY-hg7a_400x400.jpg",
+    "Description": "https://gap.karmahq.xyz/project/regen-eliza",
+    "Farcaster": "https://warpcast.com/refistarter.eth",
+    "GitHub": "https://github.com/ReFi-Starter/ReFi-Eliza",
+    "LinkedIn": "https://linkedin.com/company/refistarter",
+    "wallet_address": "0xdca58223e2a0f649461fe165f98e9a2ad4906bdc"
+  },
+  {
+    "Name": "Rossmarie Dávila",
+    "Profile Image URL": "https://farcaster.xyz/rodavila",
+    "Description": "https://gap.karmahq.xyz/project/rossmarie-dvila",
+    "Farcaster": "https://farcaster.xyz/rodavila",
+    "GitHub": "https://github.com/Rossmaried",
+    "LinkedIn": "https://www.linkedin.com/in/rossmarie-davila/",
+    "wallet_address": "0x9d36f511b7cf2743cefc5c2a74155e825750f7b4"
+  },
+  {
+    "Name": "Test project for CeloCol DeFi Builder Bootcamp",
+    "Profile Image URL": "https://avatars.githubusercontent.com/u/39354014?v=4",
+    "Description": "https://gap.karmahq.xyz/project/test-project-for-celocol-defi-builder-bootcamp",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x509b2f6af5e0453f2acd382a4ec8c04f64cc937e"
+  },
+  {
+    "Name": "Ubeswap",
+    "Profile Image URL": "N/A",
+    "Description": "https://gap.karmahq.xyz/project/ubeswap",
+    "Farcaster": "https://warpcast.com/ubeswap",
+    "GitHub": "https://github.com/ubeswap",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x2c2bc76b97bce84a5a9c6e2835ab13306b964cf1"
+  },
+  {
+    "Name": "VeriVoice",
+    "Profile Image URL": "https://abc.com/a.jpg",
+    "Description": "https://gap.karmahq.xyz/project/verivoice",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Akhil-2310/VeriVoice",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5a1d61c71cfcf21f82129392d54f39e80139be30"
+  },
+  {
+    "Name": "xMento",
+    "Profile Image URL": "https://xmento.xyz/logo.png",
+    "Description": "https://gap.karmahq.xyz/project/xmentoxyz",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/edcalderon/xmento.xyz",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x555306b8798b225ae92f6abd24e1d41ba62bcb53"
+  },
+  {
+    "Name": "BitBima",
+    "Profile Image URL": "https://github.com/Jordan-type/bit-bima/blob/main/public/brand/bitbima-icon.svg",
+    "Description": "https://gap.karmahq.xyz/project/bitbima",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Jordan-type/bit-bima",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xbabe714f243bc1ee1cb17772800096750a1d0c2f"
+  },
+  {
+    "Name": "Finura AI",
+    "Profile Image URL": "https://imgur.com/a/finura-ai-99FcPzB",
+    "Description": "https://gap.karmahq.xyz/project/finura-ai",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x36353b975372dfaa370f7fda98ffa1371d32cc7d"
+  },
+  {
+    "Name": "Jerota",
+    "Profile Image URL": "https://www.jerota.xyz/jerota.png",
+    "Description": "https://gap.karmahq.xyz/project/jerota",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/jerotaxyz/",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x3b465d0695621f330a45bcc15fcf6b2d8f2046d6"
+  },
+  {
+    "Name": "Randobet",
+    "Profile Image URL": "https://randobet.vercel.app/logo",
+    "Description": "https://gap.karmahq.xyz/project/randobet",
+    "Farcaster": "N/A",
+    "GitHub": "http://github.com/bobeu/randobet",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa1f70ffa4322e3609dd905b41f17bf3913366bc1"
+  },
+  {
+    "Name": "RockChain Duel Arena",
+    "Profile Image URL": "https://i.imghippo.com/files/ELT5846bow.png",
+    "Description": "https://gap.karmahq.xyz/project/rockchain-duel-arena",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Edcode-bot/RockchainDeulArena",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xe38a456433fff7814e40998cf0cbbbd2c885b513"
+  },
+  {
+    "Name": "Sapa safe",
+    "Profile Image URL": "https://image.png/",
+    "Description": "https://gap.karmahq.xyz/project/sapa-safe",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Mentor-Ntech",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5c7e85c6e93570ba4f45e41ab41ee8e06e14772f"
+  },
+  {
+    "Name": "404 - Page Not Found",
+    "Profile Image URL": "https://gap.karmahq.xyz/images/karma-logo-dark.svg",
+    "Description": "https://gap.karmahq.xyz/project/cartridge",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/show-karma/karma-gap-sdk",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "MovieMeter",
+    "Profile Image URL": "https://i.postimg.cc/5t3xFjXg/new-favicon-gradient.jpg",
+    "Description": "https://gap.karmahq.xyz/project/moviemeter-3",
+    "Farcaster": "https://warpcast.com/moviemeterio",
+    "GitHub": "https://github.com/GideonNut/Moviemeter",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc49b8e093600f684b69ed6ba1e36b7dfad42f982"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/BlockchainnaEscola",
+    "LinkedIn": "https://www.linkedin.com/company/blockchain-na-escola",
+    "wallet_address": "0x75d65f52eacd0436493429e02a29326d44ddfaf8"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/devbambino/equiPay",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc3ca5fca8075a17267314a95d739f61198db392d"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/salviega/my-partner",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x8d726d9652d13a918d2a6f31aea56b213f8b299f"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x7469483201bbcd4cb3f6248e8a64e550145e50c7"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://farcaster.xyz/georgedonnelly",
+    "GitHub": "https://github.com/Panmoni",
+    "LinkedIn": "https://www.linkedin.com/in/georgedonnelly/",
+    "wallet_address": "0xDD304336Cf878dF7d2647435D5f57C2345B140C1"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/the-axmc",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x075a544bc3c211b3ab6726f63e132865227c986a"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Cookie-Jar-DAO/cookie-jar-v3",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x28c0579bac08317300fe591d42ed66fefc7efcd2"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xcc0a9a450ee07f489e165654ab49fc427f2b4c00"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/the-axmc",
+    "LinkedIn": "https://www.linkedin.com/in/andrea-l%C3%B3pez-de-vicu%C3%B1a-de-jorge/",
+    "wallet_address": "0x075a544bc3c211b3ab6726f63e132865227c986a"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x0e88ac34917a6bf5e36bfdc2c6c658e58078a1e6"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/~/channel/w3gpt",
+    "GitHub": "https://github.com/markeljan",
+    "LinkedIn": "http://linkedin.com/company/web3gpt",
+    "wallet_address": "0x42e9c498135431a48796B5fFe2CBC3d7A1811927"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/peeramid-labs",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x2e8d906a63d15e110037db42dd24fe69bec4afaf"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Madhav-Gupta-28/Bet-a-meme",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x23b7a53ecfd93803c63b97316d7362eae59c55b6"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/pratiksardar/cookies-4m-groupies",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x1f9fecf4100f18a227fab7e3868ca89ef6b9e9f7"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Akhil-2310",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5a1d61c71cfcf21f82129392d54f39e80139be30"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/gabrielaxy",
+    "GitHub": "http://github.com/gabrielantonyxaviour/celo-invoices",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5a6b842891032d702517a4e52ec38ee561063539"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/0xOucan",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc095c7ca2b56b0f0dc572d5d4a9eb1b37f4306a0"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x09bb59c870aa5cb0e7a01b2f96d72b29f3a4be90"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xd49b131cbc9d58f01f017cdcf6214f76f58322f2"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/athus",
+    "GitHub": "https://github.com/Regen-Sonic-Lab",
+    "LinkedIn": "https://www.linkedin.com/in/athus-linhares-a905a917a/",
+    "wallet_address": "0x5f56e995e8d3bd05a70a63f0d7531437e873772e"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/motusdao",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x4a5ce41ed6383ee58a97eb3f0163d92562b2e0ae"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x04c5697ab48a0dec80770d008c1657b7108a7e2b"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Ari-Innovation/ariinnovation-proof-of-ship",
+    "LinkedIn": "https://www.linkedin.com/company/ariinnovation/",
+    "wallet_address": "0x87643328cf7a2ed924fd9d65c574dd359cac7e1f"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/ChurritoFi",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x9eaca8cee30e9c73b08062e34228f8d0812f2448"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/closerdao",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x9b5f6df2c7a331697cf2616ca884594f6afdc07d"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Educertfication/Educert-v2",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x62bc8ae3c235ded14ebf9fe8f72e827204c4efe4"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://gap.karmahq.xyz/project/github.com/https://gitlab.com/EthicHub",
+    "LinkedIn": "https://es.linkedin.com/company/ethichub",
+    "wallet_address": "0x9378a4932ab933fb893192dc1b163a37e807b185"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/1Hive",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x1B8C7f06F537711A7CAf6770051A43B4F3E69A7e"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Giveth",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xc46c67bb7e84490d7ebdd0b8ecdaca68cf3823f4"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/gmonchain.eth",
+    "GitHub": "https://github.com/gmonchain",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xe6e6c0ddf053822bbbc1f39218f30ea25fca58dd"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/d3portillo",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa353557ddfc96325a8ab18e6f6d9c1fc0d7c1ea6"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/normiedottech/Normie-tech-docs",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xcb3eded2537484b79a95d4f3a2356c1567c67bf9"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/Regen-Bazaar",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x1f9fecf4100f18a227fab7e3868ca89ef6b9e9f7"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/handprotocol",
+    "GitHub": "https://github.com/HandProtocol/SweetSpot",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xb522133dbd9c8b424429d89d821aeb2a115db678"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa7ca400d49bba87eb606ee05af93689bd21fab99"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://farcaster.xyz/lylethedev",
+    "GitHub": "https://github.com/lyledavids/VeriFlow",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xb7658aac84dbe5924badc9d780c36442dd46306e"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/oshadhi",
+    "GitHub": "https://github.com/oshadhi-liyanage",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x181313c4aab54fd818c727665c090dd4021d6429"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/JoE11-y/celo-farcaster-frames/tree/feat/celo_birthday_frame",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x2e5e4bd4a26c1154d44684d3fad2c0ee020938bb"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/MegalodonLabs",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x3c9c52a3ca9ddd62e78edbabe2e8385265c08d30"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/miniapps/wmU6dgTaCyPA/celocaster",
+    "GitHub": "https://github.com/dordunu1",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5828d525fe00902ae22f2270ac714616651894ff"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/~/mini-apps/launch?domain=ofac-compliance.vercel.app",
+    "GitHub": "https://github.com/sogobanwo/OFAC-Compliance",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x5c75219792a8e069fe6f27889c44fe5eff42b156"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/devfolio",
+    "GitHub": "https://github.com/aviggiano/safe-restricted-actions-guard-agi-broker-bot",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/devfolio",
+    "GitHub": "https://github.com/Dharanesh-BM/CeloFX",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/devfolio",
+    "GitHub": "https://github.com/Rajkishore08/Forex-Trading-Agent",
+    "LinkedIn": "N/A",
+    "wallet_address": "N/A"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/sairammr",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xd9bde6ab21d302427d6abc3466e1fb991cad6cff"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/juliangay/celo-proof-of-ship",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x23b7a53ecfd93803c63b97316d7362eae59c55b6"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "https://warpcast.com/shillo",
+    "GitHub": "https://github.com/shillo-org",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xd5148b96d3f6f3234721c72ec8a57a4b07a45ca7"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/thealexyao/speaktoearn-agent",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x67e8014dea7ff1b1c650fcb355519ce515d8195f"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/distroinfinity/superflow",
+    "LinkedIn": "N/A",
+    "wallet_address": "0x97bcb2f948ea838e6d6f0cfa7828bcfca69ebcee"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/untangledfinance",
+    "LinkedIn": "https://www.linkedin.com/company/untangled-finance",
+    "wallet_address": "0x46788b60daf46448668c7abaeea4ac8745451c25"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "N/A",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xa41c7e823c0ef1dc1a2102dd0bd7b0c13fa38e08"
+  },
+  {
+    "Name": "N/A",
+    "Profile Image URL": "N/A",
+    "Description": "N/A",
+    "Farcaster": "N/A",
+    "GitHub": "https://github.com/titipakorn-th/lottery-mini-pay",
+    "LinkedIn": "N/A",
+    "wallet_address": "0xad350c93788da7779fa5b2dbd372f72a8c6573cc"
+  }
+]
