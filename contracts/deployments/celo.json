@@ -1,0 +1,9 @@
+{
+  "network": "celo",
+  "chainId": 42220,
+  "stableTokens": {
+    "cUSD": "0x765DE816845861e75A25fCA122bb6898B8B1282a",
+    "cEUR": "0xD8763CBa276a3738E6DE85b4b3bF5FDed6D6cA73",
+    "cBRL": "0xE8537a3d056da446677b9e9d6c5db704eaab4787"
+  }
+}
