@@ -1,4 +1,5 @@
 import type { Project } from "@/types";
+import { shuffleArray } from "@/lib/shuffle";
 
 // Import your JSON files
 import celoBuildersRaw from '@/public/100_celo_talent_100_profiles.json';
@@ -39,6 +40,13 @@ function mapProfile(raw: any, category: string): Project {
 const celoBuilders = (celoBuildersRaw as any[]).map(p => mapProfile(p, 'Celo Builders'));
 const karmaGapProjects = (karmaGapRaw as any[]).map(p => mapProfile(p, 'KarmaGap'));
 export const allProjects = [...celoBuilders, ...karmaGapProjects];
+export function getShuffledProjects(category: string) {
+  const filtered = allProjects.filter(p => p.category === category);
+  return shuffleArray(filtered);
+}
+export function getShuffledProjects(category: string) {
+  const filtered = allProjects.filter(p => p.category === category);
+}
 
 export const categories = [
   "Celo Builders",

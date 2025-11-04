@@ -1,15 +1,16 @@
-"use client"
+'use client';
 
 import { useState, useEffect } from "react"
 import { ToggleMenu } from "@/components/toggle-menu"
 import { CategoryMenu } from "@/components/category-menu"
+import { allProjects } from '@/lib/data';
 import { ProjectCard } from "@/components/project-card"
 import { CategorySection } from "@/components/category-section"
 import { Cart } from "@/components/cart"
 import { SuccessScreen } from "@/components/success-screen"
 import { WalletConnect } from "@/components/wallet-connect"
 import { AmountSelector, type DonationAmount, type StableCoin, type ConfirmSwipes } from "@/components/amount-selector"
-import { projects, categories, getRandomProfiles } from "@/lib/data"
+import { categories, getRandomProfiles, shuffleArray } from "@/lib/data"
 import { UserProfile } from "@/components/user-profile"
 import { TrendingSection } from "@/components/trending-section"
 import { CommunityFunds } from "@/components/community-funds"
@@ -21,6 +22,7 @@ import { MobileMockup } from "@/components/mobile-mockup"
 import { useMobile } from "@/hooks/use-mobile"
 import { ProjectRegistrationForm } from "@/components/project-registration-form"
 import { EditProfile } from "@/components/edit-profile"
+const projects = allProjects;
 
 export default function Home() {
   const [viewMode, setViewMode] = useState<"swipe" | "list" | "profile" | "trending">("swipe")
@@ -47,6 +49,15 @@ export default function Home() {
     streak: 0,
     lastDonation: null as Date | null,
   })
+
+  const handleStartSwiping = () => {
+    const filtered = allProjects.filter(p => p.category === selectedCategory);
+    const shuffled = shuffleArray(filtered);
+    setFilteredProjects(shuffled);
+    setCurrentProjectIndex(0);
+    setViewMode("swipe");
+  };
+
   const [userProfile, setUserProfile] = useState({
     name: "MiniPay User",
     image: "/images/lena-profile.jpg",
@@ -265,15 +276,15 @@ export default function Home() {
       return acc
     },
     {} as Record<string, typeof projects>,
-  )
+  );
 
   const AppContent = () => (
     <div className="w-full h-full flex flex-col overflow-hidden">
       {!hasSeenWelcome ? (
         <WalletConnect
           onConnect={() => {
-            setWalletConnected(true)
-            setHasSeenWelcome(true)
+            setWalletConnected(true);
+            setHasSeenWelcome(true);
           }}
         />
       ) : (
@@ -346,11 +357,16 @@ export default function Home() {
               <UserProfile stats={userStats} onBack={() => setViewMode("swipe")} />
             ) : viewMode === "trending" ? (
               <div className="px-6 py-6">
-                <TrendingSection onDonate={handleCategoryProjectDonate} />
+               <TrendingSection onDonate={handleCategoryProjectDonate} />
                 <CommunityFunds onDonate={handleCategoryProjectDonate} />
-                <WeeklyDrop onDonate={handleCategoryProjectDonate} />
-                <button
-                  onClick={() => setViewMode("swipe")}
+                 <WeeklyDrop onDonate={handleCategoryProjectDonate} />
+                 <button
+                 onClick={handleStartSwiping}
+                 className="w-full py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg"
+                  >
+                 Back to Swipe
+                </button>
+                  onClick={handleStartSwiping}
                   className="w-full py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors mt-6"
                 >
                   Back to Swipe
