@@ -161,6 +161,12 @@ export default function Home() {
     }
   }, [userStats, shownBadges])
 
+  useEffect(() => {
+    if (!account) {
+      setUserProfile((prev) => ({ ...prev, hasSeenWelcome: false }))
+    }
+  }, [account])
+
   const handleSwipeRight = () => {
     if (donationAmount === null) return
 
@@ -340,7 +346,7 @@ export default function Home() {
 
   const AppContent = () => (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      {!userProfile.hasSeenWelcome ? (
+      {!account || !userProfile.hasSeenWelcome ? (
         <div className="flex flex-col items-center justify-center h-full px-6 relative">
           <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
             <button className="flex items-center justify-center w-12 h-12 rounded-full">
@@ -397,8 +403,10 @@ export default function Home() {
                     width: "100%",
                   },
                 }}
-                onConnect={() => {
+                onConnect={(wallet) => {
+                  console.log("[v0] Wallet connected:", wallet.getAccount()?.address)
                   setUserProfile((prev) => ({ ...prev, hasSeenWelcome: true }))
+                  toast.success("Wallet connected successfully!")
                 }}
               />
             </div>
