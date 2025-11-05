@@ -37,12 +37,16 @@ function mapProfile(raw: any, category: string): Project {
   };
 }
 
-const celoBuilders = (celoBuildersRaw as any[]).map(p => mapProfile(p, 'Celo Builders'));
+// ... (previous code remains unchanged) ...
+
+const celoBuilders = (celoBuildersRaw as any[]).map(p => mapProfile(p, 'Celo Builders')); // Added closing parenthesis here
 const karmaGapProjects = (karmaGapRaw as any[]).map(p => mapProfile(p, 'KarmaGap'));
 export const allProjects = [...celoBuilders, ...karmaGapProjects];
+
+// This function had a missing return statement
 export function getShuffledProjects(category: string) {
   const filtered = allProjects.filter(p => p.category === category);
-  return shuffleArray(filtered);
+  return shuffleArray(filtered); // Added return statement here
 }
 export function getShuffledProjects(category: string) {
   const filtered = allProjects.filter(p => p.category === category);

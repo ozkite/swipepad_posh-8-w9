@@ -1,29 +1,32 @@
-import { NextResponse } from 'next/server';
-import projects from '@/data/projects.json';
+import { NextRequest, NextResponse } from 'next/server';
+import path from 'path';
+import { promises as fs } from 'fs';
+import { fileURLToPath } from 'url';
 
-export async function GET() {
-  return NextResponse.json(projects);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.join(__dirname, '..', '..', '..');
+
+export async function GET(request: NextRequest) {
+  try {
+    const filePath = path.join(projectRoot, 'data', 'projects.json'); // Adjust path if needed
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    const jsonData = JSON.parse(fileContents);
+
+    // Optional: Add server-side filtering, processing, or rate limiting here
+    // Example: Filter based on a query parameter
+    // const { category } = request.nextUrl.searchParams;
+    // if (category) {
+    //   jsonData = jsonData.filter(item => item.category === category);
+    // }
+
+    return NextResponse.json(jsonData);
+
+  } catch (error) {
+    console.error("Error reading project data:", error);
+    return NextResponse.json(
+      { error: "Failed to load project data" },
+      { status: 500 }
+    );
+  }
 }
-```
-
-**Save** (Ctrl+X, Y, Enter)
-
----
-
-### **Tell V0 This:**
-```
-I have private JSON data accessible via API routes:
-- GET /api/builders - returns 100 builder profiles
-- GET /api/projects - returns 200 project profiles
-
-Each profile has: id, name, category, description, image, wallet
-
-Update the app to:
-1. Fetch data from these API routes on page load
-2. Display profiles in list view grouped by category
-3. Use the same swipe interface but with real data
-4. Show "Builders (100)" and "Projects (200)" in category tabs
-
-Use React hooks: useState, useEffect
-Fetch on mount, show loading state, then display profiles
-
