@@ -106,12 +106,14 @@ export function ProjectCard({
   const [imageError, setImageError] = useState(false)
   const [imageLoading, setImageLoading] = useState(true)
 
-  // Touch/swipe handling
   const cardRef = useRef<HTMLDivElement>(null)
   const [startX, setStartX] = useState(0)
+  const [startY, setStartY] = useState(0)
   const [currentX, setCurrentX] = useState(0)
+  const [currentY, setCurrentY] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const [dragThreshold] = useState(50)
+  const [dragThreshold] = useState(100)
+  const [swipeDirection, setSwipeDirection] = useState<"left" | "right" | null>(null)
 
   // Separate handlers for heart and like button
   const handleHeartLike = (e?: React.MouseEvent) => {
@@ -166,27 +168,43 @@ export function ProjectCard({
     action()
   }
 
-  // Touch event handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     if (viewMode !== "swipe") return
     const touch = e.touches[0]
     setStartX(touch.clientX)
+    setStartY(touch.clientY)
     setCurrentX(touch.clientX)
+    setCurrentY(touch.clientY)
     setIsDragging(false)
+    setSwipeDirection(null)
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (viewMode !== "swipe") return
     const touch = e.touches[0]
     setCurrentX(touch.clientX)
-    const diff = touch.clientX - startX
+    setCurrentY(touch.clientY)
+    const diffX = touch.clientX - startX
+    const diffY = touch.clientY - startY
 
-    if (Math.abs(diff) > 10) {
+    if (Math.abs(diffX) > 5 || Math.abs(diffY) > 5) {
       setIsDragging(true)
     }
 
     if (cardRef.current && isDragging) {
-      cardRef.current.style.transform = `translateX(${diff}px) rotate(${diff * 0.1}deg)`
+      const rotation = diffX * 0.05
+      const opacity = 1 - Math.abs(diffX) / 400
+
+      cardRef.current.style.transform = `translateX(${diffX}px) translateY(${diffY * 0.3}px) rotate(${rotation}deg)`
+      cardRef.current.style.opacity = `${Math.max(opacity, 0.5)}`
+      cardRef.current.style.transition = "none"
+
+      // Show swipe direction indicator
+      if (Math.abs(diffX) > 30) {
+        setSwipeDirection(diffX > 0 ? "right" : "left")
+      } else {
+        setSwipeDirection(null)
+      }
     }
   }
 
@@ -194,28 +212,60 @@ export function ProjectCard({
     if (!isDragging || viewMode !== "swipe") {
       if (cardRef.current) {
         cardRef.current.style.transform = ""
+        cardRef.current.style.opacity = "1"
+        cardRef.current.style.transition = "transform 0.3s ease, opacity 0.3s ease"
       }
       setIsDragging(false)
+      setSwipeDirection(null)
       return
     }
 
-    const diff = currentX - startX
+    const diffX = currentX - startX
 
-    if (cardRef.current) {
-      cardRef.current.style.transform = ""
-    }
+    if (Math.abs(diffX) > dragThreshold) {
+      // Animate card off screen
+      if (cardRef.current) {
+        const direction = diffX > 0 ? 1 : -1
+        cardRef.current.style.transition = "transform 0.3s ease, opacity 0.3s ease"
+        cardRef.current.style.transform = `translateX(${direction * 500}px) rotate(${direction * 30}deg)`
+        cardRef.current.style.opacity = "0"
+      }
 
-    if (Math.abs(diff) > dragThreshold) {
-      if (diff > 0 && onSwipeRight) {
-        onSwipeRight()
-      } else if (diff < 0 && onSwipeLeft) {
-        onSwipeLeft()
+      // Trigger swipe action after animation
+      setTimeout(() => {
+        if (diffX > 0 && onSwipeRight) {
+          onSwipeRight()
+        } else if (diffX < 0 && onSwipeLeft) {
+          onSwipeLeft()
+        }
+
+        // Reset card
+        if (cardRef.current) {
+          cardRef.current.style.transition = "none"
+          cardRef.current.style.transform = ""
+          cardRef.current.style.opacity = "1"
+          setTimeout(() => {
+            if (cardRef.current) {
+              cardRef.current.style.transition = "transform 0.3s ease, opacity 0.3s ease"
+            }
+          }, 50)
+        }
+      }, 300)
+    } else {
+      // Snap back to center
+      if (cardRef.current) {
+        cardRef.current.style.transition = "transform 0.3s ease, opacity 0.3s ease"
+        cardRef.current.style.transform = ""
+        cardRef.current.style.opacity = "1"
       }
     }
 
     setStartX(0)
+    setStartY(0)
     setCurrentX(0)
+    setCurrentY(0)
     setIsDragging(false)
+    setSwipeDirection(null)
   }
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -233,12 +283,39 @@ export function ProjectCard({
   const cardContent = (
     <div
       ref={cardRef}
-      className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 select-none"
+      className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 select-none relative"
+      style={{
+        transition: "transform 0.3s ease, opacity 0.3s ease",
+        touchAction: "none",
+      }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       onMouseDown={handleMouseDown}
     >
+      {viewMode === "swipe" && swipeDirection && (
+        <>
+          <div
+            className={`absolute inset-0 z-10 pointer-events-none flex items-center justify-center transition-opacity duration-200 ${
+              swipeDirection === "right" ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="bg-green-500 text-white px-8 py-4 rounded-2xl font-bold text-2xl rotate-[-20deg] border-4 border-white shadow-lg">
+              LIKE
+            </div>
+          </div>
+          <div
+            className={`absolute inset-0 z-10 pointer-events-none flex items-center justify-center transition-opacity duration-200 ${
+              swipeDirection === "left" ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="bg-red-500 text-white px-8 py-4 rounded-2xl font-bold text-2xl rotate-[20deg] border-4 border-white shadow-lg">
+              SKIP
+            </div>
+          </div>
+        </>
+      )}
+
       {/* Project Image */}
       <div className="relative h-36 bg-gray-700">
         {imageLoading && (
