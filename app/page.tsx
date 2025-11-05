@@ -172,7 +172,8 @@ export default function Home() {
     if (account) {
       console.log("[v0] Account address:", account.address)
     }
-  }, [account])
+    console.log("[v0] hasSeenWelcome:", userProfile.hasSeenWelcome)
+  }, [account, userProfile.hasSeenWelcome])
 
   const handleSwipeRight = () => {
     if (donationAmount === null) return
@@ -351,9 +352,19 @@ export default function Home() {
     {} as Record<string, typeof projects>,
   )
 
+  const handleEnterApp = () => {
+    if (account) {
+      console.log("[v0] User clicked Enter MiniApp, proceeding to main app")
+      setUserProfile((prev) => ({ ...prev, hasSeenWelcome: true }))
+      toast.success("Welcome to SwipePad!")
+    } else {
+      toast.error("Please connect your wallet first")
+    }
+  }
+
   const AppContent = () => (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      {!account || !userProfile.hasSeenWelcome ? (
+      {!userProfile.hasSeenWelcome ? (
         <div className="flex flex-col items-center justify-center h-full px-6 relative">
           <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
             <button className="flex items-center justify-center w-12 h-12 rounded-full">
@@ -382,54 +393,70 @@ export default function Home() {
               Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
             </p>
 
-            <div className="w-full mb-4">
-              <ConnectButton
-                client={client}
-                chain={defaultChain}
-                wallets={wallets}
-                connectModal={{
-                  size: "compact",
-                  title: "Sign in",
-                  showThirdwebBranding: true,
-                }}
-                theme={darkTheme({
-                  colors: {
-                    accentText: "#FFD600",
-                    accentButtonBg: "#FFD600",
-                    accentButtonText: "#000000",
-                    primaryButtonBg: "#FFD600",
-                    primaryButtonText: "#000000",
-                    borderColor: "rgba(255, 214, 0, 0.2)",
-                    separatorLine: "rgba(255, 255, 255, 0.1)",
-                  },
-                })}
-                connectButton={{
-                  label: "Enter MiniApp",
-                  style: {
-                    backgroundColor: "#FFD600",
-                    color: "#000000",
-                    fontWeight: "700",
-                    borderRadius: "12px",
-                    padding: "16px 24px",
-                    fontSize: "18px",
-                    width: "100%",
-                    border: "none",
-                    cursor: "pointer",
-                    transition: "all 0.2s ease",
-                  },
-                }}
-                onConnect={(wallet) => {
-                  console.log("[v0] Wallet connected successfully!")
-                  console.log("[v0] Wallet address:", wallet.getAccount()?.address)
-                  setUserProfile((prev) => ({ ...prev, hasSeenWelcome: true }))
-                  toast.success("Wallet connected successfully!")
-                }}
-                onDisconnect={() => {
-                  console.log("[v0] Wallet disconnected")
-                  setUserProfile((prev) => ({ ...prev, hasSeenWelcome: false }))
-                  toast.info("Wallet disconnected")
-                }}
-              />
+            <div className="w-full mb-4 space-y-3">
+              {!account ? (
+                <ConnectButton
+                  client={client}
+                  chain={defaultChain}
+                  wallets={wallets}
+                  connectModal={{
+                    size: "compact",
+                    title: "Sign in",
+                    showThirdwebBranding: true,
+                  }}
+                  theme={darkTheme({
+                    colors: {
+                      accentText: "#FFD600",
+                      accentButtonBg: "#FFD600",
+                      accentButtonText: "#000000",
+                      primaryButtonBg: "#FFD600",
+                      primaryButtonText: "#000000",
+                      borderColor: "rgba(255, 214, 0, 0.2)",
+                      separatorLine: "rgba(255, 255, 255, 0.1)",
+                    },
+                  })}
+                  connectButton={{
+                    label: "Connect Wallet",
+                    style: {
+                      backgroundColor: "#FFD600",
+                      color: "#000000",
+                      fontWeight: "700",
+                      borderRadius: "12px",
+                      padding: "16px 24px",
+                      fontSize: "18px",
+                      width: "100%",
+                      border: "none",
+                      cursor: "pointer",
+                      transition: "all 0.2s ease",
+                    },
+                  }}
+                  onConnect={(wallet) => {
+                    console.log("[v0] Wallet connected successfully!")
+                    console.log("[v0] Wallet address:", wallet.getAccount()?.address)
+                    toast.success("Wallet connected! Click 'Enter MiniApp' to continue.")
+                  }}
+                  onDisconnect={() => {
+                    console.log("[v0] Wallet disconnected")
+                    setUserProfile((prev) => ({ ...prev, hasSeenWelcome: false }))
+                    toast.info("Wallet disconnected")
+                  }}
+                />
+              ) : (
+                <button
+                  onClick={handleEnterApp}
+                  className="w-full bg-[#FFD600] hover:bg-[#E6C200] text-black font-bold py-4 px-6 rounded-xl transition-colors"
+                >
+                  Enter MiniApp
+                </button>
+              )}
+
+              {account && (
+                <div className="text-center">
+                  <p className="text-sm text-gray-400">
+                    Connected: {account.address.slice(0, 6)}...{account.address.slice(-4)}
+                  </p>
+                </div>
+              )}
             </div>
 
             <p className="text-xs text-gray-400 mt-6 leading-relaxed">
@@ -470,7 +497,7 @@ export default function Home() {
                 </h1>
 
                 <button
-                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB] text-white hover:bg-[#5A6FD3] transition-colors"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB] relative"
                   onClick={handleRegisterProject}
                   title="Register Project"
                 >

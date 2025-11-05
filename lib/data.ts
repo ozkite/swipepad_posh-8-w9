@@ -1,6 +1,7 @@
 import { shuffleArray } from "./shuffle"
 import celoBuilders from "../data/profiles/celo_builders.json"
 import karmaGapProfiles from "../data/profiles/karmagap.json"
+import celoKarmaGap100 from "../data/profiles/celo_karmagap_100.json"
 
 export interface Project {
   id: string
@@ -86,9 +87,43 @@ const karmaGapProjects: Project[] = karmaGapProfiles
     boostAmount: 0,
   }))
 
-export const projects: Project[] = [...celoBuilderProjects, ...karmaGapProjects]
+const celoKarmaGap100Projects: Project[] = celoKarmaGap100
+  .filter((profile: any) => {
+    const hasValidName = profile.Name && profile.Name.trim().length > 0 && profile.Name !== "N/A"
+    const hasValidWallet = profile.wallet_address && profile.wallet_address !== "N/A"
+    return hasValidName && hasValidWallet
+  })
+  .map((profile: any, index: number) => ({
+    id: `celo-karmagap-100-${index + 1}`,
+    name: profile.Name,
+    description: profile.Description || `Celo KarmaGap Project - ${profile.Name}`,
+    category: "Celo KarmaGap 100",
+    imageUrl:
+      profile["Profile Image URL"] &&
+      profile["Profile Image URL"] !== "N/A" &&
+      !profile["Profile Image URL"].includes("drive.google.com") &&
+      !profile["Profile Image URL"].includes("canva.com")
+        ? profile["Profile Image URL"]
+        : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(profile.Name)}`,
+    website: profile.Description && profile.Description.startsWith("http") ? profile.Description : undefined,
+    linkedin: profile.LinkedIn && profile.LinkedIn !== "N/A" ? profile.LinkedIn : undefined,
+    farcaster: profile.Farcaster && profile.Farcaster !== "N/A" ? profile.Farcaster : undefined,
+    github: profile.GitHub && profile.GitHub !== "N/A" ? profile.GitHub : undefined,
+    fundingGoal: Math.floor(Math.random() * 100000) + 10000,
+    fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
+    likes: Math.floor(Math.random() * 500) + 10,
+    comments: Math.floor(Math.random() * 100) + 1,
+    walletAddress: profile.wallet_address,
+    isBookmarked: false,
+    userHasLiked: false,
+    userHasCommented: false,
+    reportCount: 0,
+    boostAmount: 0,
+  }))
 
-export const categories = ["Projects", "Builders"]
+export const projects: Project[] = [...celoBuilderProjects, ...karmaGapProjects, ...celoKarmaGap100Projects]
+
+export const categories = ["Projects", "Builders", "Celo KarmaGap 100"]
 
 export { shuffleArray }
 
