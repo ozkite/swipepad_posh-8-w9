@@ -1,4 +1,4 @@
-import { prepareContractCall, sendTransaction } from "thirdweb";
+kimport { prepareContractCall, sendTransaction } from "thirdweb";
 import { getContract } from "thirdweb";
 import { celo } from "thirdweb/chains";
 
