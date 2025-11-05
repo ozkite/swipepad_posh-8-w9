@@ -71,6 +71,15 @@
     min-height: 100vh;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
       "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    /* Prevent horizontal scrolling on mobile */
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Prevent horizontal scrolling on main container */
+  html {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 }
 

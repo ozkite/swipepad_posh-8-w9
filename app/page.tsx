@@ -352,7 +352,10 @@ export default function Home() {
   )
 
   const AppContent = () => (
-    <div className="w-full h-full flex flex-col overflow-hidden">
+    <div
+      className="w-full h-full flex flex-col overflow-hidden overflow-x-hidden max-w-full"
+      style={{ touchAction: "pan-y" }}
+    >
       {!account || !userProfile.hasSeenWelcome ? (
         <div className="flex flex-col items-center justify-center h-full px-6 relative">
           <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
@@ -526,7 +529,7 @@ export default function Home() {
                 </button>
               </div>
             ) : (
-              <div className="py-6">
+              <div className="py-6 max-w-full overflow-x-hidden">
                 <ToggleMenu
                   viewMode={viewMode === "swipe" ? "swipe" : "list"}
                   setViewMode={(mode) => setViewMode(mode)}
@@ -573,7 +576,7 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <div className="px-6 pb-4">
+                        <div className="px-6 pb-4 max-w-full">
                           {filteredProjects.length > 0 && (
                             <ProjectCard
                               project={filteredProjects[currentProjectIndex]}
