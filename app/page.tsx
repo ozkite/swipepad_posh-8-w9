@@ -167,6 +167,13 @@ export default function Home() {
     }
   }, [account])
 
+  useEffect(() => {
+    console.log("[v0] Account status:", account ? "Connected" : "Not connected")
+    if (account) {
+      console.log("[v0] Account address:", account.address)
+    }
+  }, [account])
+
   const handleSwipeRight = () => {
     if (donationAmount === null) return
 
@@ -379,34 +386,48 @@ export default function Home() {
               <ConnectButton
                 client={client}
                 chain={defaultChain}
-                connectModal={{ size: "compact" }}
+                wallets={wallets}
+                connectModal={{
+                  size: "compact",
+                  title: "Sign in",
+                  showThirdwebBranding: true,
+                }}
                 theme={darkTheme({
                   colors: {
-                    accentText: "hsl(51, 100%, 45%)",
-                    accentButtonBg: "hsl(51, 100%, 45%)",
-                    accentButtonText: "hsl(0, 0%, 0%)",
-                    borderColor: "hsl(221, 39%, 11%)",
-                    primaryButtonBg: "hsl(51, 100%, 45%)",
-                    primaryButtonText: "hsl(0, 0%, 0%)",
+                    accentText: "#FFD600",
+                    accentButtonBg: "#FFD600",
+                    accentButtonText: "#000000",
+                    primaryButtonBg: "#FFD600",
+                    primaryButtonText: "#000000",
+                    borderColor: "rgba(255, 214, 0, 0.2)",
+                    separatorLine: "rgba(255, 255, 255, 0.1)",
                   },
                 })}
-                wallets={wallets}
                 connectButton={{
                   label: "Enter MiniApp",
                   style: {
-                    backgroundColor: "hsl(51, 100%, 45%)",
-                    color: "hsl(0, 0%, 0%)",
-                    fontWeight: "bold",
-                    borderRadius: "0.75rem",
-                    padding: "1rem 1.5rem",
-                    fontSize: "1.125rem",
+                    backgroundColor: "#FFD600",
+                    color: "#000000",
+                    fontWeight: "700",
+                    borderRadius: "12px",
+                    padding: "16px 24px",
+                    fontSize: "18px",
                     width: "100%",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
                   },
                 }}
                 onConnect={(wallet) => {
-                  console.log("[v0] Wallet connected:", wallet.getAccount()?.address)
+                  console.log("[v0] Wallet connected successfully!")
+                  console.log("[v0] Wallet address:", wallet.getAccount()?.address)
                   setUserProfile((prev) => ({ ...prev, hasSeenWelcome: true }))
                   toast.success("Wallet connected successfully!")
+                }}
+                onDisconnect={() => {
+                  console.log("[v0] Wallet disconnected")
+                  setUserProfile((prev) => ({ ...prev, hasSeenWelcome: false }))
+                  toast.info("Wallet disconnected")
                 }}
               />
             </div>

@@ -1,8 +1,12 @@
 import { createThirdwebClient } from "thirdweb"
 import { defineChain } from "thirdweb/chains"
 
+const clientId = process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3"
+
+console.log("[v0] Initializing Thirdweb client with ID:", clientId)
+
 export const client = createThirdwebClient({
-  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3",
+  clientId,
 })
 
 export const celoMainnet = defineChain({
