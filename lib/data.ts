@@ -88,15 +88,19 @@ const karmaGapProjects: Project[] = karmaGapProfiles
 
 export const projects: Project[] = [...celoBuilderProjects, ...karmaGapProjects]
 
-export const categories = ["Projects", "Builders"]
+export const categories = ["Projects", "Builders", "All"]
 
 export { shuffleArray }
 
 export function getRandomProfiles(category?: string): Project[] {
   let filtered = projects
-  if (category) {
+
+  // Only filter by category if a specific category is selected
+  if (category && category !== "All") {
     filtered = projects.filter((project) => project.category === category)
   }
+
+  // Always return shuffled profiles for random display
   return shuffleArray(filtered)
 }
 
