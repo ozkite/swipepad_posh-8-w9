@@ -233,7 +233,7 @@ export function ProjectCard({
   const cardContent = (
     <div
       ref={cardRef}
-      className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 select-none max-w-full"
+      className="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
