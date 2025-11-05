@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
-import { WalletProvider } from "@/components/wallet/WalletConnect"
 import "./globals.css"
+import { ThirdwebProvider } from "thirdweb/react"
 
 export const metadata: Metadata = {
   title: "Swipe Pad",
@@ -29,8 +29,10 @@ html {
         `}</style>
       </head>
       <body>
-        <WalletProvider>{children}</WalletProvider>
-        <Analytics />
+        <ThirdwebProvider>
+          {children}
+          <Analytics />
+        </ThirdwebProvider>
       </body>
     </html>
   )

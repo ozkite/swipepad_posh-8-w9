@@ -7,7 +7,6 @@ import { ProjectCard } from "@/components/project-card"
 import { CategorySection } from "@/components/category-section"
 import { Cart } from "@/components/cart"
 import { SuccessScreen } from "@/components/success-screen"
-import { WalletConnect } from "@/components/wallet-connect"
 import { AmountSelector, type DonationAmount, type StableCoin, type ConfirmSwipes } from "@/components/amount-selector"
 import { projects, categories, getRandomProfiles } from "@/lib/data"
 import { UserProfile } from "@/components/user-profile"
@@ -21,8 +20,42 @@ import { MobileMockup } from "@/components/mobile-mockup"
 import { useMobile } from "@/hooks/use-mobile"
 import { ProjectRegistrationForm } from "@/components/project-registration-form"
 import { EditProfile } from "@/components/edit-profile"
+import { ConnectButton, darkTheme, useActiveAccount, useConnect } from "thirdweb/react"
+import { client, defaultChain } from "@/lib/thirdweb"
+import { inAppWallet, createWallet } from "thirdweb/wallets"
+import { executeBatchTransactions, type TransactionItem } from "@/lib/transactions"
+import { toast } from "sonner"
+
+const wallets = [
+  inAppWallet({
+    auth: {
+      options: [
+        "google",
+        "discord",
+        "telegram",
+        "farcaster",
+        "email",
+        "x",
+        "passkey",
+        "phone",
+        "github",
+        "tiktok",
+        "line",
+        "facebook",
+        "apple",
+        "guest",
+      ],
+    },
+  }),
+  createWallet("io.metamask"),
+  createWallet("com.coinbase.wallet"),
+  createWallet("me.rainbow"),
+]
 
 export default function Home() {
+  const account = useActiveAccount()
+  const { connect } = useConnect()
+
   const [viewMode, setViewMode] = useState<"swipe" | "list" | "profile" | "trending">("swipe")
   const [selectedCategory, setSelectedCategory] = useState(categories[0] || "Regeneration")
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
@@ -30,17 +63,17 @@ export default function Home() {
   const [cart, setCart] = useState<Array<{ project: any; amount: number; currency: StableCoin; message?: string }>>([])
   const [showCart, setShowCart] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
-  const [walletConnected, setWalletConnected] = useState(false)
-  const [hasSeenWelcome, setHasSeenWelcome] = useState(false)
   const [donationAmount, setDonationAmount] = useState<DonationAmount | null>(null)
-  const [donationCurrency, setDonationCurrency] = useState<StableCoin>("cUSD")
-  const [confirmSwipes, setConfirmSwipes] = useState<ConfirmSwipes>(5)
+  const [donationCurrency, setDonationCurrency] = useState<StableCoin>("USDT")
+  const [confirmSwipes, setConfirmSwipes] = useState<ConfirmSwipes>(20)
   const [showBadgeNotification, setShowBadgeNotification] = useState(false)
   const [currentBadge, setCurrentBadge] = useState("")
   const [swipeCount, setSwipeCount] = useState(0)
   const [showProfileQuickView, setShowProfileQuickView] = useState(false)
   const [showEditProfile, setShowEditProfile] = useState(false)
   const [filteredProjects, setFilteredProjects] = useState<typeof projects>([])
+  const [isProcessingTransaction, setIsProcessingTransaction] = useState(false)
+
   const [userStats, setUserStats] = useState({
     totalDonations: 0,
     categoriesSupported: new Set<string>(),
@@ -59,19 +92,12 @@ export default function Home() {
     totalSwipes: 47,
     projectsReported: 3,
     totalDonated: 125.75,
+    hasSeenWelcome: false,
   })
   const [userBalance, setUserBalance] = useState({
     cUSD: 125.75,
-    cEUR: 50.2,
-    cGBP: 75.5,
-    cAUD: 95.3,
-    cCHF: 110.8,
-    cCAD: 85.4,
-    cKES: 1250.0,
-    cREAL: 520.6,
-    cZAR: 1850.2,
-    cCOL: 425000.0,
-    cJPY: 15500.0,
+    USDT: 0,
+    USDC: 0,
   })
   const [showRegistrationForm, setShowRegistrationForm] = useState(false)
   const [shownBadges, setShownBadges] = useState<Set<string>>(new Set())
@@ -158,14 +184,17 @@ export default function Home() {
       totalDonated: prev.totalDonated + Number.parseFloat(donationAmount.split(" ")[0]),
     }))
 
-    const newCart = [...cart, { project, amount: donationAmount, currency: donationCurrency }]
+    const newCart = [
+      ...cart,
+      { project, amount: Number.parseFloat(donationAmount.split(" ")[0]), currency: donationCurrency },
+    ]
     setCart(newCart)
 
     const newSwipeCount = swipeCount + 1
     setSwipeCount(newSwipeCount)
 
     if (newSwipeCount >= confirmSwipes) {
-      setShowSuccess(true)
+      handleConfirmSwipes(newCart)
       setSwipeCount(0)
     }
 
@@ -196,9 +225,54 @@ export default function Home() {
     setSwipeCount(0)
   }
 
+  const handleConfirmSwipes = async (cartItems: typeof cart) => {
+    if (!account) {
+      toast.error("Please connect your wallet to complete transactions")
+      return
+    }
+
+    if (cartItems.length === 0) {
+      return
+    }
+
+    setIsProcessingTransaction(true)
+
+    try {
+      const transactions: TransactionItem[] = cartItems.map((item) => ({
+        recipientAddress: item.project.wallet_address,
+        amount: item.amount,
+        currency: item.currency,
+        projectName: item.project.name,
+      }))
+
+      console.log("[v0] Processing batch transactions:", transactions)
+
+      const results = await executeBatchTransactions(account, transactions)
+
+      const successCount = results.filter((r) => r.success).length
+      const failCount = results.filter((r) => !r.success).length
+
+      if (successCount > 0) {
+        toast.success(`Successfully sent ${successCount} donation${successCount > 1 ? "s" : ""}!`)
+        setShowSuccess(true)
+        setCart([])
+      }
+
+      if (failCount > 0) {
+        toast.error(`${failCount} transaction${failCount > 1 ? "s" : ""} failed. Please try again.`)
+      }
+    } catch (error) {
+      console.error("[v0] Transaction error:", error)
+      toast.error("Transaction failed. Please try again.")
+    } finally {
+      setIsProcessingTransaction(false)
+    }
+  }
+
   const handleCheckout = async () => {
     setShowCart(false)
-    setShowSuccess(true)
+
+    await handleConfirmSwipes(cart)
 
     const uniqueCategories = new Set<string>()
     cart.forEach((item) => uniqueCategories.add(item.project.category))
@@ -209,9 +283,6 @@ export default function Home() {
       streak: prev.lastDonation ? prev.streak + 1 : 1,
       lastDonation: new Date(),
     }))
-
-    setCart([])
-    setSwipeCount(0)
   }
 
   const handleCategoryProjectDonate = (project: any, amount = 5) => {
@@ -227,7 +298,7 @@ export default function Home() {
       }
     })
 
-    setCart([...cart, { project, amount, currency: "cUSD" }])
+    setCart([...cart, { project, amount, currency: "USDT" }])
     setShowSuccess(true)
   }
 
@@ -269,47 +340,88 @@ export default function Home() {
 
   const AppContent = () => (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      {!hasSeenWelcome ? (
-        <WalletConnect
-          onConnect={() => {
-            setWalletConnected(true)
-            setHasSeenWelcome(true)
-          }}
-        />
+      {!userProfile.hasSeenWelcome ? (
+        <div className="flex flex-col items-center justify-center h-full px-6 relative">
+          <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
+            <button className="flex items-center justify-center w-12 h-12 rounded-full">
+              <img
+                src={userProfile.image || "/placeholder.svg"}
+                alt="Profile"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+            </button>
+            <div className="flex gap-3">
+              <button className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700">
+                <TrendingIcon />
+              </button>
+              <button className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB]">
+                <CartIcon />
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center max-w-sm mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-8 text-white" style={{ fontFamily: "Pixelify Sans, monospace" }}>
+              SwipePad
+            </h1>
+            <h2 className="text-2xl font-bold mb-4 text-white">Welcome to SwipePad!</h2>
+            <p className="text-gray-300 mb-8 leading-relaxed">
+              Support regenerative projects with micro-donations through simple swipes on the Celo blockchain.
+            </p>
+
+            <div className="w-full mb-4">
+              <ConnectButton
+                client={client}
+                chain={defaultChain}
+                connectModal={{ size: "compact" }}
+                theme={darkTheme({
+                  colors: {
+                    accentText: "hsl(51, 100%, 45%)",
+                    accentButtonBg: "hsl(51, 100%, 45%)",
+                    accentButtonText: "hsl(0, 0%, 0%)",
+                    borderColor: "hsl(221, 39%, 11%)",
+                    primaryButtonBg: "hsl(51, 100%, 45%)",
+                    primaryButtonText: "hsl(0, 0%, 0%)",
+                  },
+                })}
+                wallets={wallets}
+                connectButton={{
+                  label: "Enter MiniApp",
+                  style: {
+                    backgroundColor: "hsl(51, 100%, 45%)",
+                    color: "hsl(0, 0%, 0%)",
+                    fontWeight: "bold",
+                    borderRadius: "0.75rem",
+                    padding: "1rem 1.5rem",
+                    fontSize: "1.125rem",
+                    width: "100%",
+                  },
+                }}
+                onConnect={() => {
+                  setUserProfile((prev) => ({ ...prev, hasSeenWelcome: true }))
+                }}
+              />
+            </div>
+
+            <p className="text-xs text-gray-400 mt-6 leading-relaxed">
+              By connecting, you agree to our Terms of Service and Privacy Policy. Your funds remain secure in your
+              wallet at all times.
+            </p>
+          </div>
+
+          <button
+            onClick={handleRegisterProject}
+            className="absolute bottom-6 right-6 flex items-center justify-center w-14 h-14 rounded-full bg-[#677FEB] text-white hover:bg-[#5A6FD3] transition-colors shadow-lg"
+            title="Register Project"
+          >
+            <RegisterIcon />
+          </button>
+        </div>
       ) : (
         <>
           <div className="sticky top-0 z-40 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
-            <div className="flex flex-col items-center py-3">
-              <div className="flex items-center justify-between w-full mb-4 px-6">
-                <div className="w-8"></div>
-                <div className="flex-1 flex justify-center">
-                  <h1
-                    className="text-lg font-bold text-center text-white"
-                    style={{ fontFamily: "Pixelify Sans, monospace" }}
-                  >
-                    SwipePad
-                  </h1>
-                </div>
-                <button
-                  onClick={handleRegisterProject}
-                  className="flex items-center justify-center w-8 h-8 rounded-full bg-[#677FEB] text-white hover:bg-[#5A6FD3] transition-colors"
-                  title="Register Project"
-                >
-                  <RegisterIcon />
-                </button>
-              </div>
-
-              {walletConnected && donationAmount && (
-                <div className="bg-transparent rounded-full px-4 py-1 mb-4 flex items-center">
-                  <span className="text-[#FFD600] font-bold text-base mr-1">{userBalance[donationCurrency]}</span>
-                  <span className="text-gray-400 text-sm mr-1">{donationCurrency}</span>
-                  <button className="text-gray-400 hover:text-white">
-                    <ChevronDownIcon />
-                  </button>
-                </div>
-              )}
-
-              <div className="flex justify-between w-full px-6 space-x-2">
+            <div className="flex flex-col items-center py-2">
+              <div className="flex items-center justify-between w-full mb-2 px-6">
                 <button
                   className="flex items-center justify-center w-12 h-12 rounded-full relative"
                   onClick={() => setShowEditProfile(true)}
@@ -320,6 +432,34 @@ export default function Home() {
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 </button>
+
+                <h1
+                  className="text-lg font-bold text-center text-white"
+                  style={{ fontFamily: "Pixelify Sans, monospace" }}
+                >
+                  SwipePad
+                </h1>
+
+                <button
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB] text-white hover:bg-[#5A6FD3] transition-colors"
+                  onClick={handleRegisterProject}
+                  title="Register Project"
+                >
+                  <RegisterIcon />
+                </button>
+              </div>
+
+              {donationAmount && (
+                <div className="bg-transparent rounded-full px-4 py-0.5 mb-2 flex items-center">
+                  <span className="text-[#FFD600] font-bold text-sm mr-1">{userBalance[donationCurrency]}</span>
+                  <span className="text-gray-400 text-xs mr-1">{donationCurrency}</span>
+                  <button className="text-gray-400 hover:text-white">
+                    <ChevronDownIcon />
+                  </button>
+                </div>
+              )}
+
+              <div className="flex justify-between w-full px-6 space-x-2">
                 <button
                   className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700"
                   onClick={() => setViewMode("trending")}
@@ -390,7 +530,7 @@ export default function Home() {
                               Change
                             </button>
                           </div>
-                          <div className="mt-2 bg-gray-800 rounded-lg p-2">
+                          <div className="mt-2 bg-gray-800 rounded-lg p-1.5">
                             <div className="flex justify-between text-xs mb-1">
                               <span>Swipes until confirmation:</span>
                               <span>{confirmSwipes - swipeCount} more</span>
@@ -404,7 +544,7 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <div className="px-6">
+                        <div className="px-6 pb-4">
                           {filteredProjects.length > 0 && (
                             <ProjectCard
                               project={filteredProjects[currentProjectIndex]}
@@ -437,6 +577,16 @@ export default function Home() {
             )}
           </div>
         </>
+      )}
+
+      {isProcessingTransaction && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-gray-800 rounded-lg p-6 text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#FFD600] mx-auto mb-4"></div>
+            <p className="text-white font-bold">Processing transactions...</p>
+            <p className="text-gray-400 text-sm mt-2">Please confirm in your wallet</p>
+          </div>
+        </div>
       )}
 
       {showCart && <Cart items={cart} onClose={() => setShowCart(false)} onCheckout={handleCheckout} />}

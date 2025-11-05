@@ -2,33 +2,22 @@
 
 import { useState } from "react"
 
-export type DonationAmount = "10 cents" | "50 cents" | "1 Stable"
-export type StableCoin =
-  | "cUSD"
-  | "cEUR"
-  | "cGBP"
-  | "cAUD"
-  | "cCHF"
-  | "cCAD"
-  | "cKES"
-  | "cREAL"
-  | "cZAR"
-  | "cCOL"
-  | "cJPY"
-export type ConfirmSwipes = 5 | 10 | 20
+export type DonationAmount = "1 ¢" | "10 ¢" | "20 ¢" | "50 ¢"
+export type StableCoin = "cUSD" | "USDT" | "USDC"
+export type ConfirmSwipes = 10 | 20 | 30
 
 interface AmountSelectorProps {
   onSelect: (amount: DonationAmount, currency: StableCoin, swipes: ConfirmSwipes) => void
 }
 
 export function AmountSelector({ onSelect }: AmountSelectorProps) {
-  const [selectedAmount, setSelectedAmount] = useState<DonationAmount>("10 cents")
-  const [selectedCurrency, setSelectedCurrency] = useState<StableCoin>("cUSD")
-  const [selectedSwipes, setSelectedSwipes] = useState<ConfirmSwipes>(5)
+  const [selectedAmount, setSelectedAmount] = useState<DonationAmount>("1 ¢")
+  const [selectedCurrency, setSelectedCurrency] = useState<StableCoin>("USDT")
+  const [selectedSwipes, setSelectedSwipes] = useState<ConfirmSwipes>(20)
 
-  const amounts: DonationAmount[] = ["10 cents", "50 cents", "1 Stable"]
-  const currencies: StableCoin[] = ["cUSD", "cEUR", "cGBP", "cAUD", "cCHF", "cCAD", "cKES", "cREAL", "cZAR"]
-  const swipeOptions: ConfirmSwipes[] = [5, 10, 20]
+  const amounts: DonationAmount[] = ["1 ¢", "10 ¢", "20 ¢", "50 ¢"]
+  const currencies: StableCoin[] = ["cUSD", "USDT", "USDC"]
+  const swipeOptions: ConfirmSwipes[] = [10, 20, 30]
 
   const handleConfirm = () => {
     onSelect(selectedAmount, selectedCurrency, selectedSwipes)
@@ -41,7 +30,7 @@ export function AmountSelector({ onSelect }: AmountSelectorProps) {
       {/* Amount Selection */}
       <div className="mb-6">
         <h3 className="text-base font-medium mb-3 text-gray-300">Amount per swipe:</h3>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-4 gap-3">
           {amounts.map((amount) => (
             <button
               key={amount}

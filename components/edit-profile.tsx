@@ -176,6 +176,15 @@ export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditPro
                 className="w-full bg-gray-800 border border-gray-600 rounded-lg py-2 px-3 text-white focus:border-[#FFD600] focus:outline-none"
                 placeholder="@username"
               />
+              <div className="mt-4 bg-gray-800/50 border border-gray-600 rounded-lg p-4">
+                <div className="flex flex-col items-center">
+                  <img src="/self-verification-qr.png" alt="Verification QR Code" className="w-32 h-32 mb-3" />
+                  <p className="text-sm text-center text-gray-300">
+                    Verify your profile and receive <span className="text-[#FFD600] font-semibold">10 points</span> to
+                    scale on the rankings
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

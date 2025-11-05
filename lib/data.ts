@@ -1,61 +1,107 @@
-import type { Project } from "@/types";
+import { shuffleArray } from "./shuffle"
+import celoBuilders from "../data/profiles/celo_builders.json"
+import karmaGapProfiles from "../data/profiles/karmagap.json"
 
-// Import your JSON files
-import celoBuildersRaw from '@/public/100_celo_talent_100_profiles.json';
-import karmaGapRaw from '@/public/100_celo_karmagap_json_.json';
+export interface Project {
+  id: string
+  name: string
+  description: string
+  category: string
+  imageUrl: string
+  website?: string
+  twitter?: string
+  discord?: string
+  linkedin?: string
+  farcaster?: string
+  github?: string
+  fundingGoal?: number
+  fundingCurrent?: number
+  likes?: number
+  comments?: number
+  walletAddress?: string
+  isBookmarked?: boolean
+  userHasLiked?: boolean
+  userHasCommented?: boolean
+  reportCount?: number
+  boostAmount?: number
+}
 
-// Fisher-Yates shuffle – unbiased, in-place
-export function shuffleArray<T>(array: T[]): T[] {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+const celoBuilderProjects: Project[] = celoBuilders
+  .filter((builder: any) => {
+    const hasValidName = builder.Name && builder.Name.trim().length > 0 && builder.Name !== "N/A"
+    return hasValidName
+  })
+  .map((builder: any, index: number) => ({
+    id: `celo-builder-${index + 1}`,
+    name: builder.Name,
+    description: builder.Description || `Building on Celo blockchain - ${builder.Name}`,
+    category: "Builders",
+    imageUrl:
+      builder["Profile Image URL"] && builder["Profile Image URL"] !== "N/A"
+        ? builder["Profile Image URL"]
+        : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(builder.Name)}`,
+    website: builder.Description && builder.Description.startsWith("http") ? builder.Description : undefined,
+    linkedin: builder.LinkedIn && builder.LinkedIn !== "N/A" ? builder.LinkedIn : undefined,
+    farcaster: builder.Farcaster && builder.Farcaster !== "N/A" ? builder.Farcaster : undefined,
+    github: builder.GitHub && builder.GitHub !== "N/A" ? builder.GitHub : undefined,
+    fundingGoal: Math.floor(Math.random() * 100000) + 10000,
+    fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
+    likes: Math.floor(Math.random() * 500) + 10,
+    comments: Math.floor(Math.random() * 100) + 1,
+    walletAddress: builder.wallet_address,
+    isBookmarked: false,
+    userHasLiked: false,
+    userHasCommented: false,
+    reportCount: 0,
+    boostAmount: 0,
+  }))
+
+const karmaGapProjects: Project[] = karmaGapProfiles
+  .filter((profile: any) => {
+    const hasValidName = profile.Name && profile.Name.trim().length > 0 && profile.Name !== "N/A"
+    return hasValidName
+  })
+  .map((profile: any, index: number) => ({
+    id: `karmagap-${index + 1}`,
+    name: profile.Name,
+    description: profile.Description || `A project from Projects - ${profile.Name}`,
+    category: "Projects",
+    imageUrl:
+      profile["Profile Image URL"] && profile["Profile Image URL"] !== "N/A"
+        ? profile["Profile Image URL"]
+        : `/placeholder.svg?height=200&width=300&query=${encodeURIComponent(profile.Name)}`,
+    website: profile.Description && profile.Description.startsWith("http") ? profile.Description : undefined,
+    linkedin: profile.LinkedIn && profile.LinkedIn !== "N/A" ? profile.LinkedIn : undefined,
+    farcaster: profile.Farcaster && profile.Farcaster !== "N/A" ? profile.Farcaster : undefined,
+    github: profile.GitHub && profile.GitHub !== "N/A" ? profile.GitHub : undefined,
+    fundingGoal: Math.floor(Math.random() * 100000) + 10000,
+    fundingCurrent: Math.floor(Math.random() * 50000) + 5000,
+    likes: Math.floor(Math.random() * 500) + 10,
+    comments: Math.floor(Math.random() * 100) + 1,
+    walletAddress: profile.wallet_address,
+    isBookmarked: false,
+    userHasLiked: false,
+    userHasCommented: false,
+    reportCount: 0,
+    boostAmount: 0,
+  }))
+
+export const projects: Project[] = [...celoBuilderProjects, ...karmaGapProjects]
+
+export const categories = ["Projects", "Builders"]
+
+export { shuffleArray }
+
+export function getRandomProfiles(category?: string): Project[] {
+  let filtered = projects
+  if (category) {
+    filtered = projects.filter((project) => project.category === category)
   }
-  return shuffled;
+  return shuffleArray(filtered)
 }
 
-function mapProfile(raw: any, category: string): Project {
-  return {
-    id: raw.Name || 'unknown',
-    name: raw.Name || 'Untitled',
-    category,
-    description: raw.Description && raw.Description !== 'N/A' ? raw.Description.trim() : '',
-    imageUrl: raw["Profile Image URL"] && raw["Profile Image URL"] !== 'N/A'
-  ? raw["Profile Image URL"].trim().replace(/\s+$/, '')
-  : '/placeholder.svg',
-    raised: 0,
-    goal: 10000,
-    backers: 0,
-    location: '',
-    impact: '',
-    verified: true,
-    farcaster: raw.Farcaster && raw.Farcaster !== 'N/A' ? raw.Farcaster.trim() : undefined,
-    github: raw.GitHub && raw.GitHub !== 'N/A' ? raw.GitHub.trim() : undefined,
-    linkedin: raw.LinkedIn && raw.LinkedIn !== 'N/A' ? raw.LinkedIn.trim() : undefined,
-    wallet_address: raw.wallet_address && raw.wallet_address !== 'N/A' ? raw.wallet_address.trim() : undefined,
-  };
+export function getRandomProfile(category?: string): Project | null {
+  const filtered = category ? projects.filter((project) => project.category === category) : projects
+  if (filtered.length === 0) return null
+  return filtered[Math.floor(Math.random() * filtered.length)]
 }
-
-const celoBuilders = (celoBuildersRaw as any[]).map(p => mapProfile(p, 'Celo Builders'));
-const karmaGapProjects = (karmaGapRaw as any[]).map(p => mapProfile(p, 'KarmaGap'));
-export const allProjects = [...celoBuilders, ...karmaGapProjects];
-
-export const categories = [
-  "Celo Builders",
-  "KarmaGap",
-  "Regeneration",
-  "Climate",
-  "Education",
-  "Wildlife",
-  "Health",
-  "Community",
-  "Technology",
-  "Arts & Culture",
-];
-
-export function getRandomProfiles(category: string) {
-  return allProjects.filter(p => p.category === category);
-}
-
-// Export empty arrays for compatibility (not used, but prevents errors)
-export const projects = allProjects;

@@ -2,7 +2,7 @@ import { createThirdwebClient } from "thirdweb"
 import { defineChain } from "thirdweb/chains"
 
 export const client = createThirdwebClient({
-  clientId: "3d325540f5e91eb9d2ce5f2ab8122be3",
+  clientId: process.env.NEXT_PUBLIC_THIRDWEB_CLIENT_ID || "3d325540f5e91eb9d2ce5f2ab8122be3",
 })
 
 export const celoMainnet = defineChain({
@@ -41,8 +41,7 @@ export const celoAlfajores = defineChain({
   testnet: true,
 })
 
-// Default chain for testing
-export const defaultChain = celoAlfajores
+export const defaultChain = celoMainnet
 
 // Network constants
 export const CELO_MAINNET_CHAIN_ID = 42220

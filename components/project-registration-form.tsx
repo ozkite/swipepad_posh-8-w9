@@ -188,14 +188,20 @@ export function ProjectRegistrationForm({ isOpen, onClose, onSubmit }: ProjectRe
           {/* Identity Check */}
           <div>
             <label className="block text-sm font-medium mb-2">Identity Check</label>
-            <div className="bg-gray-800 border border-gray-600 rounded-lg py-2 px-3">
+            <div className="bg-gray-800 border border-gray-600 rounded-lg p-4">
+              <div className="flex flex-col items-center mb-3">
+                <img src="/self-verification-qr.png" alt="Verification QR Code" className="w-32 h-32 mb-3" />
+                <p className="text-sm text-center text-gray-300 mb-2">
+                  Verify your identity with Self Protocol to list your project
+                </p>
+              </div>
               <a
                 href="https://self.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#FFD600] hover:text-[#E6C200] flex items-center"
+                className="text-[#FFD600] hover:text-[#E6C200] flex items-center justify-center"
               >
-                Self Protocol <ExternalLink className="w-4 h-4 ml-1" />
+                Learn more about Self Protocol <ExternalLink className="w-4 h-4 ml-1" />
               </a>
             </div>
           </div>
@@ -254,9 +260,9 @@ export function ProjectRegistrationForm({ isOpen, onClose, onSubmit }: ProjectRe
             />
           </div>
 
-          {/* Wallet Type */}
+          {/* Public Wallet of the Project */}
           <div>
-            <label className="block text-sm font-medium mb-2">Wallet Type *</label>
+            <label className="block text-sm font-medium mb-2">Public Wallet of the Project *</label>
             <div className="space-y-2">
               <label className="flex items-center">
                 <input

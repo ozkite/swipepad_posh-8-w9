@@ -3,8 +3,7 @@ import { projects } from "@/lib/data"
 
 export async function GET() {
   try {
-    // Filter for KarmaGap profiles only
-    const karmaGapProfiles = projects.filter((project) => project.category === "KarmaGap")
+    const karmaGapProfiles = projects.filter((project) => project.category === "Projects")
 
     if (karmaGapProfiles.length === 0) {
       return NextResponse.json({ error: "No profiles found" }, { status: 404 })
