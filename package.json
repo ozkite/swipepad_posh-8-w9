@@ -6,7 +6,12 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "deploy:mainnet": "npx hardhat run farcaster/scripts/deploy.js --network celo",
+    "deploy:testnet": "npx hardhat run farcaster/scripts/deploy-testnet.js --network alfajores",
+    "verify:mainnet": "npx hardhat verify --network celo",
+    "verify:testnet": "npx hardhat verify --network alfajores",
+    "compile:farcaster": "npx hardhat compile"
   },
   "dependencies": {
     "@aws-sdk/client-lambda": "latest",
