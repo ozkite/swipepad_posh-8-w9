@@ -1,0 +1,9 @@
+{
+  "name": "SelfID Schema",
+  "description": "User identity verified via Self Protocol",
+  "fields": [
+    { "name": "walletAddress", "type": "string" },
+    { "name": "reputationScore", "type": "number" },
+    { "name": "onchainActivity", "type": "boolean" }
+  ]
+}
