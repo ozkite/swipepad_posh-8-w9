@@ -1,12 +1,14 @@
 "use client";
 
 import { AuthKitProvider } from "@farcaster/auth-kit";
-import { sdk } from "@farcaster/miniapp-sdk";
+import { farcasterMiniApp as miniAppConnector } from "@farcaster/miniapp-wagmi-connector";
+import { connectorsForWallets, darkTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import '@rainbow-me/rainbowkit/styles.css';
+import { coinbaseWallet, metaMaskWallet, rainbowWallet, walletConnectWallet } from '@rainbow-me/rainbowkit/wallets';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { createConfig, http, WagmiProvider } from "wagmi";
 import { celo } from "wagmi/chains";
-import { injected } from "wagmi/connectors";
 import { ErrorBoundary } from "./ErrorBoundary";
 import { FarcasterLifecycle } from "./FarcasterLifecycle";
 
@@ -16,23 +18,29 @@ const config = {
     siweUri: "https://farcaster.swipepad.xyz/login",
 };
 
+const connectors = connectorsForWallets(
+  [
+    {
+      groupName: 'Recommended',
+      wallets: [rainbowWallet, metaMaskWallet, coinbaseWallet, walletConnectWallet],
+    },
+  ],
+  {
+    appName: 'SwipePad',
+    projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'YOUR_PROJECT_ID',
+  }
+);
+
 const wagmiConfig = createConfig({
     chains: [celo],
     transports: {
         [celo.id]: http(),
     },
     connectors: [
-        injected(),
-        injected({
-            target: () => ({
-                id: 'farcaster',
-                name: 'Farcaster Wallet',
-                provider: (sdk as any).provider,
-            }),
-        }),
+        miniAppConnector(),
+        ...connectors
     ],
 });
-
 
 export default function Providers({ children }: { children: React.ReactNode }) {
     const [queryClient] = useState(() => new QueryClient());
@@ -40,11 +48,13 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     return (
         <ErrorBoundary>
             <WagmiProvider config={wagmiConfig}>
-                 <QueryClientProvider client={queryClient}>
-                    <AuthKitProvider config={config}>
-                        <FarcasterLifecycle />
-                        {children}
-                    </AuthKitProvider>
+                <QueryClientProvider client={queryClient}>
+                    <RainbowKitProvider theme={darkTheme()}>
+                        <AuthKitProvider config={config}>
+                            <FarcasterLifecycle />
+                            {children}
+                        </AuthKitProvider>
+                    </RainbowKitProvider>
                 </QueryClientProvider>
             </WagmiProvider>
         </ErrorBoundary>

@@ -17,6 +17,7 @@ import { SuccessScreen } from "@/components/success-screen"
 import { ToggleMenu } from "@/components/toggle-menu"
 import { TrendingSection } from "@/components/trending-section"
 import { UserProfile } from "@/components/user-profile"
+import { WalletConnect } from "@/components/wallet-connect"
 import { WeeklyDrop } from "@/components/weekly-drop"
 import { useMobile } from "@/hooks/use-mobile"
 import { boostProject, getProjects } from "@/lib/card-manager"
@@ -700,15 +701,7 @@ function HomeContent() {
                   {/* Optional: Currency selector could go here */}
                 </div>
               ) : (
-                <button 
-                  onClick={() => {
-                    const fcConnector = connectors.find(c => c.id === 'farcaster' || c.name === 'Farcaster Wallet');
-                    connect({ connector: fcConnector || connectors[0] });
-                  }}
-                  className="bg-[#855DCD] text-white text-xs font-bold px-4 py-2 rounded-full mb-2 flex items-center hover:bg-[#7C55C3] transition-colors"
-                >
-                  <span className="mr-1">⚡</span> Connect Farcaster
-                </button>
+                <WalletConnect />
               )}
 
               <div className="flex justify-between w-full px-6 space-x-2 mt-4">
