@@ -1,9 +1,7 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
-import { X, Camera, CheckCircle } from "lucide-react"
+import { X, CheckCircle, User } from "lucide-react"
 
 interface EditProfileProps {
   isOpen: boolean
@@ -31,7 +29,7 @@ interface EditProfileProps {
 export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditProfileProps) {
   const [formData, setFormData] = useState({
     name: currentProfile.name || "MiniPay User",
-    image: currentProfile.image || "/images/lena-profile.jpg",
+    image: currentProfile.image || "",
     bio: "",
     farcaster: currentProfile.farcaster || "",
     twitter: currentProfile.twitter || "",
@@ -41,23 +39,8 @@ export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditPro
     ens: currentProfile.ens || "",
   })
 
-  const [imagePreview, setImagePreview] = useState(formData.image)
-
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        const result = e.target?.result as string
-        setImagePreview(result)
-        setFormData((prev) => ({ ...prev, image: result }))
-      }
-      reader.readAsDataURL(file)
-    }
   }
 
   const handleSave = () => {
@@ -82,18 +65,10 @@ export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditPro
         <div className="p-6 space-y-6">
           {/* Profile Image */}
           <div className="flex flex-col items-center">
-            <div className="relative">
-              <img
-                src={imagePreview || "/placeholder.svg"}
-                alt="Profile"
-                className="w-24 h-24 rounded-full object-cover border-4 border-gray-600"
-              />
-              <label className="absolute bottom-0 right-0 bg-[#FFD600] rounded-full p-2 cursor-pointer hover:bg-[#E6C200] transition-colors">
-                <Camera className="w-4 h-4 text-black" />
-                <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
-              </label>
+            <div className="w-24 h-24 rounded-full bg-gray-700 flex items-center justify-center border-4 border-gray-600">
+              <User className="w-12 h-12 text-gray-400" />
             </div>
-            <p className="text-sm text-gray-400 mt-2">Click camera to change photo</p>
+            <p className="text-sm text-gray-400 mt-2">Profile picture from connected wallet</p>
           </div>
 
           <div>
@@ -213,51 +188,7 @@ export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditPro
             </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-medium mb-4">NFT Holdings</h3>
-            <div className="bg-gray-800 rounded-lg p-4 space-y-3">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-red-500 rounded mr-3 flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">P</span>
-                  </div>
-                  <span>POAPs</span>
-                </div>
-                <span className="text-[#FFD600] font-bold">{currentProfile.poaps || 10} POAPs</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-pink-500 rounded mr-3 flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">L</span>
-                  </div>
-                  <span>Lil Nouns</span>
-                </div>
-                <span className="text-[#FFD600] font-bold">{currentProfile.lilNounsHeld || 8} Lil Nouns</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-yellow-500 rounded mr-3 flex items-center justify-center">
-                    <span className="text-black font-bold text-xs">N</span>
-                  </div>
-                  <span>Nouns</span>
-                </div>
-                <span className="text-[#FFD600] font-bold">{currentProfile.nounsHeld || 0}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-orange-500 rounded mr-3 flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">¶</span>
-                  </div>
-                  <span>Paragraphs</span>
-                </div>
-                <span className="text-[#FFD600] font-bold">{currentProfile.paragraphs || 0}</span>
-              </div>
-              <p className="text-xs text-gray-400 mt-2">
-                NFT holdings are automatically detected from your connected wallet
-              </p>
-            </div>
-          </div>
-
+          {/* Self ID Check */}
           <div>
             <h3 className="text-lg font-medium mb-4">Self ID Check</h3>
             <div className="bg-gray-800 rounded-lg p-4">
@@ -276,20 +207,20 @@ export function EditProfile({ isOpen, onClose, onSave, currentProfile }: EditPro
             </div>
           </div>
 
-          {/* User Stats (Read-only) */}
+          {/* Your Stats */}
           <div>
             <h3 className="text-lg font-medium mb-4">Your Stats</h3>
             <div className="grid grid-cols-3 gap-3">
               <div className="bg-gray-800 p-3 rounded-lg text-center">
-                <p className="text-xl font-bold text-[#FFD600]">{currentProfile.totalSwipes || 47}</p>
+                <p className="text-xl font-bold text-[#FFD600]">0</p>
                 <p className="text-xs text-gray-400">Total Swipes</p>
               </div>
               <div className="bg-gray-800 p-3 rounded-lg text-center">
-                <p className="text-xl font-bold text-[#FFD600]">{currentProfile.projectsReported || 3}</p>
+                <p className="text-xl font-bold text-[#FFD600]">0</p>
                 <p className="text-xs text-gray-400">Reports Made</p>
               </div>
               <div className="bg-gray-800 p-3 rounded-lg text-center">
-                <p className="text-xl font-bold text-[#FFD600]">${currentProfile.totalDonated || 125.75}</p>
+                <p className="text-xl font-bold text-[#FFD600]">$0.00</p>
                 <p className="text-xs text-gray-400">Total Donated</p>
               </div>
             </div>
