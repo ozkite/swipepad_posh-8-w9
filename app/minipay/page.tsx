@@ -160,14 +160,23 @@ export default function MiniPayApp() {
 
               <div className="flex justify-between w-full px-6 space-x-2">
                 <button
-                  className="flex items-center justify-center w-12 h-12 rounded-full"
+                  className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-700"
                   onClick={() => setShowEditProfile(true)}
                 >
-                  <img
-                    src={userProfile.image || "/placeholder.svg"}
-                    alt="Profile"
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
                 </button>
                 <button
                   className="flex items-center justify-center w-12 h-12 rounded-full bg-[#677FEB] relative"
